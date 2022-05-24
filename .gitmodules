@@ -1,0 +1,3 @@
+[submodule "common"]
+    path= features
+    url=https://github.com/srinivasaraojyothi/seleniumpythonactionbot.git 
