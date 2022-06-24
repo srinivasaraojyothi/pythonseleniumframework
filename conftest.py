@@ -96,8 +96,8 @@ def crud_call():
     
 
     
-        consumer_key = 'K2C3YKzB54L3WFBDADsQEBFdf'
-        consumer_secret_key = 'yHW5htlvtbxxKqRo7LB0XF6xPZ39dEyf2i177mv56gjF0LtcXB'
+        consumer_key = ''
+        consumer_secret_key = ''
         key_secret = '{}:{}'.format(consumer_key, consumer_secret_key).encode('ascii')
     # Transform from bytes to bytes that can be printed
         b64_encoded_key = base64.b64encode(key_secret)
