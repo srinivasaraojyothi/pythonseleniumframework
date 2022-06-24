@@ -1,0 +1,20 @@
+{
+    "testcase_payment_1": {
+        "Id": 78912,
+        "Customer": "Jason Sweet_1",
+        "Quantity": 1,
+        "Price": 18.00
+    },
+    "testcase_payment_2": {
+        "Id": 78912,
+        "Customer": "Jason Sweet_2",
+        "Quantity": 1,
+        "Price": 18.00
+    },
+    "testcase_payment_3": {
+        "Id": 78912,
+        "Customer": "Jason Sweet_3",
+        "Quantity": 1,
+        "Price": 18.00
+    }
+}

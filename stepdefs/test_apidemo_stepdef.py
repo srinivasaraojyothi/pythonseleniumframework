@@ -1,0 +1,43 @@
+from cmath import e
+import imp
+import json
+from pathlib2 import Path
+from selenium.webdriver.common.keys import Keys
+from pytest_bdd import scenarios, given, when, then,parsers
+import requests
+import pytest
+from api.crud import crud
+scenarios("apis")
+@pytest.fixture
+@given(parsers.parse('I should be able to connect to API with "{testcaseid}"'))
+
+def create_user(testcaseid):
+     responce=crud().crudCall(testcaseid)
+     print(responce.json()) 
+     return responce   
+
+@then(parsers.parse('I should be able verify user is created successfully with status code is "{code:d}"'))
+def verify_status(create_user,code):
+    print(create_user.status_code)
+    assert create_user.status_code==code
+@then(parsers.parse('I should be able to verify the created message'))
+def verify_status(create_user,code):
+    assert str(create_user.json())==str("{'success': 'true'}")
+    
+    '''
+    post_params = {
+    'status': 'Hello World',
+    }
+    post_headers = {
+        'Authorization': 'Bearer {}'.format(access_token)    
+    }
+    post_url = 'https://reqres.in/api/users?page=2'   
+    post_resp=requests.get(post_url)
+    #post_resp = requests.post(post_url,headers=post_headers,params=post_params)
+    print(post_resp.json())
+    '''
+@then(parsers.parse('I should be able verify responce has product as "{product}"'))
+def verify_status(create_user,product):
+    print(json.loads((create_user.content))["product"])
+    assert json.loads((create_user.content))["product"]==product
+        
