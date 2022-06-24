@@ -1,0 +1,5 @@
+seleniumpythonactionbot
+*_pycache_*
+*allure*
+.pytest_cache
+./**/*_pycache_*
