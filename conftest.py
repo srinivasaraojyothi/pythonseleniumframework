@@ -16,7 +16,7 @@ import json
 import numpy as np
 import base64
 import tweepy
-'''
+
 def pytest_addoption(parser):
     parser.addoption(
         "--b", action="store", default="type1", help="my option: type1 or type2"
@@ -46,13 +46,14 @@ def browser(b,t,request ):
 
             opts.add_argument('--disable-gpu')
             
-            #browser = webdriver.Chrome("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
-            
+            browser = webdriver.Chrome("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
+            '''
             browser=webdriver.Remote(
                         command_executor='http://localhost:4444/wd/hub',
                         options=opts,
                         extensions=List[webdriver]
                     )
+            '''
                     
 
 
@@ -89,7 +90,6 @@ def browser(b,t,request ):
 
                 # Quit the WebDriver instance for the teardown
             browser.quit() 
-'''
 '''
 @pytest.fixture
 def crud_call():
