@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from pytest_bdd import scenarios, given, when, then,parsers
 import requests
 import pytest
-from api.crud import crud
+from pyseleniumbot.api_crud import crud
 scenarios("apis")
 @pytest.fixture
 @given(parsers.parse('I should be able to connect to API with "{testcaseid}"'))

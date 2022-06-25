@@ -1,4 +1,3 @@
-
 from pathlib2 import Path
 from selenium.webdriver.common.keys import Keys
 from pytest_bdd import scenarios, given, when, then
