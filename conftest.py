@@ -93,7 +93,7 @@ def browser(b, t, request):
                 "platformName": "Android",
                 "automationName": "UiAutomator2",
                 "appium:deviceName": "Pixel_5_API_31",
-                "appium:app": "D:\\Users\\sjyothi\\Repos\\pythonseleniumFramework\\Airbnb_v22.21_apkpure.com.apk",
+                "appium:app": "D:\\Users\\sjyothi\\Repos\\apks\\Airbnb_v22.21_apkpure.com.apk",
                 "appium:appPackage": "com.airbnb.android",
                 "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity"
             }
@@ -133,7 +133,7 @@ def browser(b, t, request):
 
             browser = webdriver.Remote(
                 command_executor='http://localhost:4725/wd/hub', desired_capabilities=mobile_emu)
-
+            
             # browser.set_page_load_timeout(5000)
             # browser.set_script_timeout(5000)
             # utils.is_url_connectable(4725,'---------------------------->')
