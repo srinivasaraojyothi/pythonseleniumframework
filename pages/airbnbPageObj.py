@@ -6,11 +6,12 @@ import polling2, time
 
 from appium.webdriver.extensions.execute_mobile_command import ExecuteMobileCommand
 from appium.webdriver.common.appiumby import AppiumBy
-from pyseleniumbot.web.webElement import common
-from pyseleniumbot.web.DropDown import DropDownActions
-from pyseleniumbot.mobile.pollWait import pollWait
-from pyseleniumbot.mobile.mobAppium import mobAppium
-from pyseleniumbot.mobile.session import session
+from pyallied.web.webElement import common
+from pyallied.web.DropDown import DropDownActions
+from pyallied.mobile.pollWait import pollWait
+from pyallied.mobile.mobAppium import mobAppium
+from pyallied.mobile.mobAppium_actions import mobAppium_actions
+from pyallied.mobile.session import session
 class airbnbPage:
      
     obj1="//*[@content-desc='Close']"
@@ -22,20 +23,14 @@ class airbnbPage:
          self.user =DropDownActions(self.browser)
          self.wait =pollWait(self.browser)
          self.mobAppium =mobAppium(self.browser)
-         
+         self.mobAppium_actions =mobAppium_actions(self.browser)
     def VerifyUserisOnloginPage(self):
          self.wait.with_findElements_byXpath(airbnbPage.obj1)
-         
+         self.mobAppium_actions.goto_url("https://www.airbnb.co.in/")
          #print(self.session.get_Contexts())
          #polling2.poll(lambda: self.browser.find_element(MobileBy.XPATH, airbnbPage.obj1),ignore_exceptions=(NoSuchElementException,), step=5, timeout=30)
          #WebDriverWait(self.browser, 50).until(EC.find_element((AppiumBy.XPATH, airbnbPage.obj1)))
-         actions = ActionChains(self.browser)
-         #self.browser.implicitly_wait(25)
-         menu =self.mobAppium.find_elementBy("XPATH", airbnbPage.obj2)
-         print(menu,'<---------->')
-         actions.move_to_element(menu)
-         actions.click()
-         actions.perform()
+
 
 
          #self.me.WaitFor_PresenseOf_Element_Located(airbnbPage.obj2)
