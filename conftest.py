@@ -8,11 +8,12 @@ import os
 import sys
 import pytest_bdd
 from datetime import datetime
-from typing import Union,List
+from typing import Union, List
 from pytest_html import extras
 import allure
 import ast
 from py.xml import html
+from appium.webdriver.appium_service import AppiumService
 import requests
 import xlrd
 import pandas as pd
@@ -22,6 +23,7 @@ import base64
 import tweepy
 import config
 from pyallied.web.webWaits import customwebDriverwait
+
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -34,21 +36,27 @@ def pytest_addoption(parser):
         "--t", action="store", default="web", help="my option: type1 or type2"
     )
 
+
 @pytest.fixture
 def b(request):
     return request.config.getoption("--b")
+
+
 @pytest.fixture
 def e(request):
     return request.config.getoption("--e")
+
+
 @pytest.fixture
 def t(request):
-    return request.config.getoption("--t")    
-@pytest.fixture
-def browser(b,t,request ):
-    
-    if(b=="chrome"):
-        if(t=="web"):
+    return request.config.getoption("--t")
 
+
+@pytest.fixture
+def browser(b, t, request):
+
+    if(b == "chrome"):
+        if(t == "web"):
 
             from selenium import webdriver
             from selenium.webdriver.common.by import By
@@ -56,8 +64,9 @@ def browser(b,t,request ):
             opts = webdriver.ChromeOptions()
 
             opts.add_argument('--disable-gpu')
-            
-            browser = webdriver.Chrome("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
+
+            browser = webdriver.Chrome(
+                "D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             '''
             browser=webdriver.Remote(
@@ -67,50 +76,77 @@ def browser(b,t,request ):
                     )
             
                     '''
-           
-            customwebDriverwait.customWait=25
+
+            customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
-            print(browser  ,' ------->desired caps')
+            print(browser, ' ------->desired caps')
             yield browser
 
-                # Quit the WebDriver instance for the teardown
+            # Quit the WebDriver instance for the teardown
             browser.close()
-        elif(t=="mob"):
+        elif(t == "n_mob"):
             from appium import webdriver
             from appium.webdriver.common.touch_action import TouchAction
-            
-            desired_caps={
-                            "platformName": "Android",
-                            "automationName":"UiAutomator2",
-                            "appium:deviceName": "Pixel_5_API_31",
-                            "appium:app": "D:\\Users\\sjyothi\\Repos\\pythonseleniumFramework\\Airbnb_v22.21_apkpure.com.apk",
-                            "appium:appPackage": "com.airbnb.android",
-                            "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity"
-                            }
-            #opts = webdriver.ChromeOptions()
+            from selenium.webdriver.common import utils
 
-            #opts.add_argument('headless')
-            
+            desired_caps = {
+                "platformName": "Android",
+                "automationName": "UiAutomator2",
+                "appium:deviceName": "Pixel_5_API_31",
+                "appium:app": "D:\\Users\\sjyothi\\Repos\\pythonseleniumFramework\\Airbnb_v22.21_apkpure.com.apk",
+                "appium:appPackage": "com.airbnb.android",
+                "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity"
+            }
+
+            browser = webdriver.Remote(
+                'http://localhost:4725/wd/hub',
+                desired_caps,
+            )
+
+            # opts.add_argument('headless')
+
             #driver = webdriver.Chrome("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
-            browser=webdriver.Remote(
-                        'http://localhost:4723/wd/hub',
-                        desired_caps,
-                    )
 
-
-            #browser.set_page_load_timeout(5000)
-            #browser.set_script_timeout(5000)
-            #browser.switch_to.parent_frame()
+            # browser.set_page_load_timeout(5000)
+            # browser.set_script_timeout(5000)
+            # utils.is_url_connectable(4725,'---------------------------->')
             yield browser
 
-                # Quit the WebDriver instance for the teardown
+            # Quit the WebDriver instance for the teardown
             browser.quit()
+        elif(t == "w_mob"):
+            from selenium import webdriver
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.remote.errorhandler import ErrorHandler
+
+            mobile_emu = {
+                'platformName': 'Android',
+                "automationName": "UiAutomator2",
+                "deviceName": "Pixel_5_API_31",
+                'browserName': 'Chrome',
+
+            }
+
+            #opts = webdriver.ChromeOptions()
+            #opts.add_experimental_option("mobileEmulation", mobile_emu)
+            # opts.add_argument('headless')
+
+            browser = webdriver.Remote(
+                command_executor='http://localhost:4725/wd/hub', desired_capabilities=mobile_emu)
+
+            # browser.set_page_load_timeout(5000)
+            # browser.set_script_timeout(5000)
+            # utils.is_url_connectable(4725,'---------------------------->')
+            yield browser
+
+            # Quit the WebDriver instance for the teardown
+            browser.quit()
+
         else:
-            print("*******noDriver Selected*********")     
+            print("*******noDriver Selected*********")
 
-    elif(b=="firefox"):
-        if(t=="web"):
-
+    elif(b == "firefox"):
+        if(t == "web"):
 
             from selenium import webdriver
             from selenium.webdriver.common.by import By
@@ -118,8 +154,9 @@ def browser(b,t,request ):
             opts = webdriver.ChromeOptions()
 
             opts.add_argument('--disable-gpu')
-            
-            browser = webdriver.Firefox(executable_path=r"D:/Users/sjyothi/Downloads/geckodriver/geckodriver.exe")
+
+            browser = webdriver.Firefox(
+                executable_path=r"D:/Users/sjyothi/Downloads/geckodriver/geckodriver.exe")
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             '''
             browser=webdriver.Remote(
@@ -129,15 +166,14 @@ def browser(b,t,request ):
                     )
             
                     '''
-           
-            customwebDriverwait.customWait=25
+
+            customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
-            print(browser  ,' ------->desired caps')
+            print(browser, ' ------->desired caps')
             yield browser
 
-                # Quit the WebDriver instance for the teardown
+            # Quit the WebDriver instance for the teardown
             browser.close()
-        
 
 
 '''
@@ -209,57 +245,74 @@ def pytest_pyfunc_call(pyfuncitem):
 '''
 
 # for html report with screenshots, 'do notmodify it'
+
+
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item,call):
-    #monkeypatch 
+def pytest_runtest_makereport(item, call):
+    # monkeypatch
     pytest_html = item.config.pluginmanager.getplugin("html")
     outcome = yield
     report = outcome.get_result()
-    #setattr()
+    # setattr()
     extra = getattr(report, "extra", [])
-    #extra.append(extras.html("<div>Additional HTML</div>"))  
-    #extra.append(extras.image(config.rootPath()+"/screen1.png"))
+    #extra.append(extras.html("<div>Additional HTML</div>"))
+    # extra.append(extras.image(config.rootPath()+"/screen1.png"))
     if report.when == "call":
-        #print(item.runtest(),'------------user')
-        #extra.append(extras.html("<div>Additionals HTML</div>"))  
+        # print(item.runtest(),'------------user')
+        #extra.append(extras.html("<div>Additionals HTML</div>"))
         feature_request = item.funcargs['request']
-        print(item.funcargs['request'],"-----report-------")
+        print(item.funcargs['request'], "-----report-------")
         driver = feature_request.getfixturevalue('browser')
         nodeid = item.nodeid
         xfail = hasattr(report, "wasxfail")
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = f'{nodeid}_{datetime.today().strftime("%Y-%m-%d_%H_%M")}.png'.replace("/", "_").replace("::", "_").replace(".py", "")
+            file_name = f'{nodeid}_{datetime.today().strftime("%Y-%m-%d_%H_%M")}.png'.replace(
+                "/", "_").replace("::", "_").replace(".py", "")
             #img_path = os.path.join("D:\\Users\\sjyothi\\Repos\\pythonseleniumFramework\\features", "screenshots", file_name)
-            #driver.save_screenshot(img_path)
-            screenshot = driver.get_screenshot_as_base64() # the hero
+            # driver.save_screenshot(img_path)
+            screenshot = driver.get_screenshot_as_base64()  # the hero
             extra.append(pytest_html.extras.image(screenshot, ''))
         report.extra = extra
+
+
 @pytest.fixture(autouse=True)
-def update_env_file(b,t,e):
+def update_env_file(b, t, e):
     with open(config.rootPath()+"/env.json", "r+") as jsonFile:
         data = json.load(jsonFile)
 
         data["env"] = e
         data["browser_name"] = b
         data["test_platform"] = t
-        
 
         jsonFile.seek(0)  # rewind
         json.dump(data, jsonFile)
         jsonFile.truncate()
 
+
 @pytest.hookimpl(tryfirst=True)
 def pytest_sessionfinish(session, exitstatus):
-      with open(config.rootPath()+"/env.json", "r+") as jsonFile:
+    with open(config.rootPath()+"/env.json", "r+") as jsonFile:
         data = json.load(jsonFile)
-        session.config._metadata["browserName"] =data["browser_name"]
-        session.config._metadata["environment"]=data["env"]
-        session.config._metadata["test_platform"]=data["test_platform"]
+        session.config._metadata["browserName"] = data["browser_name"]
+        session.config._metadata["environment"] = data["env"]
+        session.config._metadata["test_platform"] = data["test_platform"]
         jsonFile.close()
+
+
 @pytest.hookimpl()
 def pytest_html_report_title(report):
     report.title = "My very own title!"
-@pytest.hookimpl()    
+
+
+@pytest.hookimpl()
 def test_extra(extra):
-    extra.append(extras.html("<div>Additionalsss HTML</div>"))    
-  
+    extra.append(extras.html("<div>Additionalsss HTML</div>"))
+
+
+@pytest.fixture(scope='module', autouse=True)
+def setup_module():
+    appium_service = AppiumService()
+    appium_service.start(args=['-p', str('4725')])
+    yield appium_service
+    appium_service.stop()
+    # print('*****SETUP*****')
