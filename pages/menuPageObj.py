@@ -1,5 +1,5 @@
-from  pyseleniumbot.web.webElement import common
-#from pyseleniumbot.actions.testP import testPrivate
+from  pyallied.web.webElement import common
+#from pyallied.actions.testP import testPrivate
 
 class menuPageObj:
      obj1="//span[text()='Account & Lists']"
