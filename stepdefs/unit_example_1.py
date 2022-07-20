@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.errorhandler import ErrorHandler
 from pages.menuPageObj import menuPageObj
+from pyallied.api_crud import crud
 #from HtmlTestRunner import HTMLTestRunner
 import HtmlTestRunner
 

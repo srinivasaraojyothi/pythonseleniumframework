@@ -6,14 +6,15 @@ from selenium.webdriver.common.keys import Keys
 from pytest_bdd import scenarios, given, when, then,parsers
 import requests
 import pytest
-from pyallied.api_crud import crud
+from pyallied.api_crud.crud import crud
 scenarios("apis")
 @pytest.fixture
 @given(parsers.parse('I should be able to connect to API with "{testcaseid}"'))
 
 def create_user(testcaseid):
-     responce=crud().crudCall(testcaseid)
-     print(responce.json()) 
+    
+     responce=crud().crudCall("D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/apiList.xlsx",testcaseid)
+     print(responce) 
      return responce   
 
 @then(parsers.parse('I should be able verify user is created successfully with status code is "{code:d}"'))

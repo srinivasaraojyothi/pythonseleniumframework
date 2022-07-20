@@ -1,8 +1,8 @@
 Feature: twitter posting
-
+@api
 Scenario Outline:  creating user
 Given I should be able to connect to API with "<testcaseid>"
-Then I should be able verify user is created successfully with status code is "200"
+Then I should be able verify user is created successfully with status code is "201"
 And I should be able to verify the created message 
 
 Examples:

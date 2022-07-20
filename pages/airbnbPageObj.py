@@ -25,8 +25,10 @@ class airbnbPage:
          self.mobAppium =mobAppium(self.browser)
          self.mobAppium_actions =mobAppium_actions(self.browser)
     def VerifyUserisOnloginPage(self):
-         self.wait.with_findElements_byXpath(airbnbPage.obj1)
-         self.mobAppium_actions.goto_url("https://www.airbnb.co.in/")
+          self.mobAppium_actions.goto_url("https://appium.io/docs/en/writing-running-appium/web/mobile-web/")
+          print("--")
+         #self.wait.with_findElements_byXpath(airbnbPage.obj1)
+         
          #print(self.session.get_Contexts())
          #polling2.poll(lambda: self.browser.find_element(MobileBy.XPATH, airbnbPage.obj1),ignore_exceptions=(NoSuchElementException,), step=5, timeout=30)
          #WebDriverWait(self.browser, 50).until(EC.find_element((AppiumBy.XPATH, airbnbPage.obj1)))

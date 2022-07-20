@@ -13,6 +13,7 @@ from pytest_html import extras
 import allure
 import ast
 from py.xml import html
+import subprocess as sp
 from appium.webdriver.appium_service import AppiumService
 import requests
 import xlrd
@@ -20,6 +21,7 @@ import pandas as pd
 import json
 import numpy as np
 import base64
+import time
 import tweepy
 import config
 from pyallied.web.webWaits import customwebDriverwait
@@ -122,7 +124,7 @@ def browser(b, t, request):
             mobile_emu = {
                 'platformName': 'Android',
                 "automationName": "UiAutomator2",
-                "deviceName": "Pixel_5_API_31",
+                "deviceName": "pixel_2",
                 'browserName': 'Chrome',
 
             }
@@ -133,7 +135,7 @@ def browser(b, t, request):
 
             browser = webdriver.Remote(
                 command_executor='http://localhost:4725/wd/hub', desired_capabilities=mobile_emu)
-            
+
             # browser.set_page_load_timeout(5000)
             # browser.set_script_timeout(5000)
             # utils.is_url_connectable(4725,'---------------------------->')
@@ -310,9 +312,38 @@ def test_extra(extra):
 
 
 @pytest.fixture(scope='module', autouse=True)
-def setup_module():
+def setup_appium():
+    import json
     appium_service = AppiumService()
-    appium_service.start(args=['-p', str('4725')])
+    appium_service.start(args=['-p', str('4725')], timeout_ms=10000)
+    #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
+    #print(ele.returncode,'<-----------')
+    #time.sleep(20)
+                
+    #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
+    #for i in ele.stdout.read().splitlines():
+    #    print(i)
     yield appium_service
     appium_service.stop()
+    # print('*****SETUP*****')
+
+
+#@pytest.fixture(scope='session', autouse=True)
+def setup_androidVirtualDevice():
+    #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
+    #print(ele.returncode,'<-----------')
+    #time.sleep(20)
+    #sp.Popen('avdmanager create avd -n pixel -k "system-images;android-33;google_apis;x86_64" -d 19', stdout=sp.PIPE, text=True, shell=True)
+    #time.sleep(40)
+    start=sp.Popen('emulator -avd pixel_2',
+                     stdout=sp.PIPE, text=True, shell=True)
+    time.sleep(70)                 
+    #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
+
+    #print(ele.returncode)
+    #for i in ele.stdout.read().splitlines():
+        #print(i)
+    yield start
+    start.kill()
+    #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
     # print('*****SETUP*****')
