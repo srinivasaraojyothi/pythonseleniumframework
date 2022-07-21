@@ -36,6 +36,10 @@ Frework clone will have by default with following folders and files
 8. gitmodules
 
 features, pages, stepdefs folders has sample scripts as examples to follow.  
+
+features : this folder is to keep all the features files. subfolder structure is allowed.  
+pages: page objects of each page of AUT. subfolder structure is allowed.
+stepdefs : actual tests folder. 
 ## conftest.py
 
 This file handles the following actions:  
@@ -48,8 +52,19 @@ This file handles the following actions:
 As the framework built on pyTest test engine, it support all the features of pyTest.
 
 ```
-
+py -3 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
 ```
+
+--b : browser  
+--e : environment  
+--t : tested on
+
+To rerun failed test cases:  
+
+```shell
+py -3 -m pytest -n 2 --html=report.html --self-contained-html --driver=chrome --env=prod --reruns 1
+```
+
 
 
 
