@@ -1,4 +1,5 @@
 import imp
+from importlib.resources import path
 import pytest
 import allure
 
@@ -126,6 +127,8 @@ def browser(b, t, request):
                 "automationName": "UiAutomator2",
                 "deviceName": "pixel_2",
                 'browserName': 'Chrome',
+                'chromedriverExecutableDir ':'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata',
+                'chromedriverChromeMappingFile':"D:/Users/sjyothi/AppData/Roamin/npm/node_modules/appium/node_modules/appium-chromedriver/config/mapping.json",
 
             }
 
@@ -137,7 +140,7 @@ def browser(b, t, request):
                 command_executor='http://localhost:4725/wd/hub', desired_capabilities=mobile_emu)
 
             # browser.set_page_load_timeout(5000)
-            # browser.set_script_timeout(5000)
+            #browser.set_script_timeout(5000)
             # utils.is_url_connectable(4725,'---------------------------->')
             yield browser
 
@@ -315,7 +318,8 @@ def test_extra(extra):
 def setup_appium():
     import json
     appium_service = AppiumService()
-    appium_service.start(args=['-p', str('4725')], timeout_ms=10000)
+    appium_service.start(args=['-p', str('4725'),'--allow-insecure', 'chromedriver_autodownload','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log'
+], timeout_ms=10000)
     #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
     #print(ele.returncode,'<-----------')
     #time.sleep(20)
