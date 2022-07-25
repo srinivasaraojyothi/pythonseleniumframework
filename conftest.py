@@ -2,6 +2,7 @@ import imp
 from importlib.resources import path
 import pytest
 import allure
+from pytest import CaptureFixture
 
 #from selenium import webdriver
 #from appium import webdriver
@@ -94,15 +95,22 @@ def browser(b, t, request):
 
             desired_caps = {
                 "platformName": "Android",
+                "androidInstallTimeout":180000,
+                "avdLaunchTimeout":1200000,
+                "avdReadyTimeout":1200000, 
+                "noReset":"true",
                 "automationName": "UiAutomator2",
-                "appium:deviceName": "Pixel_5_API_31",
+                "appium:deviceName": "pixelT3",
                 "appium:app": "D:\\Users\\sjyothi\\Repos\\apks\\Airbnb_v22.21_apkpure.com.apk",
                 "appium:appPackage": "com.airbnb.android",
-                "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity"
+                "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity",
+                'chromedriverExecutableDir ':'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata',
+                'chromedriverChromeMappingFile':"D:/Users/sjyothi/AppData/Roamin/npm/node_modules/appium/node_modules/appium-chromedriver/config/mapping.json",
+
             }
 
             browser = webdriver.Remote(
-                'http://localhost:4725/wd/hub',
+                'http://localhost:4723/wd/hub',
                 desired_caps,
             )
 
@@ -314,40 +322,88 @@ def test_extra(extra):
     extra.append(extras.html("<div>Additionalsss HTML</div>"))
 
 
-@pytest.fixture(scope='module', autouse=True)
-def setup_appium():
+@pytest.fixture(scope='package', autouse=True)
+def setup_appium(setup_androidVirtualDevice):
     import json
     appium_service = AppiumService()
-    appium_service.start(args=['-p', str('4725'),'--allow-insecure', 'chromedriver_autodownload','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log'
-], timeout_ms=10000)
+
+    '''
+    args=['-p', '4725','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log','--log-timestamp','true'
+    ,'--allow-insecure', 'chromedriver_autodownload'],
+    '''
+    appium_service.start( args=['-p', str('4723'),'--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log','--local-timezone','--log-timestamp'
+    ],timeout_ms=10000)
     #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
     #print(ele.returncode,'<-----------')
     #time.sleep(20)
-                
+    #emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+    #print("------------------------ele---->",ele,"------------------------ele---->")
+    #emulatorStartErr=emulatorStart.communicate()[0]
+    #print('--error \n',emulatorStartErr,'\n error')
+    print(appium_service.is_running,'<------------->')
+    print(appium_service.is_listening,'<------------->')            
     #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
     #for i in ele.stdout.read().splitlines():
     #    print(i)
+    time.sleep(80)
     yield appium_service
     appium_service.stop()
     # print('*****SETUP*****')
 
 
-#@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='package')
 def setup_androidVirtualDevice():
-    #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
-    #print(ele.returncode,'<-----------')
-    #time.sleep(20)
-    #sp.Popen('avdmanager create avd -n pixel -k "system-images;android-33;google_apis;x86_64" -d 19', stdout=sp.PIPE, text=True, shell=True)
-    #time.sleep(40)
-    start=sp.Popen('emulator -avd pixel_2',
-                     stdout=sp.PIPE, text=True, shell=True)
-    time.sleep(70)                 
+    print('test---')
+    '''
+    
+    shutil.rmtree
+    sp.Popen('adb kill-server', stdout=sp.PIPE, text=True, shell=True)
+    if(os.path.exists("D:/Users/sjyothi/.android/avd/pixelTest3")):
+        pattern= r'D:/Users/sjyothi/.android/avd/**/multiinstance.lock'
+        for item in glob.iglob(pattern, recursive=True):
+    # delete file
+            print("Deleting:", item)
+            os.remove(item)
+        
+    #from subprocess import Popen
+    commands = ['adb start-server', 'avdmanager create avd -n pixelT -k "system-images;android-31;google_apis;x86_64" -d 1','emulator -avd pixelT -partition-size 1024 -wipe-data -no-snapshot-load']
+    procs = [ sp.Popen(i,shell=True) for i in commands ]
+    for p in procs:
+        p.wait() 
+    '''  
+    '''
+    deviceStart=sp.Popen('adb devices',stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+    deviceStartErr=deviceStart.communicate()[0]
+    print('--error \n',str(deviceStartErr).replace("\r\n"," "),'\n error')    
+    deviceServerStart=sp.Popen('adb start-server', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+    deviceServerStartErr=deviceServerStart.communicate()[0]
+    print('--error \n',str(deviceServerStartErr).replace("\r\n"," "),'\n error')
+    emulatorCreate=sp.Popen('avdmanager create avd -n pixelT3 -k "system-images;android-31;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)      
+    emulatorCreateErr=emulatorCreate.communicate()[0]
+    print('--error \n',str(emulatorCreateErr).replace("\r\n"," "),'\n error')
+    '''
+    emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+    #print("------------------------ele---->",ele,"------------------------ele---->")
+    #emulatorStartErr=emulatorStart.communicate()[0]
+    #print('--error \n',str(emulatorStartErr).replace("\r\n"," "),'\n error')
+    #if(ele.returncode):
+        #print('---')   
+        #sp.Popen('adb start-server', stdout=sp.PIPE, text=True, shell=True)
+        
+        #ele=sp.Popen('avdmanager delete avd -n pixelTest3 --force', stdout=sp.PIPE, text=True, shell=True)
+        #print(ele.returncode,'<-----------')
+        #time.sleep(20)
+        #sp.Popen('avdmanager create avd -n pixelTest3 -k "system-images;android-33;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE, text=True, shell=True)
+    #time.sleep(180)
+        #start=sp.Popen('emulator -avd pixelTest3 -partition-size 1024 -wipe-data -no-snapshot-load',
+                        #stdout=sp.PIPE, text=True, shell=True)
+    time.sleep(60)                 
     #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
 
     #print(ele.returncode)
     #for i in ele.stdout.read().splitlines():
         #print(i)
-    yield start
-    start.kill()
+    #yield start
+    #start.kill()
     #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
     # print('*****SETUP*****')
