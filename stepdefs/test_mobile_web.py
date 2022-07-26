@@ -1,0 +1,45 @@
+from numpy import broadcast
+from pages.mobile_test import Mobile_Test
+from appium import webdriver
+from appium.webdriver.common.touch_action import TouchAction
+
+def test_Mobile_Web(browser):
+
+    Mobile_Test(browser).goto_Url("https://www.demoblaze.com/")
+    Mobile_Test(browser).Get_title()
+    Mobile_Test(browser).click_sign_up()
+    Mobile_Test(browser).enter_text()
+    Mobile_Test(browser).open_window()
+    Mobile_Test(browser).Switch_toWindoW(1)
+    Mobile_Test(browser).navigate_url("https://www.2checkout.com/")
+    Mobile_Test(browser).Get_title()
+    Mobile_Test(browser).Navigate_back()
+    Mobile_Test(browser).Refresh_current_page()
+    Mobile_Test(browser).Navigate_forward()
+    Mobile_Test(browser).Get_current_window_handle()
+    Mobile_Test(browser).Switch_toWindoW(0)
+    Mobile_Test(browser).Get_title()
+    Mobile_Test(browser).Switch_toWindoW(1)
+    Mobile_Test(browser).Get_all_window_handles()
+    Mobile_Test(browser).Get_window_position()
+    Mobile_Test(browser).Get_windowSize_Dimensions()
+    Mobile_Test(browser).Get_window_position()
+    Mobile_Test(browser).Get_current_url()
+    Mobile_Test(browser).Get_cookies()
+    Mobile_Test(browser).Switchto_Frame()
+    Mobile_Test(browser).enter_email_frame()
+    Mobile_Test(browser).Switch_to_parent_frame()
+    Mobile_Test(browser).Switch_to_frame_name()
+    Mobile_Test(browser).enter_email_frame()
+    Mobile_Test(browser).Driver_execute_async_script()
+    # Mobile_Test(browser).close_Window()
+    # Mobile_Test(browser).Set_window_position()
+    # Mobile_Test(browser).set_Cookies()
+    # Mobile_Test(browser).Delete_cookie()
+    # Mobile_Test(browser).Delete_All_cookie()
+    # Mobile_Test(browser).maximize_Window()
+    # Mobile_Test(browser).click_signup()
+    
+    # Mobile_Test(browser).set_PageLoad_timeout()
+    # Mobile_Test(browser).set_scriptLoad_timeout()
+    # Mobile_Test(browser).set_Implicit_Wait_timeout()

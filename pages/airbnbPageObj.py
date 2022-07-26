@@ -6,11 +6,11 @@ import polling2, time
 
 from appium.webdriver.extensions.execute_mobile_command import ExecuteMobileCommand
 from appium.webdriver.common.appiumby import AppiumBy
-from pyseleniumbot.web.webElement import common
-from pyseleniumbot.web.DropDown import DropDownActions
-from pyseleniumbot.mobile.pollWait import pollWait
-from pyseleniumbot.mobile.mobAppium import mobAppium
-from pyseleniumbot.mobile.session import session
+from pyallied.web.webElement import common
+from pyallied.web.DropDown import DropDownActions
+from pyallied.mobile.pollWait import pollWait
+from pyallied.mobile.mobAppium import mobAppium
+from pyallied.mobile.session import session
 class airbnbPage:
      
     obj1="//*[@content-desc='Close']"

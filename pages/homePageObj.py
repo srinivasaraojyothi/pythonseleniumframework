@@ -1,6 +1,6 @@
 
-from pyseleniumbot.web.webElement import common
-from pyseleniumbot.web.DropDown import DropDownActions
+from pyallied.web.webElement import common
+from pyallied.web.DropDown import DropDownActions
 class homePageObj:
      
      obj1="//span[text()='Account & Lists']"

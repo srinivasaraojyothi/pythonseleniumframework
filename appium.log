@@ -1,0 +1,101 @@
+2022-07-19 06:57:06:382 [Appium] Welcome to Appium v1.22.3
+2022-07-19 06:57:06:383 [Appium] Non-default server args:
+2022-07-19 06:57:06:384 [Appium]   port: 4725
+2022-07-19 06:57:06:384 [Appium]   logFile: D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\appium.log
+2022-07-19 06:57:06:384 [Appium]   logTimestamp: true
+2022-07-19 06:57:06:403 [Appium] Appium REST http interface listener started on 0.0.0.0:4725
+2022-07-19 06:57:06:851 [HTTP] --> HEAD /status
+2022-07-19 06:57:06:852 [HTTP] {}
+2022-07-19 06:57:06:859 [HTTP] No route found for /status
+2022-07-19 06:57:06:866 [HTTP] <-- HEAD /status 404 13 ms - 211
+2022-07-19 06:57:06:866 [HTTP] 
+2022-07-19 06:57:07:875 [HTTP] --> HEAD /status
+2022-07-19 06:57:07:875 [HTTP] {}
+2022-07-19 06:57:07:884 [HTTP] No route found for /status
+2022-07-19 06:57:07:885 [HTTP] <-- HEAD /status 404 10 ms - 211
+2022-07-19 06:57:07:885 [HTTP] 
+2022-07-19 06:57:08:899 [HTTP] --> HEAD /status
+2022-07-19 06:57:08:899 [HTTP] {}
+2022-07-19 06:57:08:900 [HTTP] No route found for /status
+2022-07-19 06:57:08:902 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:08:902 [HTTP] 
+2022-07-19 06:57:09:914 [HTTP] --> HEAD /status
+2022-07-19 06:57:09:914 [HTTP] {}
+2022-07-19 06:57:09:914 [HTTP] No route found for /status
+2022-07-19 06:57:09:916 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:09:916 [HTTP] 
+2022-07-19 06:57:10:919 [HTTP] --> HEAD /status
+2022-07-19 06:57:10:919 [HTTP] {}
+2022-07-19 06:57:10:920 [HTTP] No route found for /status
+2022-07-19 06:57:10:921 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:10:921 [HTTP] 
+2022-07-19 06:57:11:933 [HTTP] --> HEAD /status
+2022-07-19 06:57:11:934 [HTTP] {}
+2022-07-19 06:57:11:934 [HTTP] No route found for /status
+2022-07-19 06:57:11:935 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:11:935 [HTTP] 
+2022-07-19 06:57:12:948 [HTTP] --> HEAD /status
+2022-07-19 06:57:12:948 [HTTP] {}
+2022-07-19 06:57:12:950 [HTTP] No route found for /status
+2022-07-19 06:57:12:952 [HTTP] <-- HEAD /status 404 3 ms - 211
+2022-07-19 06:57:12:952 [HTTP] 
+2022-07-19 06:57:13:964 [HTTP] --> HEAD /status
+2022-07-19 06:57:13:964 [HTTP] {}
+2022-07-19 06:57:13:965 [HTTP] No route found for /status
+2022-07-19 06:57:13:965 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:13:965 [HTTP] 
+2022-07-19 06:57:14:975 [HTTP] --> HEAD /status
+2022-07-19 06:57:14:976 [HTTP] {}
+2022-07-19 06:57:14:976 [HTTP] No route found for /status
+2022-07-19 06:57:14:978 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:14:978 [HTTP] 
+2022-07-19 06:57:15:990 [HTTP] --> HEAD /status
+2022-07-19 06:57:15:990 [HTTP] {}
+2022-07-19 06:57:15:991 [HTTP] No route found for /status
+2022-07-19 06:57:15:992 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:15:992 [HTTP] 
+2022-07-19 06:57:17:004 [HTTP] --> HEAD /status
+2022-07-19 06:57:17:004 [HTTP] {}
+2022-07-19 06:57:17:004 [HTTP] No route found for /status
+2022-07-19 06:57:17:005 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:17:005 [HTTP] 
+2022-07-19 06:57:18:015 [HTTP] --> HEAD /status
+2022-07-19 06:57:18:015 [HTTP] {}
+2022-07-19 06:57:18:015 [HTTP] No route found for /status
+2022-07-19 06:57:18:017 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:18:017 [HTTP] 
+2022-07-19 06:57:19:027 [HTTP] --> HEAD /status
+2022-07-19 06:57:19:027 [HTTP] {}
+2022-07-19 06:57:19:028 [HTTP] No route found for /status
+2022-07-19 06:57:19:029 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:19:029 [HTTP] 
+2022-07-19 06:57:20:042 [HTTP] --> HEAD /status
+2022-07-19 06:57:20:042 [HTTP] {}
+2022-07-19 06:57:20:043 [HTTP] No route found for /status
+2022-07-19 06:57:20:045 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:20:045 [HTTP] 
+2022-07-19 06:57:21:056 [HTTP] --> HEAD /status
+2022-07-19 06:57:21:057 [HTTP] {}
+2022-07-19 06:57:21:058 [HTTP] No route found for /status
+2022-07-19 06:57:21:059 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:21:059 [HTTP] 
+2022-07-19 06:57:22:071 [HTTP] --> HEAD /status
+2022-07-19 06:57:22:071 [HTTP] {}
+2022-07-19 06:57:22:072 [HTTP] No route found for /status
+2022-07-19 06:57:22:073 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:22:073 [HTTP] 
+2022-07-19 06:57:23:089 [HTTP] --> HEAD /status
+2022-07-19 06:57:23:090 [HTTP] {}
+2022-07-19 06:57:23:090 [HTTP] No route found for /status
+2022-07-19 06:57:23:092 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:23:092 [HTTP] 
+2022-07-19 06:57:24:103 [HTTP] --> HEAD /status
+2022-07-19 06:57:24:104 [HTTP] {}
+2022-07-19 06:57:24:105 [HTTP] No route found for /status
+2022-07-19 06:57:24:105 [HTTP] <-- HEAD /status 404 2 ms - 211
+2022-07-19 06:57:24:105 [HTTP] 
+2022-07-19 06:57:25:116 [HTTP] --> HEAD /status
+2022-07-19 06:57:25:116 [HTTP] {}
+2022-07-19 06:57:25:116 [HTTP] No route found for /status
+2022-07-19 06:57:25:117 [HTTP] <-- HEAD /status 404 1 ms - 211
+2022-07-19 06:57:25:117 [HTTP] 

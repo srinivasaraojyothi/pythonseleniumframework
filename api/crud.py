@@ -7,7 +7,7 @@ import numpy as np
 import base64
 import tweepy
 
-class crud:
+class Crud:
 
     def __init__(self):
         pass
@@ -17,7 +17,7 @@ class crud:
     def crudCall(self,testcaseId):
         #"D:/Users/sjyothi/Repos/SeleniumActionBot/pyseleniumbot/api/apiList.xlsx","Test_1"
         print(testcaseId)
-        dictdata=crud.__readData_toDict(self,"D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/apiList.xlsx",testcaseId)
+        dictdata=Crud.__readData_toDict(self,"D:/Users/ssreeenivasreddy/Altimetrik_JCL/pythonseleniumframework/testdata/apiList.xlsx",testcaseId)
         headersDict={}
         #print(dictdata)
         dataH=str(dictdata["headers"]).split(",")
