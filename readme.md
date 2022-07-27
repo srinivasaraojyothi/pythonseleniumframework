@@ -18,6 +18,7 @@ cd ~pythonseleniumframework
 ```
 Frework clone will have by default with following folders and files
 ### folders:
+
 1. features 
 2. pages
 3. stepdefs
@@ -25,6 +26,9 @@ Frework clone will have by default with following folders and files
 5. tmp
 6. webElement_Screenshots
 7. page_Screenshots
+8. logo
+9. report_styles
+
 ### files
 1. conftest.py
 2. config.py
@@ -55,19 +59,25 @@ As the framework built on pyTest test engine, it support all the features of pyT
 py -3 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
 ```
 
---b : browser  
+--b : browser (allowed are chrome,firefox) 
 --e : environment  
---t : tested on
+--t : tested on (allowed are web, n_mob,w_mob)
 
 To rerun failed test cases:  
 
 ```shell
 py -3 -m pytest -n 2 --html=report.html --self-contained-html --driver=chrome --env=prod --reruns 1
 ```
+### Logo insert  
 
-
-
-
-
-
+To insert logo into the default pytest html report, user should keep the 'logo' in jpg/png/gif format and needs to update the logo path in 'report_gen.css' file as mentioned below  
+``` shell
+background: url("../logo/jci_logo.png");
+```
+and execute with the below command
+``` python
+py -3 -m pytest -m 'smoke'  -rA  --html=report.html  --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
+```
+Generated report sample screenshot
+![Alt text](reportImg.PNG)
 
