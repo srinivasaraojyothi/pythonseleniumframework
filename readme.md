@@ -79,5 +79,37 @@ and execute with the below command
 py -3 -m pytest -m 'smoke'  -rA  --html=report.html  --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
 ```
 Generated report sample screenshot
-![Alt text](reportImg.PNG)
 
+![Alt text](reportImg.PNG)
+ 
+### Allure Report Generation   - (manual)
+
+Note: uncomment the allure generation code in conftest.py file and comment the defaulte pytest html report code in conftest.py file.
+There is open bug w.r.t pytest-bdd with allure-bdd.  
+refer https://github.com/allure-framework/allure-python/issues/636  
+
+prerequisites:(local execution)  
+ 1. Need to download allure zip from allure sie - https://github.com/allure-framework/allure2/releases/tag/  
+ 2. unzip the folder
+ Execute the test suite/test cases with following command
+ 
+ ```shell
+ py -3 -m pytest -m 'm'  -rA  --alluredir allurereports --b=chrome --e=qc --t=web -v
+ ```
+report data will be updated to 'allurereports' folder, then generate the report with following commands
+
+```shell
+<unzipped allure folder location>\bin\allure.bat generate <path>\allurereports <path>\allure-report
+
+ex: D:\Users\sjyothi\allure2\allure-2.18.1\bin\allure.bat generate D:\Users\sjyothi\Repos\pythonseleniumFramework\allurereports D:\Users\sjyothi\Repos\pythonseleniumFramework\allure-report
+```
+report will be generated to 'allure-report' folder
+
+serve the report with following command
+
+```shell
+<unzipped allure folder location>\bin\allure.bat open -h localhost -p 52399
+```
+allure sample screenshot
+
+![Alt text](allure_sample.png)
