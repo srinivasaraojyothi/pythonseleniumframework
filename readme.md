@@ -112,7 +112,7 @@ serve the report with following command
 ```
 allure sample screenshot
 
-![Alt text](allure_sample.png)
+![Alt text](bdd_sample.png)
 
 Note: if you install allure_pytest_bdd and allure-pytest, then above mentioned allure execution command wont work. You need to execute the test cases with below command. allure_pytest_bdd works with unittest.
 ``` shell
