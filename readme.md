@@ -113,3 +113,13 @@ serve the report with following command
 allure sample screenshot
 
 ![Alt text](allure_sample.png)
+
+Note: if you install allure_pytest_bdd and allure-pytest, then above mentioned allure execution command wont work. You need to execute the test cases with below command. allure_pytest_bdd works with unittest.
+``` shell
+
+ py -3 -m pytest -m 'm'  -rA  --alluredir allurereports --b=chrome --e=qc --t=web -v
+
+ instead of above, run with below command
+
+py -3 -m pytest -m 'j'  -rA -p no:allure_pytest_bdd  --alluredir=allurereports --b=chrome --e=qc --t=web -v
+```
