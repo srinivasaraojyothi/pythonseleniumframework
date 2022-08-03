@@ -272,7 +272,7 @@ def pytest_pyfunc_call(pyfuncitem):
 
 
 # for html report with screenshots, 'do notmodify it'
-'''
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
@@ -301,7 +301,7 @@ def pytest_runtest_makereport(item, call):
             extra.append(pytest_html.extras.image(screenshot, ''))
         report.extra = extra
 
-'''
+
 @pytest.fixture(autouse=True)
 def update_env_file(b, t, e):
     with open(config.rootPath()+"/env.json", "r+") as jsonFile:
@@ -436,6 +436,8 @@ def setup_androidVirtualDevice(platformType):
 #@given('screenshot insert')        
 def pytest_bdd_after_scenario(request, feature, scenario):
     print()
+
+
 
 @pytest.hookimpl()
 def pytest_html_results_summary(prefix, summary, postfix):
