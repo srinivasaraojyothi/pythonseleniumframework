@@ -439,19 +439,7 @@ def pytest_bdd_after_scenario(request, feature, scenario):
 
 @pytest.hookimpl()
 def pytest_html_results_summary(prefix, summary, postfix):
-    '''
-    table_1.append(html.tr())
-    table_1.append(html.th(col="name_1"))
-    table_1.append(html.div("TEST_1"))
-    table_1.append(html.td("email_1"))
-    table_1.append(html.th(col="name"))
-    table_1.append(html.div("TEST_2"))
-    #table_1.append('text line #2')
-    table_1.append(html.td("email_2"))
-    #table_1.append('text line #3')
-    '''
-    #prefix.extend ([html.p("test development group: stop phrase")])
-    #v1=html.p.insert()
+
     
     summary.extend ([html.p('')])
     #style=html.style(border='1px solid black')
@@ -477,28 +465,7 @@ def pytest_html_results_summary(prefix, summary, postfix):
             if '<span class="error">' in str(i):
                 error_testcases=int(re.findall(r'\d+', str(i))[0])                
     total_cases=pass_testcases+failed_testcase+skipped_testcase
-    failedPercentage_onPie=str((failed_testcase/total_cases)*100)+"%"
-    passsedPercentage=str(((failed_testcase/total_cases)*100)+(pass_testcases/total_cases)*100)+"%" 
-     
-    skippedPercentage=str(((pass_testcases/total_cases)*100)+((failed_testcase/total_cases)*100)+(skipped_testcase/total_cases)*100)+"%" 
 
-    '''    
-    style_pie='background: conic-gradient(red 0%'+' '+failedPercentage_onPie+' ,green '+failedPercentage_onPie+' '+passsedPercentage+  ' ,blue '+passsedPercentage+' '+skippedPercentage+')'
-   
-    print(style_pie)
-    #table_3 = html.div( class_="pie hollow",style="height: 100px;width:100px;border-radius: 50%;display: flex;justify-content: center;align-items: center;background-color: blue;")
-    
-    table_1 = html.div(class_="pie",style="height: 100px;width:100px;border-radius: 50%;"+style_pie )
-    #table_1.append(html.span(" pass--"))
-    table_2=html.div(class_="Container")
-    table_2.append(html.ul())
-    table_2.append(html.li("pass %: "+str((pass_testcases/total_cases)*100)))
-    table_2.append(html.li("fail %: "+str((failed_testcase/total_cases)*100)))
-    table_2.append(html.li("skip %: "+str((skipped_testcase/total_cases)*100)))
-    table_2.append(html.li("error %"))
-    #table_1.li(class_="key")
-    summary.extend ([table_1,table_2])
-    '''
 
     failed=str((failed_testcase/total_cases))
     passsed=str((pass_testcases/total_cases)) 
@@ -506,17 +473,12 @@ def pytest_html_results_summary(prefix, summary, postfix):
     skipped=str((skipped_testcase/total_cases)) 
     errorcases=str((error_testcases/total_cases)) 
 
-
-
-    style_pie="0% "+failedPercentage_onPie+";"
-    style_pie2=failedPercentage_onPie+ " "+passsedPercentage+";"
-    print("--r:"+style_pie+" "+"--g:"+style_pie2)
     data_pie=html.link( rel='stylesheet',href='report_styles/summarypiechart.css')
     data_pie.append(html.div( class_="pie",style="--val_1:"+failed+"; --val_2:"+passsed+"; --val_3:"+skipped+"; --val_4:"+errorcases))
-    table_2=html.div(class_="Container",style="float: right;position: relative;left: -75%;padding: 0 70px;")
+    table_2=html.div(class_="Container",style="float: right;position: relative;left: -75%;padding: 0 70px;line-height: 200%;")
     table_2.append(html.ul())
     table_2.append(html.li("pass %: "+str((pass_testcases/total_cases)*100),style="color: green;font-size: 12px;align-content: center;"))
     table_2.append(html.li("fail %: "+str((failed_testcase/total_cases)*100),style="color: red;font-size: 12px;align-content: center;"))
-    table_2.append(html.li("skip %: "+str((skipped_testcase/total_cases)*100),style="color: pink;font-size: 12px;align-content: center;"))
-    table_2.append(html.li("error %: "+str((error_testcases/total_cases)*100),style="color: orange;font-size: 12px;align-content: center;"))
+    table_2.append(html.li("skip %: "+str((skipped_testcase/total_cases)*100),style="color: orange;font-size: 12px;align-content: center;"))
+    table_2.append(html.li("error %: "+str((error_testcases/total_cases)*100),style="color: red;font-size: 12px;align-content: center;"))
     summary.extend ([data_pie,table_2])
