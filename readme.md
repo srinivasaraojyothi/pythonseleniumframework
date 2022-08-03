@@ -77,9 +77,11 @@ To insert logo into the default pytest html report, user should keep the logo in
 ``` shell
 background: url("../logo/jci_logo.png");
 ```
-and execute with the below command
+uncomment html report hook 'def pytest_runtest_makereport 'code. if you run with commented code, it wont attach the screenshots, only report will be generated. 
+
+and execute with the below command 
 ``` python
-py -3 -m pytest -m 'smoke'  -rA  --html=report.html  --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
+py -3 -m pytest -n 2  -rA  --html=report.html --self-contained-html --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
 ```
 Generated report sample screenshot
 
@@ -89,11 +91,18 @@ Generated report sample screenshot
 style sheets are kept under folder 'report_styles'  
 
 report_gen.css - for inserting the logo.  
-summarypiechart.css - for inserting pie chart under summary section.
- 
+summarypiechart.css - for inserting pie chart under summary section.  
+
 To reflect the pie chart, user needs to uncomment the below hook code in conftest.py file  
 
-def pytest_html_results_summary  
+1. def pytest_html_results_summary 
+2. uncomment html report hook 'def pytest_runtest_makereport 'code. if you run with commented code, it wont attach the screenshots, only report will be generated.  
+
+execute below command
+ ```
+ py -3 -m pytest -n 2  -rA  --html=report.html --self-contained-html --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
+ ``` 
+
 
 ![Alt text](piechart.PNG)
 
