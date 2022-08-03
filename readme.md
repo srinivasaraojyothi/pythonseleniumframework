@@ -68,9 +68,12 @@ To rerun failed test cases:
 ```shell
 py -3 -m pytest -n 2 --html=report.html --self-contained-html --driver=chrome --env=prod --reruns 1
 ```
-### Logo insert  
+### pytest-html report - Logo insert  
+style sheets are kept under folder 'report_styles'  
 
-To insert logo into the default pytest html report, user should keep the 'logo' in jpg/png/gif format and needs to update the logo path in 'report_gen.css' file as mentioned below  
+report_gen.css - for inserting the logo.  
+summarypiechart.css - for inserting pie chart under summary section.  
+To insert logo into the default pytest html report, user should keep the logo in jpg/png/gif format under folder -logo,and needs to update the logo image path in 'report_gen.css' file as mentioned below  
 ``` shell
 background: url("../logo/jci_logo.png");
 ```
@@ -81,7 +84,20 @@ py -3 -m pytest -m 'smoke'  -rA  --html=report.html  --css=report_styles\\report
 Generated report sample screenshot
 
 ![Alt text](reportImg.PNG)
+
+### pytest-html report- pie chart insertion under summary section
+style sheets are kept under folder 'report_styles'  
+
+report_gen.css - for inserting the logo.  
+summarypiechart.css - for inserting pie chart under summary section.
  
+To reflect the pie chart, user needs to uncomment the below hook code in conftest.py file  
+
+def pytest_html_results_summary  
+
+![Alt text](piechart.PNG)
+
+
 ### Allure Report Generation   - (manual)
 
 Note: uncomment the allure generation code in conftest.py file and comment the defaulte pytest html report code in conftest.py file.
@@ -123,3 +139,5 @@ Note: if you install allure_pytest_bdd and allure-pytest, then above mentioned a
 
 py -3 -m pytest -m 'j'  -rA -p no:allure_pytest_bdd  --alluredir=allurereports --b=chrome --e=qc --t=web -v
 ```
+
+
