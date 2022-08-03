@@ -1,0 +1,27 @@
+.pie {
+
+    width: 100px;
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 50%;
+    background: conic-gradient(red 0% calc(var(--val_1) * 100%), green calc(var(--val_1) * 100%) calc(calc(var(--val_1) * 100%) + calc(var(--val_2) * 100%)), orange calc(calc(var(--val_1) * 100%) + calc(var(--val_2) * 100%))  calc(calc(var(--val_1) * 100%) + calc(calc(var(--val_2) * 100%) + 
+    calc(var(--val_3) * 100%))), pink calc(calc(var(--val_1) * 100%) + calc(calc(var(--val_2) * 100%) + 
+    calc(var(--val_3) * 100%)))  calc(calc(var(--val_1) * 100%) + calc(calc(var(--val_2) * 100%) + 
+    calc(var(--val_3) * 100%) + calc(var(--val_4) * 100%) )));
+
+
+}
+
+.pie:before {
+
+
+    content: "";
+    position: absolute;
+    inset: 0;
+}
