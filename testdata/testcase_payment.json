@@ -1,87 +1,31 @@
 {
-    "testcase_payment_1": {
-        "Id": 78912,
-        "Customer": "Jason Sweet_1",
-        "Quantity": 1,
-        "Price": 18.00
-    },
-    "testcase_payment_2": {
-        "Id": 78912,
-        "Customer": "Jason Sweet_2",
-        "Quantity": 1,
-        "Price": 18.00
-    },
-    "testcase_payment_3": {
-        "Id": 78912,
-        "Customer": "Jason Sweet_3",
-        "Quantity": 1,
-        "Price": 18.00
-    },
-    "testcase_payment_6": {
-        "Name": "Sreenivas Reddy",
-        "Job": "Quality Engineer",
-        "DOB": "05-08-1995"
-        
-    },
-    "testcase_payment_7": {
-        "Name": "Sreenivas Reddy Saddikuti",
-        "Job": "Quality Engineer",
-        "DOB": "05-08-1995"
-
-    },
-    "testcase_data_10": {
-        "first_name": "sreenivas",
-        "middle_name": "reddy",
-        "last_name": "Saddikuti",
-        "date_of_birth": "05/08/1995"
-    },
-    "testcase_add_tech_11": {
-        "id": 12680237,
-        "language": [
-          "Python",
-          "Java"
-        ],
-        "yearexp": "4",
-        "lastused": "2022",
-        "st_id": "12680237"
-      },
-      "testcase_address_12": {
-        "Permanent_Address": {
-          "House_Number": "2/194",
-          "City": "Anantapur",
-          "State": "Andhra Pradesh",
-          "Country": "India",
-          "PhoneNumber": [
-            {
-              "Std_Code": "08554",
-              "Home": "250250",
-              "Mobile": "9392415043"
-            },
-            {
-              "Std_Code": "08554",
-              "Home": "250250",
-              "Mobile": "9392415043"
-            }
-          ]
-        },
-        "Current_Address": {
-          "House_Number": "2/194",
-          "City": "Anantapur",
-          "State": "Andhra Pradesh",
-          "Country": "India",
-          "PhoneNumber": [
-            {
-              "Std_Code": "08554",
-              "Home": "250250",
-              "Mobile": "9392415043"
-            },
-            {
-              "Std_Code": "08554",
-              "Home": "250250",
-              "Mobile": "9392415043"
-            }
-          ]
-        },
-        "stId": "12680237"
-      }
+    "testcase_payment_1": 
+	{
+    "name": "morpheus",
+    "job": "leader"
 }
+  ,
+    "testcase_payment_2": {
+    "name": "morpheus",
+    "job": "leader"
+},
+    "testcase_payment_3": {
+    "name": "morpheus",
+    "job": "leader"
+},
+"testcase_payment_6": {
+    "Name": "Sreenivas Reddy",
+    "Job": "Quality Engineer",
+    "DOB": "05-08-1995"
+    
+},
+"testcase_payment_7": {
+    "Name": "Sreenivas Reddy Saddikuti",
+    "Job": "Quality Engineer",
+    "DOB": "05-08-1995"
+
+}
+}
+
+
+

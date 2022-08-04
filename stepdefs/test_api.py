@@ -11,73 +11,69 @@ from pytest_bdd import scenarios, given, when, then,parsers
 import requests
 from requests.auth import HTTPBasicAuth
 import pytest
-# from pyseleniumbot.api_crud import crud
 from pyallied.api_crud.crud import crud
 
 
 
+class TestApi:
+    @pytest.mark.api()
+    def test_get_method():
+        response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_5')
+        code = 200
+        assert response.status_code == code
+        '''
+        #Dispaly Respose Content
+        print(response.content)
+        # Fetch Headers
+        # print(response.headers)
+        # Fetch specific respone header content
+        print(response.headers.get('Date'))
+        print(response.headers.get('Server'))
+        # fetch cookies
+        print(response.cookies)
+        # fetch encoding
+        print(response.encoding)
+        print(response.elapsed)
+        '''
+        # parse response to json format
+        json_response = json.loads(response.text)
+        # print(json_response)
+        # fetch vaule using json path
+        a = jsonpath.jsonpath(json_response,'disclaimer')
+        print(a)
 
+        return response
+    @pytest.mark.api()
+    def test_post_method():
+        response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_6')
+        # validation
+        assert response.status_code == 201
+        #  print(responce.json())
+        # print(response)
+        # print(response.content)
+        # print(response.headers.get('Content-Length'))
+        # fetch headers
+        # print(response.headers)
+        # parse respose to json format
+        # response_json = json.loads(response.text)
+        # id = jsonpath.jsonpath(response_json,'id')          # json path returns list
+        # print(id[0])
 
-def test_get_method():
-    response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_5')
-    # print(response.json())
-    # print(response)
-    code = 200
-    # print(response.status_code)
-    assert response.status_code == code
-    '''
-     #Dispaly Respose Content
-    print(response.content)
-     # Verify status code
-    
-     # Fetch Headers
-     # print(response.headers)
-     # Fetch specific respone header content
-    print(response.headers.get('Date'))
-    print(response.headers.get('Server'))
-     # fetch cookies
-    print(response.cookies)
-     # fetch encoding
-    print(response.encoding)
-    print(response.elapsed)
-    '''
-    # parse response to json format
-    json_response = json.loads(response.text)
-    # print(json_response)
-    # fetch vaule using json path
-    a = jsonpath.jsonpath(json_response,'disclaimer')
-    print(a)
+    @pytest.mark.api()
+    def test_put_method():
+        response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_7')
+        # print(response)
+        assert response.status_code == 200
+        response_json = json.loads(response.text)
+        # print(response_json)
+        updated = jsonpath.jsonpath(response_json,'DOB')
+        print(updated[0])
 
-    return response
-
-def test_post_method():
-    response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_6')
-    #  print(responce.json())
-    # print(response)
-    # print(response.content)
-    # print(response.headers.get('Content-Length'))
-    # validation
-    assert response.status_code == 201
-    # fetch headers
-    # print(response.headers)
-    # parse respose to json format
-    # response_json = json.loads(response.text)
-    # id = jsonpath.jsonpath(response_json,'id')          # json path returns list
-    # print(id[0])
-
-def test_put_method():
-    response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_7')
-    # print(response)
-    assert response.status_code == 200
-    response_json = json.loads(response.text)
-    # print(response_json)
-    updated = jsonpath.jsonpath(response_json,'DOB')
-    print(updated[0])
-
-def test_delete_method():
-    response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_8')
-    # print(response)
-    assert response.status_code == 204
+    @pytest.mark.api()
+    def test_delete_method():
+        response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_payment_8')
+        # print(response)
+        assert response.status_code == 204
 
 # def test_basic_authentication():
 #     response=requests.get('https://api.github.com/users', auth=HTTPBasicAuth('sreenivashs38@gmail.com', "Sree@2127"))
@@ -100,23 +96,6 @@ def test_delete_method():
 #     # Add Customised parameters
 #     param = {'Name_1':'sreenivas', 'Name_2':'reddy', 'Name_3':'saddikuti'}
 #     response = requests.get('https://httpbin.org/get',params=param)
-#     print(response.text)
-
-# def test_new_data():
-#     response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_data_10')
-#     # print(response)
-#     # print(response.content)
-#     id = jsonpath.jsonpath(response.json(),"id")
-#     print(id[0])
-
-#     response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_add_tech_11')
-#     print(response.text)
-
-#     response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_address_12')
-#     print(response.text)
-
-
-#     response=crud().crudCall(r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\testdata\apiList.xlsx",'testcase_final_13')
 #     print(response.text)
 
 

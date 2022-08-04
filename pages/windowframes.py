@@ -53,8 +53,6 @@ class WindowFrames:
 
 
     def SwitchToFrame(self):
-        # self.me.click(WindowFrames.a2)
-        # self.me.click(WindowFrames.a3)
         self.me.fillField(WindowFrames.a2, "sreenivas")
         self.user.switchToFrame(WindowFrames.frame1)
         self.i.selectDropDownByVisibleText(WindowFrames.f1, "Home")
@@ -62,14 +60,7 @@ class WindowFrames:
         self.user.switchToParentFrame()
         self.me.clear(WindowFrames.a2)
         self.me.fillField(WindowFrames.a2, "sreenivas reddy")
-        # self.user.switchToFrame(WindowFrames.frame2)
-        # self.i.selectDropDownByVisibleText(WindowFrames.f1, "Telugu")
-        
 
-    #
-    # def SwitchToParentFrame(self):
-    #     self.user.switchToParentFrame()
-    #
     def Switch_To_Frame_ByXpatH(self):
         self.user.switch_To_Frame_ByXpath(WindowFrames.frame2)
         self.i.selectDropDownByVisibleText(WindowFrames.f1, "Telugu")

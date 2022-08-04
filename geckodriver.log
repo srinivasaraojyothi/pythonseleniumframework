@@ -1,603 +1,159 @@
-1657886187599	geckodriver	INFO	Listening on 127.0.0.1:53175
-1657886190662	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53176" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileypZ2rW"
-1657886191339	Marionette	INFO	Marionette enabled
-1657886191344	Marionette	INFO	Listening on port 53187
-WebDriver BiDi listening on ws://localhost:53176
-Read port: 53187
-1657886191502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileypZ2rW\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:53176/devtools/browser/428dc1f1-33a9-43b5-b9b7-330c697026da
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1657886196204	Marionette	INFO	Stopped listening on port 53187
-1657886366215	geckodriver	INFO	Listening on 127.0.0.1:53283
-1657886369227	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53284" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilemPRkS1"
-1657886369682	Marionette	INFO	Marionette enabled
-1657886369687	Marionette	INFO	Listening on port 53293
-WebDriver BiDi listening on ws://localhost:53284
-Read port: 53293
-1657886369860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilemPRkS1\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:53284/devtools/browser/a658e67c-f176-4ee1-968f-26f09336d5bd
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1657886374077	Marionette	INFO	Stopped listening on port 53293
-1658113742659	geckodriver	INFO	Listening on 127.0.0.1:50357
-1658113745732	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50358" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZ1ekNk"
-1658113746773	Marionette	INFO	Marionette enabled
-1658113746778	Marionette	INFO	Listening on port 50367
-WebDriver BiDi listening on ws://localhost:50358
-Read port: 50367
-1658113746979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZ1ekNk\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50358/devtools/browser/d70cdbe9-f81d-4efa-b937-c2464b58a100
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658113751430	Marionette	INFO	Stopped listening on port 50367
-1658113794696	geckodriver	INFO	Listening on 127.0.0.1:50413
-1658113797755	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50414" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileleCHdK"
-1658113798059	Marionette	INFO	Marionette enabled
-1658113798063	Marionette	INFO	Listening on port 50424
-WebDriver BiDi listening on ws://localhost:50414
-Read port: 50424
-1658113798181	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileleCHdK\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50414/devtools/browser/22edce90-a7dc-4f72-9d02-05bf3283adb4
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658113801471	Marionette	INFO	Stopped listening on port 50424
-1658114016190	geckodriver	INFO	Listening on 127.0.0.1:50477
-1658114019262	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50478" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilerAcnTB"
-1658114019574	Marionette	INFO	Marionette enabled
-1658114019579	Marionette	INFO	Listening on port 50488
-WebDriver BiDi listening on ws://localhost:50478
-Read port: 50488
-1658114019694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilerAcnTB\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50478/devtools/browser/f23dffb3-d681-411e-b178-2de3b60a8e8a
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114022906	Marionette	INFO	Stopped listening on port 50488
-1658114102158	geckodriver	INFO	Listening on 127.0.0.1:50535
-1658114105219	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50536" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilepKzSuf"
-1658114105544	Marionette	INFO	Marionette enabled
-1658114105548	Marionette	INFO	Listening on port 50547
-WebDriver BiDi listening on ws://localhost:50536
-Read port: 50547
-1658114105669	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilepKzSuf\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50536/devtools/browser/ca5613f6-d46a-4bba-951a-c48e3e44280b
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114109448	Marionette	INFO	Stopped listening on port 50547
-1658114144704	geckodriver	INFO	Listening on 127.0.0.1:50588
-1658114147761	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50589" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilesnXDUZ"
-1658114148109	Marionette	INFO	Marionette enabled
-1658114148113	Marionette	INFO	Listening on port 50598
-WebDriver BiDi listening on ws://localhost:50589
-Read port: 50598
-1658114148318	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilesnXDUZ\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50589/devtools/browser/dcd5182e-b90d-4054-979e-4cb65af64055
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114152221	Marionette	INFO	Stopped listening on port 50598
-1658114180555	geckodriver	INFO	Listening on 127.0.0.1:50636
-1658114183642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50637" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilelyFQK5"
-1658114184009	Marionette	INFO	Marionette enabled
-1658114184014	Marionette	INFO	Listening on port 50647
-WebDriver BiDi listening on ws://localhost:50637
-Read port: 50647
-1658114184136	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilelyFQK5\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50637/devtools/browser/e754489e-b72d-44e5-9fbf-8239da7fbb0f
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114187457	Marionette	INFO	Stopped listening on port 50647
-1658114284721	geckodriver	INFO	Listening on 127.0.0.1:50694
-1658114287768	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50695" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilecTGED9"
-1658114288100	Marionette	INFO	Marionette enabled
-1658114288105	Marionette	INFO	Listening on port 50705
-WebDriver BiDi listening on ws://localhost:50695
-Read port: 50705
-1658114288222	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilecTGED9\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50695/devtools/browser/dafa381b-8529-4cb1-89d2-a3a94d6e0466
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114291740	Marionette	INFO	Stopped listening on port 50705
-1658114406339	geckodriver	INFO	Listening on 127.0.0.1:50754
-1658114409381	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50755" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileSaEWDt"
-1658114409714	Marionette	INFO	Marionette enabled
-1658114409720	Marionette	INFO	Listening on port 50765
-WebDriver BiDi listening on ws://localhost:50755
-Read port: 50765
-1658114409881	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileSaEWDt\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50755/devtools/browser/41a41554-2243-498d-9979-303f4b92ff75
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658114413564	Marionette	INFO	Stopped listening on port 50765
-1658121539532	geckodriver	INFO	Listening on 127.0.0.1:55899
-1658121542597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55900" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilex7m6HV"
-1658121543291	Marionette	INFO	Marionette enabled
-1658121543296	Marionette	INFO	Listening on port 55909
-WebDriver BiDi listening on ws://localhost:55900
-Read port: 55909
-1658121543449	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilex7m6HV\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:55900/devtools/browser/42093320-a881-4d7f-ad29-20035a10baf8
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658121547738	Marionette	INFO	Stopped listening on port 55909
-1658121570257	geckodriver	INFO	Listening on 127.0.0.1:55954
-1658121573324	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55955" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilejKiqkQ"
-1658121573741	Marionette	INFO	Marionette enabled
-1658121573746	Marionette	INFO	Listening on port 55966
-WebDriver BiDi listening on ws://localhost:55955
-Read port: 55966
-1658121573919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilejKiqkQ\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:55955/devtools/browser/9478897e-9bd3-4731-b617-25d19b35da03
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658121578404	Marionette	INFO	Stopped listening on port 55966
-1658121661335	geckodriver	INFO	Listening on 127.0.0.1:56039
-1658121664382	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56040" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileHLcYEc"
-1658121664791	Marionette	INFO	Marionette enabled
-1658121664797	Marionette	INFO	Listening on port 56049
-WebDriver BiDi listening on ws://localhost:56040
-Read port: 56049
-1658121664991	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileHLcYEc\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:56040/devtools/browser/84eaad38-9ead-45c0-80be-960235c233ae
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658121668869	Marionette	INFO	Stopped listening on port 56049
-1658121850431	geckodriver	INFO	Listening on 127.0.0.1:56167
-1658121853506	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56168" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDQNEMl"
-1658121853869	Marionette	INFO	Marionette enabled
-1658121853875	Marionette	INFO	Listening on port 56178
-WebDriver BiDi listening on ws://localhost:56168
-Read port: 56178
-1658121854024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDQNEMl\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:56168/devtools/browser/1d4c539c-06c3-4dca-a52a-3e776d86b301
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658121858478	Marionette	INFO	Stopped listening on port 56178
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
-1658121968059	geckodriver	INFO	Listening on 127.0.0.1:62376
-1658121971131	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62377" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileIf6hwZ"
-1658121971599	Marionette	INFO	Marionette enabled
-1658121971605	Marionette	INFO	Listening on port 62390
-WebDriver BiDi listening on ws://localhost:62377
-Read port: 62390
-1658121971762	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileIf6hwZ\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62377/devtools/browser/3f79c643-9841-4611-9ace-d93133529bd1
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658121975856	Marionette	INFO	Stopped listening on port 62390
-1658122103880	geckodriver	INFO	Listening on 127.0.0.1:62470
-1658122106928	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62471" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileoRBFYn"
-1658122107319	Marionette	INFO	Marionette enabled
-1658122107324	Marionette	INFO	Listening on port 62481
-WebDriver BiDi listening on ws://localhost:62471
-Read port: 62481
-1658122107473	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileoRBFYn\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62471/devtools/browser/1aa62aa2-bf24-4a9a-bca9-d9949655ea44
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122111171	Marionette	INFO	Stopped listening on port 62481
-1658122192848	geckodriver	INFO	Listening on 127.0.0.1:62545
-1658122195924	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62546" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileTkFbo4"
-1658122196354	Marionette	INFO	Marionette enabled
-1658122196361	Marionette	INFO	Listening on port 62557
-WebDriver BiDi listening on ws://localhost:62546
-Read port: 62557
-1658122196522	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileTkFbo4\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62546/devtools/browser/bea5f6ad-c2f5-4c3b-b1bf-a1e2bc874f02
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122201086	Marionette	INFO	Stopped listening on port 62557
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
-1658122221730	geckodriver	INFO	Listening on 127.0.0.1:62601
-1658122224787	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62602" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilerrx0N0"
-1658122225174	Marionette	INFO	Marionette enabled
-1658122225180	Marionette	INFO	Listening on port 62616
-WebDriver BiDi listening on ws://localhost:62602
-Read port: 62616
-1658122225358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilerrx0N0\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62602/devtools/browser/662c2632-965c-41e4-b141-be903826d9c1
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122229552	Marionette	INFO	Stopped listening on port 62616
-1658122242018	geckodriver	INFO	Listening on 127.0.0.1:62655
-1658122245063	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62656" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilek6W5j3"
-1658122245468	Marionette	INFO	Marionette enabled
-1658122245474	Marionette	INFO	Listening on port 62668
-WebDriver BiDi listening on ws://localhost:62656
-Read port: 62668
-1658122245655	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilek6W5j3\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62656/devtools/browser/d5bcea58-c6a4-4f97-808b-a61959579e92
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122249745	Marionette	INFO	Stopped listening on port 62668
-1658122281995	geckodriver	INFO	Listening on 127.0.0.1:62723
-1658122285069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62724" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileAl0plq"
-1658122285500	Marionette	INFO	Marionette enabled
-1658122285505	Marionette	INFO	Listening on port 62735
-WebDriver BiDi listening on ws://localhost:62724
-Read port: 62735
-1658122285674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileAl0plq\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62724/devtools/browser/51ed53a3-95d6-4cbc-90c6-21ddc753ee50
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122289923	Marionette	INFO	Stopped listening on port 62735
-1658122324768	geckodriver	INFO	Listening on 127.0.0.1:62791
-1658122327842	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62792" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileS0SYRZ"
-1658122328228	Marionette	INFO	Marionette enabled
-1658122328233	Marionette	INFO	Listening on port 62805
-WebDriver BiDi listening on ws://localhost:62792
-Read port: 62805
-1658122328385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileS0SYRZ\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62792/devtools/browser/08a206ee-18b8-406b-b3c4-955012e0146c
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122332560	Marionette	INFO	Stopped listening on port 62805
-1658122404660	geckodriver	INFO	Listening on 127.0.0.1:62876
-1658122407719	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62877" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZIVQfq"
-1658122408146	Marionette	INFO	Marionette enabled
-1658122408150	Marionette	INFO	Listening on port 62887
-WebDriver BiDi listening on ws://localhost:62877
-Read port: 62887
-1658122408297	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZIVQfq\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62877/devtools/browser/eca69d4a-c077-4207-a2fe-3ce43734e2a6
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122412506	Marionette	INFO	Stopped listening on port 62887
-JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\SSREEE~1\AppData\Local\Temp\rust_mozprofileZIVQfq\protections.sqlite
-1658122430232	geckodriver	INFO	Listening on 127.0.0.1:62929
-1658122433314	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62930" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilev6GFuv"
-1658122433747	Marionette	INFO	Marionette enabled
-1658122433751	Marionette	INFO	Listening on port 62940
-WebDriver BiDi listening on ws://localhost:62930
-Read port: 62940
-1658122433891	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilev6GFuv\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:62930/devtools/browser/9b73825d-aaa0-4c19-8b45-faee578e4131
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658122438582	Marionette	INFO	Stopped listening on port 62940
-1658123182214	geckodriver	INFO	Listening on 127.0.0.1:59762
-1658123185287	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59763" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile3uMm14"
-1658123185683	Marionette	INFO	Marionette enabled
-1658123185687	Marionette	INFO	Listening on port 59773
-WebDriver BiDi listening on ws://localhost:59763
-Read port: 59773
-1658123185819	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile3uMm14\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:59763/devtools/browser/47de0508-b9a1-440d-a488-869c191c8937
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658123189785	Marionette	INFO	Stopped listening on port 59773
-1658123220126	geckodriver	INFO	Listening on 127.0.0.1:59823
-1658123223188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59824" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilegvBE4S"
-1658123223646	Marionette	INFO	Marionette enabled
-1658123223655	Marionette	INFO	Listening on port 59835
-WebDriver BiDi listening on ws://localhost:59824
-Read port: 59835
-1658123223827	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilegvBE4S\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:59824/devtools/browser/5b9429a2-d0c3-400a-8745-d1d749be9290
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
-TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
-onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
-_emit@resource://devtools/shared/event-emitter.js:242:32
-emit@resource://devtools/shared/event-emitter.js:186:18
-emit@resource://devtools/shared/event-emitter.js:330:18
-getMutations@resource://devtools/client/fronts/walker.js:312:10
-
-console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
-JavaScript error: resource://devtools/shared/loader/base-loader.js, line 449: TypeError: loader is undefined
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
-1658123503132	Marionette	INFO	Stopped listening on port 59835
-1658123509787	geckodriver	INFO	Listening on 127.0.0.1:51493
-1658123512854	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51494" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile0UlgNq"
-1658123513270	Marionette	INFO	Marionette enabled
-1658123513275	Marionette	INFO	Listening on port 51504
-WebDriver BiDi listening on ws://localhost:51494
-Read port: 51504
-1658123513418	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile0UlgNq\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51494/devtools/browser/59626184-7ef8-4255-b204-4173ece1f8d6
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658123519969	Marionette	INFO	Stopped listening on port 51504
-JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\SSREEE~1\AppData\Local\Temp\rust_mozprofile0UlgNq\protections.sqlite
-1658123563003	geckodriver	INFO	Listening on 127.0.0.1:51567
-1658123566077	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51568" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile9k7hJt"
-1658123566501	Marionette	INFO	Marionette enabled
-1658123566507	Marionette	INFO	Listening on port 51580
-WebDriver BiDi listening on ws://localhost:51568
-Read port: 51580
-1658123566665	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile9k7hJt\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51568/devtools/browser/e595612c-e8f0-4f96-9f44-acbbb484fac9
-1658123708919	Marionette	INFO	Stopped listening on port 51580
-console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
-1658123712790	geckodriver	INFO	Listening on 127.0.0.1:51695
-1658123715867	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51696" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilermD43T"
-1658123716242	Marionette	INFO	Marionette enabled
-1658123716247	Marionette	INFO	Listening on port 51705
-WebDriver BiDi listening on ws://localhost:51696
-Read port: 51705
-1658123716385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilermD43T\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51696/devtools/browser/843944bd-e5fb-4878-86e4-129f55817ff4
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-WARNING: content window passed to PrivateBrowsingUtils.isWindowPrivate. Use isContentWindowPrivate instead (but only for frame scripts).
-pbu_isWindowPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:27:11
-isBrowserPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:47:19
-loadURI@resource://gre/modules/RemoteWebNavigation.jsm:90:51
-loadURI/<@chrome://global/content/elements/browser-custom-element.js:810:28
-_wrapURIChangeCall@chrome://global/content/elements/browser-custom-element.js:739:9
-loadURI@chrome://global/content/elements/browser-custom-element.js:809:12
-loadURI@chrome://mozapps/content/extensions/aboutaddons.js:2466:18
-render/<@chrome://mozapps/content/extensions/aboutaddons.js:2445:14
-render@chrome://mozapps/content/extensions/aboutaddons.js:2404:11
-1658123756048	Marionette	INFO	Stopped listening on port 51705
-console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
-1658123824920	geckodriver	INFO	Listening on 127.0.0.1:51798
-1658123827980	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51799" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilemcOBrE"
-1658123828411	Marionette	INFO	Marionette enabled
-1658123828417	Marionette	INFO	Listening on port 51811
-WebDriver BiDi listening on ws://localhost:51799
-Read port: 51811
-1658123828567	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilemcOBrE\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51799/devtools/browser/c8860477-6cc3-4b7d-8588-7a13840ab493
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658123847455	Marionette	INFO	Stopped listening on port 51811
-1658123852623	geckodriver	INFO	Listening on 127.0.0.1:51861
-1658123855706	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51862" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilevsUy3j"
-1658123856098	Marionette	INFO	Marionette enabled
-1658123856103	Marionette	INFO	Listening on port 51872
-WebDriver BiDi listening on ws://localhost:51862
-Read port: 51872
-1658123856247	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilevsUy3j\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51862/devtools/browser/86bed24a-df60-42db-9bf6-a6432c316fcc
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658123876651	Marionette	INFO	Stopped listening on port 51872
-console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
-1658123902318	geckodriver	INFO	Listening on 127.0.0.1:51932
-1658123905390	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51933" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileVKglhO"
-1658123905794	Marionette	INFO	Marionette enabled
-1658123905799	Marionette	INFO	Listening on port 51944
-WebDriver BiDi listening on ws://localhost:51933
-Read port: 51944
-1658123905946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileVKglhO\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:51933/devtools/browser/2a03bc66-e8a7-4e93-8b95-5027dedc5018
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124003833	Marionette	INFO	Stopped listening on port 51944
-console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
-1658124027999	geckodriver	INFO	Listening on 127.0.0.1:52025
-1658124031086	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52026" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilesFl01q"
-1658124031469	Marionette	INFO	Marionette enabled
-1658124031476	Marionette	INFO	Listening on port 52040
-WebDriver BiDi listening on ws://localhost:52026
-Read port: 52040
-1658124031650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilesFl01q\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52026/devtools/browser/f5df0879-f03d-4a17-b2b2-fa3b7c3245e2
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124036168	Marionette	INFO	Stopped listening on port 52040
-1658124132382	geckodriver	INFO	Listening on 127.0.0.1:52151
-1658124135453	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52152" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZmFWzM"
-1658124135835	Marionette	INFO	Marionette enabled
-1658124135839	Marionette	INFO	Listening on port 52164
-WebDriver BiDi listening on ws://localhost:52152
-Read port: 52164
-1658124135982	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileZmFWzM\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52152/devtools/browser/cc6a004a-a61c-4783-b083-55f9e9412fd8
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124140226	Marionette	INFO	Stopped listening on port 52164
-1658124281585	geckodriver	INFO	Listening on 127.0.0.1:52256
-1658124284622	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52257" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDegEeP"
-1658124285023	Marionette	INFO	Marionette enabled
-1658124285029	Marionette	INFO	Listening on port 52268
-WebDriver BiDi listening on ws://localhost:52257
-Read port: 52268
-1658124285170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDegEeP\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52257/devtools/browser/acf3ba85-67df-4698-9f31-bc5205b77092
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124288884	Marionette	INFO	Stopped listening on port 52268
-1658124304036	geckodriver	INFO	Listening on 127.0.0.1:52308
-1658124307101	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52309" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilee3QDHp"
-1658124307507	Marionette	INFO	Marionette enabled
-1658124307512	Marionette	INFO	Listening on port 52319
-WebDriver BiDi listening on ws://localhost:52309
-Read port: 52319
-1658124307665	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilee3QDHp\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52309/devtools/browser/51a21a2b-c1aa-425e-9b0e-cde1e7df9be8
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124311086	Marionette	INFO	Stopped listening on port 52319
-1658124590957	geckodriver	INFO	Listening on 127.0.0.1:52449
-1658124594001	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52450" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilewZ1Gzf"
-1658124594459	Marionette	INFO	Marionette enabled
-1658124594464	Marionette	INFO	Listening on port 52460
-WebDriver BiDi listening on ws://localhost:52450
-Read port: 52460
-1658124594646	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofilewZ1Gzf\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52450/devtools/browser/eda7d6f8-51e8-4d0d-9ef6-a00cdc429c20
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124598327	Marionette	INFO	Stopped listening on port 52460
-1658124613415	geckodriver	INFO	Listening on 127.0.0.1:52500
-1658124616465	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52501" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDBOqLW"
-1658124616925	Marionette	INFO	Marionette enabled
-1658124616930	Marionette	INFO	Listening on port 52511
-WebDriver BiDi listening on ws://localhost:52501
-Read port: 52511
-1658124617130	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileDBOqLW\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52501/devtools/browser/ae9c2ac3-17f0-40ed-80c6-4462044a8e86
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124621332	Marionette	INFO	Stopped listening on port 52511
-1658124656768	geckodriver	INFO	Listening on 127.0.0.1:52556
-1658124659836	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52557" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileAjuTbq"
-1658124660252	Marionette	INFO	Marionette enabled
-1658124660257	Marionette	INFO	Listening on port 52568
-WebDriver BiDi listening on ws://localhost:52557
-Read port: 52568
-1658124660425	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileAjuTbq\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52557/devtools/browser/21a082d6-9ae8-4615-bd6d-32792deff192
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124664659	Marionette	INFO	Stopped listening on port 52568
-1658124689762	geckodriver	INFO	Listening on 127.0.0.1:52614
-1658124692832	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52615" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileup28UX"
-1658124693223	Marionette	INFO	Marionette enabled
-1658124693229	Marionette	INFO	Listening on port 52624
-WebDriver BiDi listening on ws://localhost:52615
-Read port: 52624
-1658124693404	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofileup28UX\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52615/devtools/browser/be4dc93a-44a5-4294-9ead-d517b57cb4c8
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124697243	Marionette	INFO	Stopped listening on port 52624
-1658124743398	geckodriver	INFO	Listening on 127.0.0.1:52676
-1658124746432	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52677" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile4qkzfk"
-1658124746807	Marionette	INFO	Marionette enabled
-1658124746812	Marionette	INFO	Listening on port 52687
-WebDriver BiDi listening on ws://localhost:52677
-Read port: 52687
-1658124746950	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\SSREEE~1\\AppData\\Local\\Temp\\rust_mozprofile4qkzfk\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:52677/devtools/browser/e2bb1b0d-5def-4525-a4a8-ee443261c969
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-JavaScript error: https://in.search.yahoo.com/?fr2=inr, line 1: TypeError: YAHOO.LL is undefined
-1658124750969	Marionette	INFO	Stopped listening on port 52687
+1657889223757	geckodriver	INFO	Listening on 127.0.0.1:50601
+1657889226816	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50602" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileTOieWB"
+1657889227599	Marionette	INFO	Marionette enabled
+1657889227605	Marionette	INFO	Listening on port 50613
+WebDriver BiDi listening on ws://localhost:50602
+Read port: 50613
+1657889227765	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileTOieWB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50602/devtools/browser/22b7a8d6-1278-46e7-a6b3-47d47393fc59
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657889244759	Marionette	INFO	Stopped listening on port 50613
+[Parent 1772, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657890071143	geckodriver	INFO	Listening on 127.0.0.1:50835
+1657890074195	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50836" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileHqwGQF"
+1657890074639	Marionette	INFO	Marionette enabled
+1657890074646	Marionette	INFO	Listening on port 50844
+WebDriver BiDi listening on ws://localhost:50836
+Read port: 50844
+1657890074915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileHqwGQF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50836/devtools/browser/e7850a04-ee43-47db-969c-f00ed1bf8cf2
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657890080511	Marionette	INFO	Stopped listening on port 50844
+1657892515122	geckodriver	INFO	Listening on 127.0.0.1:51152
+1657892518142	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51153" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilezf5l7G"
+1657892518669	Marionette	INFO	Marionette enabled
+1657892518675	Marionette	INFO	Listening on port 51176
+WebDriver BiDi listening on ws://localhost:51153
+Read port: 51176
+1657892518803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilezf5l7G\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51153/devtools/browser/13de0b1b-b13e-424a-81a3-bc68b0fd21fd
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657892525549	Marionette	INFO	Stopped listening on port 51176
+1657892644764	geckodriver	INFO	Listening on 127.0.0.1:51281
+1657892647812	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51282" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileJSMb2B"
+1657892648208	Marionette	INFO	Marionette enabled
+1657892648213	Marionette	INFO	Listening on port 51293
+WebDriver BiDi listening on ws://localhost:51282
+Read port: 51293
+1657892648315	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileJSMb2B\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51282/devtools/browser/529a53bf-f2df-4de0-b48b-e1797050a547
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657892653367	Marionette	INFO	Stopped listening on port 51293
+1657893160014	geckodriver	INFO	Listening on 127.0.0.1:51435
+1657893163085	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51436" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilewrUlJA"
+1657893163512	Marionette	INFO	Marionette enabled
+1657893163517	Marionette	INFO	Listening on port 51447
+WebDriver BiDi listening on ws://localhost:51436
+Read port: 51447
+1657893163623	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilewrUlJA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51436/devtools/browser/3bc6e1b6-47bf-4c1a-9252-c19a5814a5e0
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657893169193	Marionette	INFO	Stopped listening on port 51447
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\sjyothi\AppData\Local\Temp\rust_mozprofilewrUlJA\protections.sqlite
+1657893321003	geckodriver	INFO	Listening on 127.0.0.1:51550
+1657893324052	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51551" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileiZDLGL"
+1657893324472	Marionette	INFO	Marionette enabled
+1657893324477	Marionette	INFO	Listening on port 51560
+WebDriver BiDi listening on ws://localhost:51551
+Read port: 51560
+1657893324580	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileiZDLGL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51551/devtools/browser/876afc13-14c4-4bbe-a880-eb7b2d33c638
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657893330626	Marionette	INFO	Stopped listening on port 51560
+1657893456516	geckodriver	INFO	Listening on 127.0.0.1:51676
+1657893459573	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51677" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileeAcYh2"
+1657893459963	Marionette	INFO	Marionette enabled
+1657893459968	Marionette	INFO	Listening on port 51686
+WebDriver BiDi listening on ws://localhost:51677
+Read port: 51686
+1657893460067	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileeAcYh2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51677/devtools/browser/502291ee-103d-4301-a3c6-cbde2af00c6a
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657893465997	Marionette	INFO	Stopped listening on port 51686
+1657893772698	geckodriver	INFO	Listening on 127.0.0.1:51825
+1657893775761	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51826" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilewlqqJM"
+1657893776228	Marionette	INFO	Marionette enabled
+1657893776234	Marionette	INFO	Listening on port 51835
+WebDriver BiDi listening on ws://localhost:51826
+Read port: 51835
+1657893776474	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilewlqqJM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51826/devtools/browser/f978f683-6d07-493a-9c80-f477eae8cf0c
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657893782957	Marionette	INFO	Stopped listening on port 51835
+1657895228338	geckodriver	INFO	Listening on 127.0.0.1:61114
+1657895231416	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61115" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofile8zAvq7"
+1657895231927	Marionette	INFO	Marionette enabled
+1657895231932	Marionette	INFO	Listening on port 61124
+WebDriver BiDi listening on ws://localhost:61115
+Read port: 61124
+1657895232049	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofile8zAvq7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61115/devtools/browser/f6ceb4f3-80e9-4d88-9173-cf81dba46491
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657895237540	Marionette	INFO	Stopped listening on port 61124
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\sjyothi\AppData\Local\Temp\rust_mozprofile8zAvq7\protections.sqlite
+1657895389031	geckodriver	INFO	Listening on 127.0.0.1:61231
+1657895392099	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61232" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofile8lpl26"
+1657895392511	Marionette	INFO	Marionette enabled
+1657895392515	Marionette	INFO	Listening on port 61242
+WebDriver BiDi listening on ws://localhost:61232
+Read port: 61242
+1657895392620	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofile8lpl26\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61232/devtools/browser/870968ff-b84e-4b54-8b39-494b9b3cc53a
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657895398857	Marionette	INFO	Stopped listening on port 61242
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\sjyothi\AppData\Local\Temp\rust_mozprofile8lpl26\protections.sqlite
+1657895457807	geckodriver	INFO	Listening on 127.0.0.1:61329
+1657895460850	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61330" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileZXUwyB"
+1657895461261	Marionette	INFO	Marionette enabled
+1657895461266	Marionette	INFO	Listening on port 61339
+WebDriver BiDi listening on ws://localhost:61330
+Read port: 61339
+1657895461366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileZXUwyB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61330/devtools/browser/da876e2f-4a79-4115-8226-57412d47717e
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657895482415	Marionette	INFO	Stopped listening on port 61339
+1657895719233	geckodriver	INFO	Listening on 127.0.0.1:61455
+1657895722262	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61456" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileWu3yhy"
+1657895722676	Marionette	INFO	Marionette enabled
+1657895722682	Marionette	INFO	Listening on port 61465
+WebDriver BiDi listening on ws://localhost:61456
+Read port: 61465
+1657895722790	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileWu3yhy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61456/devtools/browser/33ec6edb-deeb-4e68-a9f3-98f747b70114
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657895728926	Marionette	INFO	Stopped listening on port 61465
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: D:\Users\sjyothi\AppData\Local\Temp\rust_mozprofileWu3yhy\protections.sqlite
+1657896059836	geckodriver	INFO	Listening on 127.0.0.1:61591
+1657896062877	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61592" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilevBr0dR"
+1657896063284	Marionette	INFO	Marionette enabled
+1657896063289	Marionette	INFO	Listening on port 61602
+WebDriver BiDi listening on ws://localhost:61592
+Read port: 61602
+1657896063388	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofilevBr0dR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61592/devtools/browser/55caed80-6eca-431f-bc3a-b66953d6bde4
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657896075236	Marionette	INFO	Stopped listening on port 61602
+1657896100686	geckodriver	INFO	Listening on 127.0.0.1:61697
+1657896103740	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61698" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileGqEvxp"
+1657896104127	Marionette	INFO	Marionette enabled
+1657896104132	Marionette	INFO	Listening on port 61707
+WebDriver BiDi listening on ws://localhost:61698
+Read port: 61707
+1657896104235	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at D:\\Users\\sjyothi\\AppData\\Local\\Temp\\rust_mozprofileGqEvxp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61698/devtools/browser/d9d3755a-9e8b-4e00-8897-aea4cd4daff4
+JavaScript warning: https://av.sc.com/assets/global/adobe/production/dbccb09c4e46/a4595f584f88/launch-5bffc24dfdee.min.js, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657896115636	Marionette	INFO	Stopped listening on port 61707

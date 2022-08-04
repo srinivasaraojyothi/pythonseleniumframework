@@ -1,7 +1,10 @@
+from distutils.log import error
 import imp
+from importlib.resources import path
+from platform import platform
 import pytest
-import subprocess as sp
 import allure
+from pytest import CaptureFixture
 
 #from selenium import webdriver
 #from appium import webdriver
@@ -14,6 +17,7 @@ from pytest_html import extras
 import allure
 import ast
 from py.xml import html
+import subprocess as sp
 from appium.webdriver.appium_service import AppiumService
 import requests
 import xlrd
@@ -21,6 +25,7 @@ import pandas as pd
 import json
 import numpy as np
 import base64
+import time
 import tweepy
 import config
 from pyallied.web.webWaits import customwebDriverwait
@@ -38,8 +43,13 @@ def pytest_addoption(parser):
     )
 
 
+@pytest.fixture(scope='package')
+def platformType(request):
+    
+    return request.config.getoption("--t")
 @pytest.fixture
 def b(request):
+    
     return request.config.getoption("--b")
 
 
@@ -50,6 +60,7 @@ def e(request):
 
 @pytest.fixture
 def t(request):
+    
     return request.config.getoption("--t")
 
 
@@ -92,11 +103,18 @@ def browser(b, t, request):
 
             desired_caps = {
                 "platformName": "Android",
+                "androidInstallTimeout":180000,
+                "avdLaunchTimeout":1200000,
+                "avdReadyTimeout":1200000, 
+                "noReset":"true",
                 "automationName": "UiAutomator2",
                 "appium:deviceName": "Pixel_4_API_30",
-                "appium:app": r"D:\\Users\ssreeenivasreddy\\Altimetrik_JCL\\pythonseleniumframework\\Airbnb_v22.21_apkpure.com.apk",
-                "appium:appPackage": "com.airbnb.android",
-                "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity"
+                # "appium:app": "D:\\Users\\sjyothi\\Repos\\apks\\Airbnb_v22.21_apkpure.com.apk",
+                # "appium:appPackage": "com.airbnb.android",
+                # "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity",
+                'chromedriverExecutableDir ':r'D:\Users\ssreeenivasreddy\Altimetrik_JCL\deve\pythonseleniumframework\testdata',
+                'chromedriverChromeMappingFile':r"D:\Users\ssreeenivasreddy\AppData\Roaming\npm\node_modules\appium\node_modules\appium-chromedriver\config.json",
+
             }
 
             browser = webdriver.Remote(
@@ -121,15 +139,12 @@ def browser(b, t, request):
             from selenium.webdriver.remote.errorhandler import ErrorHandler
 
             mobile_emu = {
-                # 'platformName': 'Android',
-                # "automationName": "UiAutomator2",
-                # "deviceName": "Pixel_4_API_30",
-                # 'browserName': 'Chrome',
-                # 'chromedriverExecutable': r'D://Users//ssreeenivasreddy//Downloads//New folder//chromedriver.exe'
                 'platformName': 'Android',
                 "automationName": "UiAutomator2",
                 "deviceName": "Pixel_4_API_30",
-                'browserName': 'Chrome'
+                'browserName': 'Chrome',
+                'chromedriverExecutableDir ':r'D:\Users\ssreeenivasreddy\Altimetrik_JCL\deve\pythonseleniumframework\testdata',
+                'chromedriverChromeMappingFile':r"D:\Users\ssreeenivasreddy\AppData\Roaming\npm\node_modules\appium\node_modules\appium-chromedriver\config.json",
 
             }
 
@@ -139,9 +154,9 @@ def browser(b, t, request):
 
             browser = webdriver.Remote(
                 command_executor='http://localhost:4723/wd/hub', desired_capabilities=mobile_emu)
-            
+
             # browser.set_page_load_timeout(5000)
-            # browser.set_script_timeout(5000)
+            #browser.set_script_timeout(5000)
             # utils.is_url_connectable(4725,'---------------------------->')
             yield browser
 
@@ -162,7 +177,7 @@ def browser(b, t, request):
             opts.add_argument('--disable-gpu')
 
             browser = webdriver.Firefox(
-                executable_path=r"D:/Users/sjyothi/Downloads/geckodriver/geckodriver.exe")
+                executable_path=r"D:\Users\ssreeenivasreddy\Altimetrik_JCL\geckodriver.exe")
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             '''
             browser=webdriver.Remote(
@@ -315,11 +330,100 @@ def test_extra(extra):
     extra.append(extras.html("<div>Additionalsss HTML</div>"))
 
 
-# @pytest.fixture(scope='module', autouse=True)
-# def setup_module():
-#     appium_service = AppiumService()
-#     appium_service.start()
-#     # appium_service.start(args=['-p', str('4725'),'--log-timestamp','--log',r'D:\Users\ssreeenivasreddy\Altimetrik_JCL\pythonseleniumframework\appium.log'],stdout=sp.DEVNULL,timeout_ms=20000)
-#     yield appium_service
-#     appium_service.stop()
-#     # print('*****SETUP*****')
+# @pytest.fixture(scope='package', autouse=True)
+# def setup_appium(platformType,setup_androidVirtualDevice):
+#     try:
+#         if platformType=='w_mob' or platformType=='n_mob':
+#             #import json
+#             appium_service = AppiumService()
+
+#             '''
+#             args=['-p', '4725','--log', 'D:/Users/ssreeenivasreddy/Altimetrik_JCL/deve/pythonseleniumframework/testdata\appium.log','--log-timestamp','true'
+#             ,'--allow-insecure', 'chromedriver_autodownload'],
+#             '''
+#             appium_service.start( args=['-p', str('4723'),'--log', 'D:/Users/ssreeenivasreddy/Altimetrik_JCL/deve/pythonseleniumframework/testdata\appium.log','--local-timezone','--log-timestamp'
+#             ],timeout_ms=10000)
+#             #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
+#             #print(ele.returncode,'<-----------')
+#             #time.sleep(20)
+#             #emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+#             #print("------------------------ele---->",ele,"------------------------ele---->")
+#             #emulatorStartErr=emulatorStart.communicate()[0]
+#             #print('--error \n',emulatorStartErr,'\n error')
+#             print(appium_service.is_running,',Appium service started...')
+#             print(appium_service.is_listening,',Appium service started listening...')            
+#             #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
+#             #for i in ele.stdout.read().splitlines():
+#             #    print(i)
+#             time.sleep(80)
+#             yield appium_service
+#             appium_service.stop()
+#         # print('*****SETUP*****')
+#         else:
+            
+#             yield "not required"
+#             print(' mobile platform is not selected')
+
+            
+
+#     except Exception as error:
+#         raise error    
+
+
+@pytest.fixture(scope='package')
+def setup_androidVirtualDevice(platformType):
+    if platformType=='w_mob' or platformType=='n_mob':
+        print('test---')
+        '''
+        
+        shutil.rmtree
+        sp.Popen('adb kill-server', stdout=sp.PIPE, text=True, shell=True)
+        if(os.path.exists("D:/Users/sjyothi/.android/avd/pixelTest3")):
+            pattern= r'D:/Users/sjyothi/.android/avd/**/multiinstance.lock'
+            for item in glob.iglob(pattern, recursive=True):
+        # delete file
+                print("Deleting:", item)
+                os.remove(item)
+            
+        #from subprocess import Popen
+        commands = ['adb start-server', 'avdmanager create avd -n pixelT -k "system-images;android-31;google_apis;x86_64" -d 1','emulator -avd pixelT -partition-size 1024 -wipe-data -no-snapshot-load']
+        procs = [ sp.Popen(i,shell=True) for i in commands ]
+        for p in procs:
+            p.wait() 
+        '''  
+        '''
+        deviceStart=sp.Popen('adb devices',stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+        deviceStartErr=deviceStart.communicate()[0]
+        print('--error \n',str(deviceStartErr).replace("\r\n"," "),'\n error')    
+        deviceServerStart=sp.Popen('adb start-server', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+        deviceServerStartErr=deviceServerStart.communicate()[0]
+        print('--error \n',str(deviceServerStartErr).replace("\r\n"," "),'\n error')
+        emulatorCreate=sp.Popen('avdmanager create avd -n pixelT3 -k "system-images;android-31;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)      
+        emulatorCreateErr=emulatorCreate.communicate()[0]
+        print('--error \n',str(emulatorCreateErr).replace("\r\n"," "),'\n error')
+        '''
+        emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+        #print("------------------------ele---->",ele,"------------------------ele---->")
+        #emulatorStartErr=emulatorStart.communicate()[0]
+        #print('--error \n',str(emulatorStartErr).replace("\r\n"," "),'\n error')
+        #if(ele.returncode):
+            #print('---')   
+            #sp.Popen('adb start-server', stdout=sp.PIPE, text=True, shell=True)
+            
+            #ele=sp.Popen('avdmanager delete avd -n pixelTest3 --force', stdout=sp.PIPE, text=True, shell=True)
+            #print(ele.returncode,'<-----------')
+            #time.sleep(20)
+            #sp.Popen('avdmanager create avd -n pixelTest3 -k "system-images;android-33;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE, text=True, shell=True)
+        #time.sleep(180)
+            #start=sp.Popen('emulator -avd pixelTest3 -partition-size 1024 -wipe-data -no-snapshot-load',
+                            #stdout=sp.PIPE, text=True, shell=True)
+        time.sleep(60)                 
+        #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
+
+        #print(ele.returncode)
+        #for i in ele.stdout.read().splitlines():
+            #print(i)
+        #yield start
+        #start.kill()
+        #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
+        # print('*****SETUP*****')

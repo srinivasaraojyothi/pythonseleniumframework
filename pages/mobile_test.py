@@ -1,4 +1,6 @@
+from turtle import down
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
 
 from selenium.common.exceptions import NoSuchElementException
 import polling2, time
@@ -14,6 +16,9 @@ from pyallied.mobile.mobAppium_actions import mobAppium_actions
 from pyallied.web.webElement import common
 from pyallied.web.browser import Browser
 from pyallied.web.windowAndFrame import frameAndWindow
+from pyallied.web.webElement_v2 import common_v2
+from pyallied.web.alerts import driverAlerts
+from pyallied.web.keys import Keys
 
 class Mobile_Test:
 
@@ -517,5 +522,257 @@ class Mobile_Test:
 
     def toggle_touch_id_enrollment_Ios_simulator(self):
         self.mobAppium.toggle_touch_id_enrollment_ios_simulator()
+
+
+class Mobile_Web_V2:
+    def __init__(self, browser):
+        self.browser=browser
+        self.me = common_v2(self.browser)
+        self.u = driverAlerts(self.browser)
+        self.mob =mobAppium_actions(self.browser)
+        self.web1 = common(self.browser)
+        self.frame = frameAndWindow(self.browser)
+
+    login_id = "login2"
+    css_username = "input#loginusername"
+    duble_cl = "//button[text()='Double Click Me']"
+    css_pswd = "input#loginpassword"
+    login2 = "//button[text()='Log in']"
+    id_1 = "(//li[@class='nav-item'])[6]"
+    id_2 = "nameofuser"
+    id3 = "//a[@class='dropdwnbtn accessibility-plugin-ac newMenu abhaanchortag']"
+    id4 = "//div[@aria-label='MINISTRY OF HEALTH AND FAMILY WELFARE']"
+    id5 = "//a[text()='Register / Sign In ']"
+    scr = "(//img[@class='d-block img-fluid'])[1]"
+    act1 = "(//a[@href='prod.html?idp_=5'])[2]"
+    act2 = "//a[@class='btn btn-success btn-lg']"
+    act3 = "(//a[text()='Resources'])[2]"
+    act4 = "(//a[text()='States / Departments / Ministries'])[3]"
+    act5 = "//a[text()='About us']"
+    right_cl = "//button[text()='Right Click Me']"
+    act6 = "//input[@name='globalSearch']"
+    act7 = "(//h3[text()='Mahindra Scorpio-N'])[1]"
+    act8 = "(//a[@href='prod.html?idp_=7'])[2]"
+
+    down_1 = "//b[text()='Get in Touch']"
+    up1 = "//a[text()='Home ']"
+
+
+    source_path = "(//div[text()='Rome'])[2]"
+    destination_path = "//*[@id='box106']"
+    s2 = "(//div[text()='Seoul'])[2]"
+
+    a1 = "//select[@name='Month']"
+
+
+
+    def launch_url(self, url):
+        self.me.navigateto(url)
+    def click_login(self):
+        self.me.isClickable("ID", Mobile_Web_V2.login_id)
+        print("Element is able to click")
+        self.me.click("ID", Mobile_Web_V2.login_id)
+    def enter_user_name(self, name):
+        self.me.fillField("CSS_SELECTOR",Mobile_Web_V2.css_username, name)
+    def enter_password(self, name):
+        self.me.fillField("CSS_SELECTOR",Mobile_Web_V2.css_pswd, name)
+    def click_login2(self):
+        self.me.isElementDisplayed("XPATH",Mobile_Web_V2.login2)
+        self.me.isElementEnabled("XPATH",Mobile_Web_V2.login2)
+        print("Element is enable")
+        self.me.click("XPATH",Mobile_Web_V2.login2)
+        time.sleep(5)
+    def clear_element(self):
+        self.me.clear("CSS_SELECTOR",Mobile_Web_V2.css_pswd)
+
+    def GetAttribute(self):
+        ab = self.me.getAttribute("XPATH", Mobile_Web_V2.id_1, "class")
+        print(ab)
+
+    def GetDomAttribute(self):
+        a = self.me.getDomAttribute("XPATH", Mobile_Web_V2.id_1,"class")
+        print(a)
+
+    def GetProperty(self):
+        a = self.me.getProperty("ID", Mobile_Web_V2.id_2,"text_length")
+        print(a)
+
+    def CurrentElementscreenshot(self):
+        self.me.currentElementScreenshot("XPATH", Mobile_Web_V2.id_1, r'D://Users//ssreeenivasreddy//Altimetrik_JCL//deve//pythonseleniumframework//webElement_Screenshots//test3.png')
+
+    def click_action(self):
+        self.me.actionClick("XPATH", Mobile_Web_V2.act1)
+
+    def click_action_hold(self):
+        self.me.actionClickandHold("XPATH", Mobile_Web_V2.act2)
+        self.me.actionClick("XPATH", Mobile_Web_V2.act2)
+
+    def AcceptAlert(self):
+        self.u.acceptAlert()
+
+    def dismiss_Alert(self):
+        self.u.dismissAlert()
+    
+    def move_element(self):
+        self.me.moveToElement("XPATH", Mobile_Web_V2.act2)
+        self.me.actionClick("XPATH", Mobile_Web_V2.act2)
+
+    def move_element_click(self):
+        self.me.moveToElement_and_click("XPATH", Mobile_Web_V2.act2)
+
+    def open_new_window(self):
+        self.mob.execute_Script("window.open()")
+        time.sleep(2)
+    
+    def Switch_toWindoW(self, windowNumber):
+        time.sleep(2)
+        self.frame.switchtoWindowUsingHandle(windowNumber)
+
+    def move_element_click_sub(self):
+        self.me.moveToElement_and_subElement_click("XPATH", Mobile_Web_V2.act3, Mobile_Web_V2.act4)
+
+    def MoveToElementWithOffset(self):
+        self.me.moveToElementWithOffset("XPATH", Mobile_Web_V2.act5, 100, 200)
+
+    def keydown_and_sendKeys(self):
+        self.me.keyDown_and_sendKeys(Keys.ENTER,"enter", "ID", Mobile_Web_V2.login_id)
+
+    def Double_click(self):
+        self.me.double_click("XPATH", Mobile_Web_V2.duble_cl)
+
+    def Right_Click(self):
+        self.me.right_Click("XPATH", Mobile_Web_V2.right_cl)
+        time.sleep(5)
+
+    def ResetActions(self):
+        self.me.resetActions()
+        
+
+    # def SendKeys(self):
+    #     self.me.click("XPATH", Mobile_Web_V2.act5)
+    #     self.me.sendKeys("sreenivas")
+
+    # def SendKeysToElement(self):
+    #     self.me.sendKeysToElement("XPATH", Mobile_Web_V2.act5,"sreenivas")
+
+    def scroll(self):
+        self.me.Scroll()
+
+    def Scroll_By_amount(self):
+        self.me.Scroll_by_amount()
+
+    def Scroll_From_origin(self):
+        self.me.Scroll_from_origin()
+
+    def scroll_To_Element(self):
+        self.me.scroll_to_Element()
+
+    def switch_to_ActiveElement(self):
+        self.me.switch_To_ActiveElement()
+
+    def FormSubmit(self):
+        self.me.formSubmit()
+
+    def Get_Value_of_css_property(self):
+        a = self.me.get_Value_of_css_property("XPATH", Mobile_Web_V2.id3, "color")
+        print(a)
+
+    def Get_Accessible_name(self):
+        a = self.me.get_Accessible_name("XPATH", Mobile_Web_V2.id4)
+        print(a)
+
+    def Get_Aria_role(self):
+        a = self.me.get_Aria_role("XPATH", Mobile_Web_V2.id4)
+        print(a)
+
+    def get_internal_ID(self):
+        a = self.me.Get_internal_ID("XPATH", Mobile_Web_V2.id3)
+        print(a)
+
+    def get_location_of_Element(self):
+        a = self.me.Get_location_of_Element("XPATH", Mobile_Web_V2.id3)
+        print(a)
+
+    def Get_Scroll_location_of_Element(self):
+        a = self.me.get_Scroll_location_of_Element("XPATH", Mobile_Web_V2.id3)
+        print(a)
+
+    def Get_Prent_of_Element(self):
+        a = self.me.get_Prent_of_Element("XPATH", Mobile_Web_V2.id3)
+        print(a)
+
+    def Get_size_And_Location(self):
+        a = self.me.get_size_And_Location("XPATH", Mobile_Web_V2.id3)
+        print(a)
+
+    def Get_element_screenshot_as_base64(self):
+        self.me.get_element_screenshot_as_base64()
+
+    def Get_element_screenshot_as_png(self):
+        a = self.me.get_element_screenshot_as_png()
+        print(a)
+
+    def Get_Element_shadow_root(self):
+        a = self.me.get_Element_shadow_root("XPATH", Mobile_Web_V2.id4)
+        print(a)
+
+    def Get_Element_size(self):
+        a = self.me.get_Element_size("XPATH", Mobile_Web_V2.id4)
+        print(a)
+
+    def Get_Element_text(self):
+        a = self.me.get_Element_text("XPATH", Mobile_Web_V2.id4)
+        print(a)
+
+    def DragAndDrop(self):
+        self.me.dragAndDrop("XPATH", Mobile_Web_V2.source_path, Mobile_Web_V2.destination_path)
+
+    def DragAndDropByOffset(self):
+        self.me.dragAndDropByOffset("XPATH", Mobile_Web_V2.s2, 304, -57)
+        time.sleep(5)
+
+    def SelectDropDownByValue(self):
+        self.me.selectDropDownByValue("XPATH", Mobile_Web_V2.a1, "Ap")
+        time.sleep(1)
+
+    def SelectDropDownByIndex(self):
+        self.me.selectDropDownByIndex("XPATH", Mobile_Web_V2.a1, "3")
+        time.sleep(1)
+
+    def SelectDropDownByVisibleText(self):
+        self.me.selectDropDownByVisibleText("XPATH", Mobile_Web_V2.a1, "May")
+        time.sleep(1)
+
+    def DeselectAllOptionsInDropDown(self):
+        self.me.deselectAllOptionsInDropDown("XPATH", Mobile_Web_V2.a1)
+        time.sleep(1)
+
+    def GetDefaultSelectedDropDownOptions(self):
+        a = self.me.getDefaultSelectedDropDownOptions("XPATH", Mobile_Web_V2.a1)
+        print(a)
+
+    def GetAllOptionInDropDown(self):
+        a = self.me.getAllOptionInDropDown("XPATH", Mobile_Web_V2.a1)
+        print(a)
+
+    def DeselectByIndex(self):
+        self.me.deselectByIndex("XPATH", Mobile_Web_V2.a1, "3")
+        time.sleep(1)
+
+    def DeselectByValue(self):
+        self.me.deselectByValue("XPATH", Mobile_Web_V2.a1, "Ap")
+        time.sleep(1)
+
+    def DeselectByVisibleText(self):
+        self.me.deselectByVisibleText("XPATH", Mobile_Web_V2.a1, "May")
+        time.sleep(1)
+
+    def GetFirstSelecteOption(self):
+        a = self.me.getFirstSelecteOption("XPATH", Mobile_Web_V2.a1)
+        print(a)
+
+    def GetDefaultSelectedDropDownOptions(self):
+        a = self.me.getDefaultSelectedDropDownOptions("XPATH", Mobile_Web_V2.a1)
+        print(a)
 
     
