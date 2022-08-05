@@ -155,7 +155,15 @@ go to allure installation folder
 ex: allure-2.18.1\plugins\custom-logo-plugin\static
 ```
 keep the logo image under folder 'static,keep the image of max 5 kb size.  
-name the image as 'custom-logo'.
+name the image as 'custom-logo'.  
+
+change the image type in file 'styles.css' file
+
+```shell
+background: url('custom-logo.png') no-repeat left center !important;
+```
+
+
 go to 'config' folder
 
 ```shell
