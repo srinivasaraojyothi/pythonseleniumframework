@@ -174,7 +174,7 @@ plugins:
   - custom-logo-plugin
 ```
 Generate the allure and check logo is displaying like below
-![Alt text](allure_png_logo.PNG)
+![Alt text](report_png_logo.PNG)
 
 
 
