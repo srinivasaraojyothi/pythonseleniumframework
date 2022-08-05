@@ -81,7 +81,7 @@ uncomment html report hook 'def pytest_runtest_makereport 'code. if you run with
 
 and execute with the below command 
 ``` python
-py -3 -m pytest -n 2  -rA  --html=report.html --self-contained-html --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
+py -3 -m pytest -n 2  -rA  --html=report.html  --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
 ```
 Generated report sample screenshot
 
@@ -100,7 +100,7 @@ To reflect the pie chart, user needs to uncomment the below hook code in conftes
 
 execute below command
  ```
- py -3 -m pytest -n 2  -rA  --html=report.html --self-contained-html --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
+ py -3 -m pytest -n 2  -rA  --html=report.html  --css=report_styles\\report_gen.css --b=chrome --e=qc --t=web -v
  ``` 
 
 
@@ -148,5 +148,34 @@ Note: if you install allure_pytest_bdd and allure-pytest, then above mentioned a
 
 py -3 -m pytest -m 'j'  -rA -p no:allure_pytest_bdd  --alluredir=allurereports --b=chrome --e=qc --t=web -v
 ```
+### allure - logo insert  
+
+go to allure installation folder  
+```shell
+ex: allure-2.18.1\plugins\custom-logo-plugin\static
+```
+keep the logo image under folder 'static,keep the image of max 5 kb size.  
+name the image as 'custom-logo'.
+go to 'config' folder
+
+```shell
+ex: allure-2.18.1\config
+```
+we can see following files under 'config' folder
+``` shell
+1. allure.yaml
+2. allure-cucumber
+3. allure-junit
+```
+open 'allure.yaml' file and add below line at under plugins section
+```
+plugins:
+
+  - custom-logo-plugin
+```
+Generate the allure and check logo is displaying like below
+![Alt text](allure_png_logo.PNG)
+
+
 
 
