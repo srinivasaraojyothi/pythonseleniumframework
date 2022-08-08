@@ -96,8 +96,8 @@ def browser(b, t, request):
 
             customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
-            print(browser, ' ------->desired caps')
-            browser.get('https://jqueryui.com/droppable/')
+            #print(browser, ' ------->desired caps')
+            #browser.get('https://jqueryui.com/droppable/')
             yield browser
 
             # Quit the WebDriver instance for the teardown
@@ -196,7 +196,7 @@ def browser(b, t, request):
 
             customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
-            print(browser, ' ------->desired caps')
+            #print(browser, ' ------->desired caps')
             yield browser
 
             # Quit the WebDriver instance for the teardown
@@ -463,14 +463,13 @@ def pytest_html_results_summary(prefix, summary, postfix):
     total_cases=pass_testcases+failed_testcase+skipped_testcase
 
 
-    failed=str((failed_testcase/total_cases))
-    passsed=str((pass_testcases/total_cases)) 
-     
-    skipped=str((skipped_testcase/total_cases)) 
-    errorcases=str((error_testcases/total_cases)) 
+    failed = 0 if failed_testcase == 0 else (failed_testcase/total_cases)
+    errorcases = 0 if error_testcases == 0 else (error_testcases/total_cases)
+    passed = 0 if pass_testcases == 0 else (pass_testcases/total_cases)
+    skipped = 0 if skipped_testcase == 0 else (skipped_testcase/total_cases)
 
     data_pie=html.link( rel='stylesheet',href='report_styles/summarypiechart.css')
-    data_pie.append(html.div( class_="pie",style="--val_1:"+failed+"; --val_2:"+passsed+"; --val_3:"+skipped+"; --val_4:"+errorcases))
+    data_pie.append(html.div( class_="pie",style="--val_1:"+str(failed)+"; --val_2:"+str(passed)+"; --val_3:"+str(skipped)+"; --val_4:"+str(errorcases)))
     Data_table=html.div(class_="Container",style="float: right;position: relative;left: -70%;padding: 0 70px;line-height: 200%;")
     Data_table.append(html.ul())
     Data_table.append(html.li("pass %: "+str((pass_testcases/total_cases)*100),style="color: green;font-size: 12px;align-content: center;"))
