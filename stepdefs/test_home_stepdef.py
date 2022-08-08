@@ -5,8 +5,11 @@ from pages.homePageObj import homePageObj
 
 
 scenarios("homefeatures")
+@given("I press the pull button")
+@given("I press the great button")
 @given("I press the publish button")
 def article(browser):
+    print('conftest--')
     homePageObj(browser).searchinGoogle("https://www.amazon.in/")
    # print(' in step----------')
 @then("do the google search")

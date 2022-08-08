@@ -7,8 +7,8 @@ from pages.menuPageObj import menuPageObj
 
 
 
-scenarios("menufeatures")
-@given("I menu press the publish button")
+#scenarios("menufeatures")
+#@given("I menu press the publish button")
 def publish_article(browser):
     #try:
         menuPageObj(browser).searchinGoogle("https://www.amazon.in/")

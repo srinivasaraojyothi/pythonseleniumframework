@@ -3,3 +3,13 @@ seleniumpythonactionbot
 *allure*
 .pytest_cache
 ./**/*_pycache_*
+*.py
+pages/**/*.py
+features/**/*.feature
+index.js
+*.log
+node_modules
+*.json
+*.png
+*.css
+*.html

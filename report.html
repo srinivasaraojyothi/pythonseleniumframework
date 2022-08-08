@@ -3,193 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>Test Report</title>
-    <style>body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  /* do not increase min-width as some may use split screens */
-  min-width: 800px;
-  color: #999;
-}
-
-h1 {
-  font-size: 24px;
-  color: black;
-}
-
-h2 {
-  font-size: 16px;
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-a {
-  color: #999;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-#environment td {
-  padding: 5px;
-  border: 1px solid #E6E6E6;
-}
-#environment tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed,
-.passed .col-result {
-  color: green;
-}
-
-span.skipped,
-span.xfailed,
-span.rerun,
-.skipped .col-result,
-.xfailed .col-result,
-.rerun .col-result {
-  color: orange;
-}
-
-span.error,
-span.failed,
-span.xpassed,
-.error .col-result,
-.failed .col-result,
-.xpassed .col-result {
-  color: red;
-}
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-/*------------------
- * 1. Table Layout
- *------------------*/
-#results-table {
-  border: 1px solid #e6e6e6;
-  color: #999;
-  font-size: 12px;
-  width: 100%;
-}
-#results-table th,
-#results-table td {
-  padding: 5px;
-  border: 1px solid #E6E6E6;
-  text-align: left;
-}
-#results-table th {
-  font-weight: bold;
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-.log {
-  background-color: #e6e6e6;
-  border: 1px solid #e6e6e6;
-  color: black;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  height: 230px;
-  overflow-y: scroll;
-  padding: 5px;
-  white-space: pre-wrap;
-}
-.log:only-child {
-  height: inherit;
-}
-
-div.image {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin-left: 5px;
-  overflow: hidden;
-  width: 320px;
-}
-div.image img {
-  width: 320px;
-}
-
-div.video {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin-left: 5px;
-  overflow: hidden;
-  width: 320px;
-}
-div.video video {
-  overflow: hidden;
-  width: 320px;
-  height: 240px;
-}
-
-.collapsed {
-  display: none;
-}
-
-.expander::after {
-  content: " (show details)";
-  color: #BBB;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.collapser::after {
-  content: " (hide details)";
-  color: #BBB;
-  font-style: italic;
-  cursor: pointer;
-}
-
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-  cursor: pointer;
-}
-
-.sort-icon {
-  font-size: 0px;
-  float: left;
-  margin-right: 5px;
-  margin-top: 5px;
-  /*triangle*/
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-}
-.inactive .sort-icon {
-  /*finish triangle*/
-  border-top: 8px solid #E6E6E6;
-}
-.asc.active .sort-icon {
-  /*finish triangle*/
-  border-bottom: 8px solid #999;
-}
-.desc.active .sort-icon {
-  /*finish triangle*/
-  border-top: 8px solid #999;
-}
-</style></head>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
   <body onLoad="init()">
     <script>/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -428,8 +242,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
     notFoundMessage.hidden = !allRowsHidden;
 }
 </script>
-    <h1>My very own title!</h1>
-    <p>Report generated on 25-Jul-2022 at 19:28:33 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h1> JCI logo Test</h1>
+    <p>Report generated on 08-Aug-2022 at 12:55:18 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -443,7 +257,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Windows-10-10.0.19044-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"allure-pytest-bdd": "2.9.45", "bdd": "5.0.0", "forked": "1.4.0", "html": "3.1.1", "lazy-fixture": "0.6.3", "metadata": "2.0.1", "rerunfailures": "10.2", "xdist": "2.5.0"}</td></tr>
+        <td>{"allure-pytest": "2.9.45", "bdd": "5.0.0", "forked": "1.4.0", "html": "3.1.1", "lazy-fixture": "0.6.3", "metadata": "2.0.1", "rerunfailures": "10.2", "xdist": "2.5.0"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.10.4</td></tr>
@@ -455,10 +269,20 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>qc</td></tr>
       <tr>
         <td>test_platform</td>
-        <td>n_mob</td></tr></table>
+        <td>web</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 347.18 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>15 tests ran in 121.50 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">9 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">6 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p></p>
+    <link href="report_styles/summarypiechart.css" rel="stylesheet">
+      <div class="pie" style="--val_1:0.4; --val_2:0.6; --val_3:0.0; --val_4:0.0"></div></link>
+    <div class="Container" style="float: right;position: relative;left: -75%;padding: 0 70px;line-height: 200%;">
+      <ul></ul>
+      <li style="color: green;font-size: 12px;align-content: center;">pass %: 60.0</li>
+      <li style="color: red;font-size: 12px;align-content: center;">fail %: 40.0</li>
+      <li style="color: orange;font-size: 12px;align-content: center;">skip %: 0.0</li>
+      <li style="color: red;font-size: 12px;align-content: center;">error %: 0.0</li></div>
+    <body href="report_styles/exper.css" rel="stylesheet"></body>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -469,16 +293,464 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">stepdefs/test_menu_test.py::test_airbnb_mobile_demo</td>
-          <td class="col-duration">143.39</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_apidemo_stepdef.py::test_creating_user[testcase_payment_1]</td>
+          <td class="col-duration">0.76</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>test---
-True &lt;-------------&gt;
-True &lt;-------------&gt;
-<br/> -------------------------------Captured log setup------------------------------- <br/>WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &#x27;ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection object at 0x000001C7A9FB2770&gt;, &#x27;Connection to 127.0.0.1 timed out. (connect timeout=1.0)&#x27;)&#x27;: /wd/hub/status
-WARNING  urllib3.connectionpool:connectionpool.py:810 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &#x27;ConnectTimeoutError(&lt;urllib3.connection.HTTPConnection object at 0x000001C7A9FB2AD0&gt;, &#x27;Connection to 127.0.0.1 timed out. (connect timeout=1.0)&#x27;)&#x27;: /wd/hub/status<br/></div></td></tr></tbody></table></body></html>
+            <div class="image"><a class="image" href="assets/stepdefs_test_apidemo_stepdef.py__test_creating_user_testcase_payment_1__0_0.png" target="_blank"><img src="assets/stepdefs_test_apidemo_stepdef.py__test_creating_user_testcase_payment_1__0_0.png"/></a></div>
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_creating_user[testcase_payment_1]&gt;&gt;, _pytest_bdd_example = {&#x27;testcaseid&#x27;: &#x27;testcase_payment_1&#x27;}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_apidemo_stepdef.py:16: in create_user<br/>    responce=crud().crudCall(&quot;D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/apiList.xlsx&quot;,testcaseid)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\api_crud\crud.py:20: in crudCall<br/>    dictdata=crud.__readData_toDict(self,testLocation,testcaseId)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\api_crud\crud.py:108: in __readData_toDict<br/>    dataDict=xls.set_index(&quot;testcase_id&quot;).to_dict(&quot;index&quot;)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self =                    crud_type  ...                                               data<br/>testcase_id                   ......         NaN<br/>testcase_payment_2      POST  ...  D:/Users/sjyothi/Repos/pythonseleniumFramework...<br/><br/>[4 rows x 4 columns]<br/>orient = &#x27;index&#x27;, into = &lt;class &#x27;dict&#x27;&gt;<br/><br/>    def to_dict(self, orient: str = &quot;dict&quot;, into=dict):<br/>        &quot;&quot;&quot;<br/>        Convert the DataFrame to a dictionary.<br/>    <br/>        The type of the key-value pairs can be customized with the parameters<br/>        (see below).<br/>    <br/>        Parameters<br/>        ----------<br/>        orient : str {&#x27;dict&#x27;, &#x27;list&#x27;, &#x27;series&#x27;, &#x27;split&#x27;, &#x27;records&#x27;, &#x27;index&#x27;}<br/>            Determines the type of the values of the dictionary.<br/>    <br/>            - &#x27;dict&#x27; (default) : dict like {column -&gt; {index -&gt; value}}<br/>            - &#x27;list&#x27; : dict like {column -&gt; [values]}<br/>            - &#x27;series&#x27; : dict like {column -&gt; Series(values)}<br/>            - &#x27;split&#x27; : dict like<br/>              {&#x27;index&#x27; -&gt; [index], &#x27;columns&#x27; -&gt; [columns], &#x27;data&#x27; -&gt; [values]}<br/>            - &#x27;tight&#x27; : dict like<br/>              {&#x27;index&#x27; -&gt; [index], &#x27;columns&#x27; -&gt; [columns], &#x27;data&#x27; -&gt; [values],<br/>              &#x27;index_names&#x27; -&gt; [index.names], &#x27;column_names&#x27; -&gt; [column.names]}<br/>            - &#x27;records&#x27; : list like<br/>              [{column -&gt; value}, ... , {column -&gt; value}]<br/>            - &#x27;index&#x27; : dict like {index -&gt; {column -&gt; value}}<br/>    <br/>            Abbreviations are allowed. `s` indicates `series` and `sp`<br/>            indicates `split`.<br/>    <br/>            .. versionadded:: 1.4.0<br/>                &#x27;tight&#x27; as an allowed value for the ``orient`` argument<br/>    <br/>        into : class, default dict<br/>            The collections.abc.Mapping subclass used for all Mappings<br/>            in the return value.  Can be the actual class or an empty<br/>            instance of the mapping type you want.  If you want a<br/>            collections.defaultdict, you must pass it initialized.<br/>    <br/>        Returns<br/>        -------<br/>        dict, list or collections.abc.Mapping<br/>            Return a collections.abc.Mapping object representing the DataFrame.<br/>            The resulting transformation depends on the `orient` parameter.<br/>    <br/>        See Also<br/>        --------<br/>        DataFrame.from_dict: Create a DataFrame from a dictionary.<br/>        DataFrame.to_json: Convert a DataFrame to JSON format.<br/>    <br/>        Examples<br/>        --------<br/>        &gt;&gt;&gt; df = pd.DataFrame({&#x27;col1&#x27;: [1, 2],<br/>        ...                    &#x27;col2&#x27;: [0.5, 0.75]},<br/>        ...                   index=[&#x27;row1&#x27;, &#x27;row2&#x27;])<br/>        &gt;&gt;&gt; df<br/>              col1  col2<br/>        row1     1  0.50<br/>        row2     2  0.75<br/>        &gt;&gt;&gt; df.to_dict()<br/>        {&#x27;col1&#x27;: {&#x27;row1&#x27;: 1, &#x27;row2&#x27;: 2}, &#x27;col2&#x27;: {&#x27;row1&#x27;: 0.5, &#x27;row2&#x27;: 0.75}}<br/>    <br/>        You can specify the return orientation.<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;series&#x27;)<br/>        {&#x27;col1&#x27;: row1    1<br/>                 row2    2<br/>        Name: col1, dtype: int64,<br/>        &#x27;col2&#x27;: row1    0.50<br/>                row2    0.75<br/>        Name: col2, dtype: float64}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;split&#x27;)<br/>        {&#x27;index&#x27;: [&#x27;row1&#x27;, &#x27;row2&#x27;], &#x27;columns&#x27;: [&#x27;col1&#x27;, &#x27;col2&#x27;],<br/>         &#x27;data&#x27;: [[1, 0.5], [2, 0.75]]}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;records&#x27;)<br/>        [{&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}, {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75}]<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;index&#x27;)<br/>        {&#x27;row1&#x27;: {&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}, &#x27;row2&#x27;: {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75}}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;tight&#x27;)<br/>        {&#x27;index&#x27;: [&#x27;row1&#x27;, &#x27;row2&#x27;], &#x27;columns&#x27;: [&#x27;col1&#x27;, &#x27;col2&#x27;],<br/>         &#x27;data&#x27;: [[1, 0.5], [2, 0.75]], &#x27;index_names&#x27;: [None], &#x27;column_names&#x27;: [None]}<br/>    <br/>        You can also specify the mapping type.<br/>    <br/>        &gt;&gt;&gt; from collections import OrderedDict, defaultdict<br/>        &gt;&gt;&gt; df.to_dict(into=OrderedDict)<br/>        OrderedDict([(&#x27;col1&#x27;, OrderedDict([(&#x27;row1&#x27;, 1), (&#x27;row2&#x27;, 2)])),<br/>                     (&#x27;col2&#x27;, OrderedDict([(&#x27;row1&#x27;, 0.5), (&#x27;row2&#x27;, 0.75)]))])<br/>    <br/>        If you want a `defaultdict`, you need to initialize it:<br/>    <br/>        &gt;&gt;&gt; dd = defaultdict(list)<br/>        &gt;&gt;&gt; df.to_dict(&#x27;records&#x27;, into=dd)<br/>        [defaultdict(&lt;class &#x27;list&#x27;&gt;, {&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}),<br/>         defaultdict(&lt;class &#x27;list&#x27;&gt;, {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75})]<br/>        &quot;&quot;&quot;<br/>        if not self.columns.is_unique:<br/>            warnings.warn(<br/>                &quot;DataFrame columns are not unique, some columns will be omitted.&quot;,<br/>                UserWarning,<br/>                stacklevel=find_stack_level(),<br/>            )<br/>        # GH16122<br/>        into_c = com.standardize_mapping(into)<br/>    <br/>        orient = orient.lower()<br/>        # GH32515<br/>        if orient.startswith((&quot;d&quot;, &quot;l&quot;, &quot;s&quot;, &quot;r&quot;, &quot;i&quot;)) and orient not in {<br/>            &quot;dict&quot;,<br/>            &quot;list&quot;,<br/>            &quot;series&quot;,<br/>            &quot;split&quot;,<br/>            &quot;records&quot;,<br/>            &quot;index&quot;,<br/>        }:<br/>            warnings.warn(<br/>                &quot;Using short name for &#x27;orient&#x27; is deprecated. Only the &quot;<br/>                &quot;options: (&#x27;dict&#x27;, list, &#x27;series&#x27;, &#x27;split&#x27;, &#x27;records&#x27;, &#x27;index&#x27;) &quot;<br/>                &quot;will be used in a future version. Use one of the above &quot;<br/>                &quot;to silence this warning.&quot;,<br/>                FutureWarning,<br/>                stacklevel=find_stack_level(),<br/>            )<br/>    <br/>            if orient.startswith(&quot;d&quot;):<br/>                orient = &quot;dict&quot;<br/>            elif orient.startswith(&quot;l&quot;):<br/>                orient = &quot;list&quot;<br/>            elif orient.startswith(&quot;sp&quot;):<br/>                orient = &quot;split&quot;<br/>            elif orient.startswith(&quot;s&quot;):<br/>                orient = &quot;series&quot;<br/>            elif orient.startswith(&quot;r&quot;):<br/>                orient = &quot;records&quot;<br/>            elif orient.startswith(&quot;i&quot;):<br/>                orient = &quot;index&quot;<br/>    <br/>        if orient == &quot;dict&quot;:<br/>            return into_c((k, v.to_dict(into)) for k, v in self.items())<br/>    <br/>        elif orient == &quot;list&quot;:<br/>            return into_c((k, v.tolist()) for k, v in self.items())<br/>    <br/>        elif orient == &quot;split&quot;:<br/>            return into_c(<br/>                (<br/>                    (&quot;index&quot;, self.index.tolist()),<br/>                    (&quot;columns&quot;, self.columns.tolist()),<br/>                    (<br/>                        &quot;data&quot;,<br/>                        [<br/>                            list(map(maybe_box_native, t))<br/>                            for t in self.itertuples(index=False, name=None)<br/>                        ],<br/>                    ),<br/>                )<br/>            )<br/>    <br/>        elif orient == &quot;tight&quot;:<br/>            return into_c(<br/>                (<br/>                    (&quot;index&quot;, self.index.tolist()),<br/>                    (&quot;columns&quot;, self.columns.tolist()),<br/>                    (<br/>                        &quot;data&quot;,<br/>                        [<br/>                            list(map(maybe_box_native, t))<br/>                            for t in self.itertuples(index=False, name=None)<br/>                        ],<br/>                    ),<br/>                    (&quot;index_names&quot;, list(self.index.names)),<br/>                    (&quot;column_names&quot;, list(self.columns.names)),<br/>                )<br/>            )<br/>    <br/>        elif orient == &quot;series&quot;:<br/>            return into_c((k, v) for k, v in self.items())<br/>    <br/>        elif orient == &quot;records&quot;:<br/>            columns = self.columns.tolist()<br/>            rows = (<br/>                dict(zip(columns, row))<br/>                for row in self.itertuples(index=False, name=None)<br/>            )<br/>            return [<br/>                into_c((k, maybe_box_native(v)) for k, v in row.items()) for row in rows<br/>            ]<br/>    <br/>        elif orient == &quot;index&quot;:<br/>            if not self.index.is_unique:<br/>&gt;               raise ValueError(&quot;DataFrame index must be unique for orient=&#x27;index&#x27;.&quot;)<br/><span class="error">E               ValueError: DataFrame index must be unique for orient=&#x27;index&#x27;.</span><br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py:1953: ValueError[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>testcase_payment_1
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_creating_user[testcase_payment_1]&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;8c2c6e9ce3b1b4a305b50794de3438c6&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;8c2c6e9ce3b1b4a305b50794de3438c6&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_apidemo_stepdef.py::test_report[testcase_payment_2_2]</td>
+          <td class="col-duration">0.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a class="image" href="assets/stepdefs_test_apidemo_stepdef.py__test_report_testcase_payment_2_2__0_0.png" target="_blank"><img src="assets/stepdefs_test_apidemo_stepdef.py__test_report_testcase_payment_2_2__0_0.png"/></a></div>
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_report[testcase_payment_2_2]&gt;&gt;, _pytest_bdd_example = {&#x27;testcaseid&#x27;: &#x27;testcase_payment_2_2&#x27;}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_apidemo_stepdef.py:16: in create_user<br/>    responce=crud().crudCall(&quot;D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/apiList.xlsx&quot;,testcaseid)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\api_crud\crud.py:20: in crudCall<br/>    dictdata=crud.__readData_toDict(self,testLocation,testcaseId)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\api_crud\crud.py:108: in __readData_toDict<br/>    dataDict=xls.set_index(&quot;testcase_id&quot;).to_dict(&quot;index&quot;)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self =                    crud_type  ...                                               data<br/>testcase_id                   ......         NaN<br/>testcase_payment_2      POST  ...  D:/Users/sjyothi/Repos/pythonseleniumFramework...<br/><br/>[4 rows x 4 columns]<br/>orient = &#x27;index&#x27;, into = &lt;class &#x27;dict&#x27;&gt;<br/><br/>    def to_dict(self, orient: str = &quot;dict&quot;, into=dict):<br/>        &quot;&quot;&quot;<br/>        Convert the DataFrame to a dictionary.<br/>    <br/>        The type of the key-value pairs can be customized with the parameters<br/>        (see below).<br/>    <br/>        Parameters<br/>        ----------<br/>        orient : str {&#x27;dict&#x27;, &#x27;list&#x27;, &#x27;series&#x27;, &#x27;split&#x27;, &#x27;records&#x27;, &#x27;index&#x27;}<br/>            Determines the type of the values of the dictionary.<br/>    <br/>            - &#x27;dict&#x27; (default) : dict like {column -&gt; {index -&gt; value}}<br/>            - &#x27;list&#x27; : dict like {column -&gt; [values]}<br/>            - &#x27;series&#x27; : dict like {column -&gt; Series(values)}<br/>            - &#x27;split&#x27; : dict like<br/>              {&#x27;index&#x27; -&gt; [index], &#x27;columns&#x27; -&gt; [columns], &#x27;data&#x27; -&gt; [values]}<br/>            - &#x27;tight&#x27; : dict like<br/>              {&#x27;index&#x27; -&gt; [index], &#x27;columns&#x27; -&gt; [columns], &#x27;data&#x27; -&gt; [values],<br/>              &#x27;index_names&#x27; -&gt; [index.names], &#x27;column_names&#x27; -&gt; [column.names]}<br/>            - &#x27;records&#x27; : list like<br/>              [{column -&gt; value}, ... , {column -&gt; value}]<br/>            - &#x27;index&#x27; : dict like {index -&gt; {column -&gt; value}}<br/>    <br/>            Abbreviations are allowed. `s` indicates `series` and `sp`<br/>            indicates `split`.<br/>    <br/>            .. versionadded:: 1.4.0<br/>                &#x27;tight&#x27; as an allowed value for the ``orient`` argument<br/>    <br/>        into : class, default dict<br/>            The collections.abc.Mapping subclass used for all Mappings<br/>            in the return value.  Can be the actual class or an empty<br/>            instance of the mapping type you want.  If you want a<br/>            collections.defaultdict, you must pass it initialized.<br/>    <br/>        Returns<br/>        -------<br/>        dict, list or collections.abc.Mapping<br/>            Return a collections.abc.Mapping object representing the DataFrame.<br/>            The resulting transformation depends on the `orient` parameter.<br/>    <br/>        See Also<br/>        --------<br/>        DataFrame.from_dict: Create a DataFrame from a dictionary.<br/>        DataFrame.to_json: Convert a DataFrame to JSON format.<br/>    <br/>        Examples<br/>        --------<br/>        &gt;&gt;&gt; df = pd.DataFrame({&#x27;col1&#x27;: [1, 2],<br/>        ...                    &#x27;col2&#x27;: [0.5, 0.75]},<br/>        ...                   index=[&#x27;row1&#x27;, &#x27;row2&#x27;])<br/>        &gt;&gt;&gt; df<br/>              col1  col2<br/>        row1     1  0.50<br/>        row2     2  0.75<br/>        &gt;&gt;&gt; df.to_dict()<br/>        {&#x27;col1&#x27;: {&#x27;row1&#x27;: 1, &#x27;row2&#x27;: 2}, &#x27;col2&#x27;: {&#x27;row1&#x27;: 0.5, &#x27;row2&#x27;: 0.75}}<br/>    <br/>        You can specify the return orientation.<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;series&#x27;)<br/>        {&#x27;col1&#x27;: row1    1<br/>                 row2    2<br/>        Name: col1, dtype: int64,<br/>        &#x27;col2&#x27;: row1    0.50<br/>                row2    0.75<br/>        Name: col2, dtype: float64}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;split&#x27;)<br/>        {&#x27;index&#x27;: [&#x27;row1&#x27;, &#x27;row2&#x27;], &#x27;columns&#x27;: [&#x27;col1&#x27;, &#x27;col2&#x27;],<br/>         &#x27;data&#x27;: [[1, 0.5], [2, 0.75]]}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;records&#x27;)<br/>        [{&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}, {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75}]<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;index&#x27;)<br/>        {&#x27;row1&#x27;: {&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}, &#x27;row2&#x27;: {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75}}<br/>    <br/>        &gt;&gt;&gt; df.to_dict(&#x27;tight&#x27;)<br/>        {&#x27;index&#x27;: [&#x27;row1&#x27;, &#x27;row2&#x27;], &#x27;columns&#x27;: [&#x27;col1&#x27;, &#x27;col2&#x27;],<br/>         &#x27;data&#x27;: [[1, 0.5], [2, 0.75]], &#x27;index_names&#x27;: [None], &#x27;column_names&#x27;: [None]}<br/>    <br/>        You can also specify the mapping type.<br/>    <br/>        &gt;&gt;&gt; from collections import OrderedDict, defaultdict<br/>        &gt;&gt;&gt; df.to_dict(into=OrderedDict)<br/>        OrderedDict([(&#x27;col1&#x27;, OrderedDict([(&#x27;row1&#x27;, 1), (&#x27;row2&#x27;, 2)])),<br/>                     (&#x27;col2&#x27;, OrderedDict([(&#x27;row1&#x27;, 0.5), (&#x27;row2&#x27;, 0.75)]))])<br/>    <br/>        If you want a `defaultdict`, you need to initialize it:<br/>    <br/>        &gt;&gt;&gt; dd = defaultdict(list)<br/>        &gt;&gt;&gt; df.to_dict(&#x27;records&#x27;, into=dd)<br/>        [defaultdict(&lt;class &#x27;list&#x27;&gt;, {&#x27;col1&#x27;: 1, &#x27;col2&#x27;: 0.5}),<br/>         defaultdict(&lt;class &#x27;list&#x27;&gt;, {&#x27;col1&#x27;: 2, &#x27;col2&#x27;: 0.75})]<br/>        &quot;&quot;&quot;<br/>        if not self.columns.is_unique:<br/>            warnings.warn(<br/>                &quot;DataFrame columns are not unique, some columns will be omitted.&quot;,<br/>                UserWarning,<br/>                stacklevel=find_stack_level(),<br/>            )<br/>        # GH16122<br/>        into_c = com.standardize_mapping(into)<br/>    <br/>        orient = orient.lower()<br/>        # GH32515<br/>        if orient.startswith((&quot;d&quot;, &quot;l&quot;, &quot;s&quot;, &quot;r&quot;, &quot;i&quot;)) and orient not in {<br/>            &quot;dict&quot;,<br/>            &quot;list&quot;,<br/>            &quot;series&quot;,<br/>            &quot;split&quot;,<br/>            &quot;records&quot;,<br/>            &quot;index&quot;,<br/>        }:<br/>            warnings.warn(<br/>                &quot;Using short name for &#x27;orient&#x27; is deprecated. Only the &quot;<br/>                &quot;options: (&#x27;dict&#x27;, list, &#x27;series&#x27;, &#x27;split&#x27;, &#x27;records&#x27;, &#x27;index&#x27;) &quot;<br/>                &quot;will be used in a future version. Use one of the above &quot;<br/>                &quot;to silence this warning.&quot;,<br/>                FutureWarning,<br/>                stacklevel=find_stack_level(),<br/>            )<br/>    <br/>            if orient.startswith(&quot;d&quot;):<br/>                orient = &quot;dict&quot;<br/>            elif orient.startswith(&quot;l&quot;):<br/>                orient = &quot;list&quot;<br/>            elif orient.startswith(&quot;sp&quot;):<br/>                orient = &quot;split&quot;<br/>            elif orient.startswith(&quot;s&quot;):<br/>                orient = &quot;series&quot;<br/>            elif orient.startswith(&quot;r&quot;):<br/>                orient = &quot;records&quot;<br/>            elif orient.startswith(&quot;i&quot;):<br/>                orient = &quot;index&quot;<br/>    <br/>        if orient == &quot;dict&quot;:<br/>            return into_c((k, v.to_dict(into)) for k, v in self.items())<br/>    <br/>        elif orient == &quot;list&quot;:<br/>            return into_c((k, v.tolist()) for k, v in self.items())<br/>    <br/>        elif orient == &quot;split&quot;:<br/>            return into_c(<br/>                (<br/>                    (&quot;index&quot;, self.index.tolist()),<br/>                    (&quot;columns&quot;, self.columns.tolist()),<br/>                    (<br/>                        &quot;data&quot;,<br/>                        [<br/>                            list(map(maybe_box_native, t))<br/>                            for t in self.itertuples(index=False, name=None)<br/>                        ],<br/>                    ),<br/>                )<br/>            )<br/>    <br/>        elif orient == &quot;tight&quot;:<br/>            return into_c(<br/>                (<br/>                    (&quot;index&quot;, self.index.tolist()),<br/>                    (&quot;columns&quot;, self.columns.tolist()),<br/>                    (<br/>                        &quot;data&quot;,<br/>                        [<br/>                            list(map(maybe_box_native, t))<br/>                            for t in self.itertuples(index=False, name=None)<br/>                        ],<br/>                    ),<br/>                    (&quot;index_names&quot;, list(self.index.names)),<br/>                    (&quot;column_names&quot;, list(self.columns.names)),<br/>                )<br/>            )<br/>    <br/>        elif orient == &quot;series&quot;:<br/>            return into_c((k, v) for k, v in self.items())<br/>    <br/>        elif orient == &quot;records&quot;:<br/>            columns = self.columns.tolist()<br/>            rows = (<br/>                dict(zip(columns, row))<br/>                for row in self.itertuples(index=False, name=None)<br/>            )<br/>            return [<br/>                into_c((k, maybe_box_native(v)) for k, v in row.items()) for row in rows<br/>            ]<br/>    <br/>        elif orient == &quot;index&quot;:<br/>            if not self.index.is_unique:<br/>&gt;               raise ValueError(&quot;DataFrame index must be unique for orient=&#x27;index&#x27;.&quot;)<br/><span class="error">E               ValueError: DataFrame index must be unique for orient=&#x27;index&#x27;.</span><br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\frame.py:1953: ValueError[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>testcase_payment_2_2
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_report[testcase_payment_2_2]&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;1c829aa0f8d317d70c0c785159b46793&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;1c829aa0f8d317d70c0c785159b46793&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_home_stepdef.py::test_myntra</td>
+          <td class="col-duration">14.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a class="image" href="assets/stepdefs_test_home_stepdef.py__test_myntra_0_0.png" target="_blank"><img src="assets/stepdefs_test_home_stepdef.py__test_myntra_0_0.png"/></a></div>
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_myntra&gt;&gt;, _pytest_bdd_example = {}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_home_stepdef.py:17: in article2<br/>    homePageObj(browser).googleSearch()<br/>pages\homePageObj.py:33: in googleSearch<br/>    raise error<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pages.homePageObj.homePageObj object at 0x00000283874D4D30&gt;<br/><br/>    def googleSearch(self):<br/>     try:<br/>       #element= self.me.getAttribute(homePageObj.obj4,&quot;href&quot;)<br/>       element= self.user.getFirstSelecteOption(homePageObj.obj3)<br/>       print(element,&#x27;&lt;-------&gt;&#x27;)<br/>       self.user.selectDropDownByVisibleText(homePageObj.obj3,&quot;Amazon Fresh&quot;)<br/>    <br/>&gt;      assert False,&quot;hello&quot;<br/><span class="error">E      AssertionError: hello</span><br/><br/>pages\homePageObj.py:30: AssertionError[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000283877FC520&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+conftest--
+https://www.amazon.in/ &lt;-------&gt;
+before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find tag name  =  option &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find tag name  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; option
+[&#x27;All Categories&#x27;] &lt;-------&gt;
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  .//option[normalize-space(.) = &quot;Amazon Fresh&quot;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; .//option[normalize-space(.) = &quot;Amazon Fresh&quot;]
+before_click &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;, element=&quot;672f94a3-869f-41d6-ae71-06fc7ea654b9&quot;)&gt;
+Aafter_click &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;, element=&quot;672f94a3-869f-41d6-ae71-06fc7ea654b9&quot;)&gt;
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_myntra&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;093574a8aeaff4e26e231665bfd72e5d&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_home_stepdef.py::test_google_the_article</td>
+          <td class="col-duration">17.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a class="image" href="assets/stepdefs_test_home_stepdef.py__test_google_the_article_0_0.png" target="_blank"><img src="assets/stepdefs_test_home_stepdef.py__test_google_the_article_0_0.png"/></a></div>
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_google_the_article&gt;&gt;, _pytest_bdd_example = {}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_home_stepdef.py:17: in article2<br/>    homePageObj(browser).googleSearch()<br/>pages\homePageObj.py:33: in googleSearch<br/>    raise error<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pages.homePageObj.homePageObj object at 0x00000218F65DFC10&gt;<br/><br/>    def googleSearch(self):<br/>     try:<br/>       #element= self.me.getAttribute(homePageObj.obj4,&quot;href&quot;)<br/>       element= self.user.getFirstSelecteOption(homePageObj.obj3)<br/>       print(element,&#x27;&lt;-------&gt;&#x27;)<br/>       self.user.selectDropDownByVisibleText(homePageObj.obj3,&quot;Amazon Fresh&quot;)<br/>    <br/>&gt;      assert False,&quot;hello&quot;<br/><span class="error">E      AssertionError: hello</span><br/><br/>pages\homePageObj.py:30: AssertionError[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F6450F40&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+conftest--
+https://www.amazon.in/ &lt;-------&gt;
+before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find tag name  =  option &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find tag name  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; option
+[&#x27;All Categories&#x27;] &lt;-------&gt;
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  //*[@id=&#x27;searchDropdownBox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;searchDropdownBox&#x27;]
+before_find xpath  =  .//option[normalize-space(.) = &quot;Amazon Fresh&quot;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; .//option[normalize-space(.) = &quot;Amazon Fresh&quot;]
+before_click &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;, element=&quot;ff21d019-65a4-4e5c-938e-992b5b46d32e&quot;)&gt;
+Aafter_click &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;, element=&quot;ff21d019-65a4-4e5c-938e-992b5b46d32e&quot;)&gt;
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_google_the_article&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2d4d11c13573739b658cc2be7ae6e269&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_menu_test.py::test_airbnb_mobile_demo</td>
+          <td class="col-duration">9.33</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a class="image" href="assets/stepdefs_test_menu_test.py__test_airbnb_mobile_demo_0_0.png" target="_blank"><img src="assets/stepdefs_test_menu_test.py__test_airbnb_mobile_demo_0_0.png"/></a></div>
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_airbnb_mobile_demo&gt;&gt;, _pytest_bdd_example = {}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_menu_test.py:12: in publish_article<br/>    airbnbPage(browser).VerifyUserisOnloginPage()<br/>pages\airbnbPageObj.py:30: in VerifyUserisOnloginPage<br/>    print(&quot;--&quot;,self.mobAppium.get_geoLocation())<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\mobile\mobAppium.py:197: in get_geoLocation<br/>    location = self.driver.location()<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F7C7B850&gt;, name = &#x27;location&#x27;<br/><br/>    def __getattr__(self, name):<br/>        def _wrap(*args, **kwargs):<br/>            try:<br/>                result = attrib(*args, **kwargs)<br/>                return _wrap_elements(result, self)<br/>            except Exception as e:<br/>                self._listener.on_exception(e, self._driver)<br/>                raise<br/>    <br/>        try:<br/>&gt;           attrib = getattr(self._driver, name)<br/><span class="error">E           AttributeError: &#x27;WebDriver&#x27; object has no attribute &#x27;location&#x27;</span><br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\support\event_firing_webdriver.py:222: AttributeError[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F7C7B850&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+on_exception &#x27;WebDriver&#x27; object has no attribute &#x27;location&#x27;
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_airbnb_mobile_demo&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;5f82dea6c400e62179379b451b9bdd1f&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;5f82dea6c400e62179379b451b9bdd1f&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">stepdefs/test_menu_test_1.py::test_airbnb_mobile_demo</td>
+          <td class="col-duration">9.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="image"><a class="image" href="assets/stepdefs_test_menu_test_1.py__test_airbnb_mobile_demo_0_0.png" target="_blank"><img src="assets/stepdefs_test_menu_test_1.py__test_airbnb_mobile_demo_0_0.png"/></a></div>
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/><br/>request = &lt;FixtureRequest for &lt;Function test_airbnb_mobile_demo&gt;&gt;, _pytest_bdd_example = {}<br/><br/>    @pytest.mark.usefixtures(*args)<br/>    def scenario_wrapper(request, _pytest_bdd_example):<br/>        scenario = templated_scenario.render(_pytest_bdd_example)<br/>&gt;       _execute_scenario(feature, scenario, request)<br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:174: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:144: in _execute_scenario<br/>    _execute_step_function(request, scenario, step, step_func)<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pytest_bdd\scenario.py:114: in _execute_step_function<br/>    return_value = step_func(**kwargs)<br/>stepdefs\test_menu_test_1.py:12: in publish_article<br/>    airbnbPage(browser).VerifyUserisOnloginPage()<br/>pages\airbnbPageObj.py:30: in VerifyUserisOnloginPage<br/>    print(&quot;--&quot;,self.mobAppium.get_geoLocation())<br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\pyallied\mobile\mobAppium.py:197: in get_geoLocation<br/>    location = self.driver.location()<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028388FA9030&gt;, name = &#x27;location&#x27;<br/><br/>    def __getattr__(self, name):<br/>        def _wrap(*args, **kwargs):<br/>            try:<br/>                result = attrib(*args, **kwargs)<br/>                return _wrap_elements(result, self)<br/>            except Exception as e:<br/>                self._listener.on_exception(e, self._driver)<br/>                raise<br/>    <br/>        try:<br/>&gt;           attrib = getattr(self._driver, name)<br/><span class="error">E           AttributeError: &#x27;WebDriver&#x27; object has no attribute &#x27;location&#x27;</span><br/><br/>..\..\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\support\event_firing_webdriver.py:222: AttributeError[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028388FA9030&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+on_exception &#x27;WebDriver&#x27; object has no attribute &#x27;location&#x27;
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_airbnb_mobile_demo&gt;&gt;&gt;
+<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a14fbf8f2ccd30c8fc990b78253eac9f&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a14fbf8f2ccd30c8fc990b78253eac9f&quot;)&gt;
+ mobile platform is not selected
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_1.py::test_amazon_the_article</td>
+          <td class="col-duration">9.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stdout call------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028388FAA950&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+ i am here-1-
+before_find xpath  =  //*[@class=&#x27;demo-frame&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@class=&#x27;demo-frame&#x27;]
+before_find id  =  draggable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; draggable
+before_find id  =  draggable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; draggable
+before_find id  =  droppable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; droppable
+before_find id  =  droppable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; droppable
+before_find id  =  draggable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; draggable
+before_find id  =  draggable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; draggable
+before_find id  =  droppable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; droppable
+before_find id  =  droppable &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_find id  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; droppable
+ i am here-2-
+
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_amazon_the_article&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:53:56 root test_menu_stepdef_1 publish_article CRITICAL This outputs just to the scre
+2022-08-08 12:53:56 root test_menu_stepdef_1 publish_article DEBUG    This does not write to either screen (expected) nor file (unexpected)
+2022-08-08 12:53:56 root menuPageObj edurekha CRITICAL This outputs just to the scre_critical
+2022-08-08 12:53:56 root menuPageObj edurekha INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:53:56 root menuPageObj edurekha DEBUG    debug
+2022-08-08 12:53:56 root menuPageObj edurekha ERROR    exception----
+NoneType: None
+2022-08-08 12:53:56 root menuPageObj edurekha WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:test_menu_stepdef_1.py:20 This outputs just to the scre
+DEBUG    root:test_menu_stepdef_1.py:21 This does not write to either screen (expected) nor file (unexpected)
+CRITICAL root:menuPageObj.py:47 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:48 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:49 debug
+ERROR    root:menuPageObj.py:50 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:51 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7efb83e7e299b2bfe8274c0a5f457ff6&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_1.py::test_publish_article</td>
+          <td class="col-duration">11.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F7C7AE30&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;, element=&quot;573fbf4b-5c9f-4de6-bb77-ef76f09e93e3&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;, element=&quot;573fbf4b-5c9f-4de6-bb77-ef76f09e93e3&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:01 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:01 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:01 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:01 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:01 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;2c6146c11d1ea7d4bfea495af014e111&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_1.py::test_publish_article_2</td>
+          <td class="col-duration">11.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028388FA9750&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;, element=&quot;f92d090d-1f76-408f-93aa-a7515d47048a&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;, element=&quot;f92d090d-1f76-408f-93aa-a7515d47048a&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article_2&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:08 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:08 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:08 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:08 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:08 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a0aa5d44218baffb1e7a36886f35a009&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_1.py::test_publish_article_3</td>
+          <td class="col-duration">11.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F7C7BB20&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;, element=&quot;d234eed7-d72b-48e6-9b00-393e7e6f3839&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;, element=&quot;d234eed7-d72b-48e6-9b00-393e7e6f3839&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article_3&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:12 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:12 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:12 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:12 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:12 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;69d643671f1e7dce0e734fe33c9c1bb9&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_2.py::test_publish_article__5</td>
+          <td class="col-duration">16.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x00000218F7C79E10&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000218F4341500&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;, element=&quot;d72809ee-d8f7-4913-9182-2d28c434d0a4&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;, element=&quot;d72809ee-d8f7-4913-9182-2d28c434d0a4&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article__5&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:28 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:28 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:28 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:28 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:28 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e9f3f8a9a5d554f335dd464688018892&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_2.py::test_publish_article_4</td>
+          <td class="col-duration">18.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028387A52500&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e888af4450627a0e61627296c1c51039&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e888af4450627a0e61627296c1c51039&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e888af4450627a0e61627296c1c51039&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e888af4450627a0e61627296c1c51039&quot;, element=&quot;732a81a7-d3b7-4ddf-bf9c-5073b0db0f70&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e888af4450627a0e61627296c1c51039&quot;, element=&quot;732a81a7-d3b7-4ddf-bf9c-5073b0db0f70&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article_4&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:27 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:27 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:27 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:27 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:27 root menuPageObj searchinGoogle WARNING  warning----
+2022-08-08 12:54:27 root test_menu_stepdef_tdd_2 test_publish_article_4 CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:27 root test_menu_stepdef_tdd_2 test_publish_article_4 INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:27 root test_menu_stepdef_tdd_2 test_publish_article_4 DEBUG    debug
+2022-08-08 12:54:27 root test_menu_stepdef_tdd_2 test_publish_article_4 ERROR    exception----
+NoneType: None
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----
+CRITICAL root:test_menu_stepdef_tdd_2.py:23 This outputs just to the scre_critical
+INFO     root:test_menu_stepdef_tdd_2.py:24 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:test_menu_stepdef_tdd_2.py:25 debug
+ERROR    root:test_menu_stepdef_tdd_2.py:26 exception----
+NoneType: None<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e888af4450627a0e61627296c1c51039&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;e888af4450627a0e61627296c1c51039&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_menu_stepdef_tdd_2.py::test_publish_article_6</td>
+          <td class="col-duration">11.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw1] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> -----------------------------Captured stdout setup------------------------------ <br/>&lt;selenium.webdriver.support.event_firing_webdriver.EventFiringWebDriver object at 0x0000028388FA9270&gt;  -------&gt;desired caps
+before_navigate_to https://jqueryui.com/droppable/
+after_navigate_to https://jqueryui.com/droppable/
+<br/> ------------------------------Captured stdout call------------------------------ <br/>before_navigate_to https://www.amazon.in/
+after_navigate_to https://www.amazon.in/
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a84c62f25919078613639c31ec16e565&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a84c62f25919078613639c31ec16e565&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_find xpath  =  //*[@id=&#x27;twotabsearchtextbox&#x27;] &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a84c62f25919078613639c31ec16e565&quot;)&gt;
+after_find xpath  =  &lt;built-in method __init_subclass__ of type object at 0x00000283856EBD40&gt;  &lt;&lt;&gt;&gt; //*[@id=&#x27;twotabsearchtextbox&#x27;]
+before_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;a84c62f25919078613639c31ec16e565&quot;, element=&quot;646e0bca-8d9f-45b7-8b3e-35ffbc9a0e8f&quot;)&gt;
+after_change_value_of &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;a84c62f25919078613639c31ec16e565&quot;, element=&quot;646e0bca-8d9f-45b7-8b3e-35ffbc9a0e8f&quot;)&gt;
+this happens after the test runs &lt;bound method FixtureRequest.getfixturevalue of &lt;FixtureRequest for &lt;Function test_publish_article_6&gt;&gt;&gt;
+<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:39 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:39 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:39 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:39 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:39 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a84c62f25919078613639c31ec16e565&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;a84c62f25919078613639c31ec16e565&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_unit_example.py::SampleCase::test_method</td>
+          <td class="col-duration">6.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:43 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:43 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:43 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:43 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:43 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;16a4e2a103ee6dff8684da33c015a122&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;16a4e2a103ee6dff8684da33c015a122&quot;)&gt;
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">stepdefs/test_unit_example_1.py::SampleCase_2::test_method_1</td>
+          <td class="col-duration">6.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/>[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe[gw0] win32 -- Python 3.10.4 D:\Users\sjyothi\AppData\Local\Programs\Python\Python310\python.exe<br/> ------------------------------Captured stderr call------------------------------ <br/>2022-08-08 12:54:58 root menuPageObj searchinGoogle CRITICAL This outputs just to the scre_critical
+2022-08-08 12:54:58 root menuPageObj searchinGoogle INFO     This does not write to either screen (expected) nor file (unexpected)_info
+2022-08-08 12:54:58 root menuPageObj searchinGoogle DEBUG    debug
+2022-08-08 12:54:58 root menuPageObj searchinGoogle ERROR    exception----
+NoneType: None
+2022-08-08 12:54:58 root menuPageObj searchinGoogle WARNING  warning----
+<br/> -------------------------------Captured log call-------------------------------- <br/>CRITICAL root:menuPageObj.py:28 This outputs just to the scre_critical
+INFO     root:menuPageObj.py:29 This does not write to either screen (expected) nor file (unexpected)_info
+DEBUG    root:menuPageObj.py:30 debug
+ERROR    root:menuPageObj.py:31 exception----
+NoneType: None
+WARNING  root:menuPageObj.py:32 warning----<br/> ----------------------------Captured stdout teardown---------------------------- <br/>before_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;896b4b744c914df843d666039f6236b9&quot;)&gt;
+after_close &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;896b4b744c914df843d666039f6236b9&quot;)&gt;
+ mobile platform is not selected
+<br/></div></td></tr></tbody></table></body></html>
