@@ -33,7 +33,7 @@ import numpy as np
 #import base64
 import time
 #import tweepy
-import config
+from config import rootPath,summary_modification
 from pyallied.web.webWaits import customwebDriverwait
 
 
@@ -301,7 +301,7 @@ def pytest_runtest_makereport(item, call):
 
 @pytest.fixture(autouse=True)
 def update_env_file(b, t, e):
-    with open(config.rootPath()+"/env.json", "r+") as jsonFile:
+    with open(rootPath()+"/env.json", "r+") as jsonFile:
         data = json.load(jsonFile)
 
         data["env"] = e
@@ -315,7 +315,7 @@ def update_env_file(b, t, e):
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_sessionfinish(session, exitstatus):
-    with open(config.rootPath()+"/env.json", "r+") as jsonFile:
+    with open(rootPath()+"/env.json", "r+") as jsonFile:
         data = json.load(jsonFile)
         session.config._metadata["browserName"] = data["browser_name"]
         session.config._metadata["environment"] = data["env"]
@@ -440,7 +440,7 @@ def pytest_bdd_after_scenario(request, feature, scenario):
 
 @pytest.hookimpl()
 def pytest_html_results_summary(prefix, summary, postfix):
-    config.summary_modification(prefix,summary,postfix)
+    summary_modification(prefix,summary,postfix)
     
 from allure_commons.lifecycle import AllureLifecycle
 from allure_commons.model2 import TestResult
