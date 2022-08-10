@@ -1,20 +1,21 @@
 from distutils.log import error
 import imp
-from importlib.resources import path
+#from importlib.resources import path
 from platform import platform
 from this import s
-from cv2 import getDerivKernels
-from matplotlib.pyplot import text
+#from cv2 import getDerivKernels
+#from matplotlib.pyplot import text
 import pytest
 import allure
 from pytest import CaptureFixture
-import pytest_bdd
+#import pytest_bdd
 #from selenium import webdriver
 #from appium import webdriver
+import config
 import os
 import re
 import sys
-from pytest_bdd import hooks
+#from pytest_bdd import hooks
 from datetime import datetime
 from typing import Union, List
 from pytest_html import extras,plugin
@@ -24,7 +25,7 @@ from py.xml import html
 import subprocess as sp
 from appium.webdriver.appium_service import AppiumService
 import requests
-from torch import embedding
+#from torch import embedding
 import xlrd
 import pandas as pd
 import json
@@ -48,7 +49,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope='package')
+@pytest.fixture(scope='session')
 def platformType(request):
     
     return request.config.getoption("--t")
@@ -332,7 +333,7 @@ def test_extra(extra):
     extra.append(extras.html("<div>Additionalsss HTML</div>"))
 
 
-@pytest.fixture(scope='package', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup_appium(platformType,setup_androidVirtualDevice):
     try:
         if platformType=='w_mob' or platformType=='n_mob':
@@ -343,7 +344,7 @@ def setup_appium(platformType,setup_androidVirtualDevice):
             args=['-p', '4725','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log','--log-timestamp','true'
             ,'--allow-insecure', 'chromedriver_autodownload'],
             '''
-            appium_service.start( args=['-p', str('4723'),'--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log','--local-timezone','--log-timestamp'
+            appium_service.start( args=['-p', '4725','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log'
             ],timeout_ms=10000)
             #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
             #print(ele.returncode,'<-----------')
@@ -357,7 +358,7 @@ def setup_appium(platformType,setup_androidVirtualDevice):
             #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
             #for i in ele.stdout.read().splitlines():
             #    print(i)
-            time.sleep(80)
+            time.sleep(40)
             yield appium_service
             appium_service.stop()
         # print('*****SETUP*****')
@@ -372,108 +373,90 @@ def setup_appium(platformType,setup_androidVirtualDevice):
         raise error    
 
 
-@pytest.fixture(scope='package')
+@pytest.fixture(scope='session')
 def setup_androidVirtualDevice(platformType):
-    if platformType=='w_mob' or platformType=='n_mob':
-        print('test---')
-        '''
-        
-        shutil.rmtree
-        sp.Popen('adb kill-server', stdout=sp.PIPE, text=True, shell=True)
-        if(os.path.exists("D:/Users/sjyothi/.android/avd/pixelTest3")):
-            pattern= r'D:/Users/sjyothi/.android/avd/**/multiinstance.lock'
-            for item in glob.iglob(pattern, recursive=True):
-        # delete file
-                print("Deleting:", item)
-                os.remove(item)
+    try:
+        if platformType=='w_mob' or platformType=='n_mob':
+            print('test---')
+            '''
             
-        #from subprocess import Popen
-        commands = ['adb start-server', 'avdmanager create avd -n pixelT -k "system-images;android-31;google_apis;x86_64" -d 1','emulator -avd pixelT -partition-size 1024 -wipe-data -no-snapshot-load']
-        procs = [ sp.Popen(i,shell=True) for i in commands ]
-        for p in procs:
-            p.wait() 
-        '''  
-        '''
-        deviceStart=sp.Popen('adb devices',stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-        deviceStartErr=deviceStart.communicate()[0]
-        print('--error \n',str(deviceStartErr).replace("\r\n"," "),'\n error')    
-        deviceServerStart=sp.Popen('adb start-server', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-        deviceServerStartErr=deviceServerStart.communicate()[0]
-        print('--error \n',str(deviceServerStartErr).replace("\r\n"," "),'\n error')
-        emulatorCreate=sp.Popen('avdmanager create avd -n pixelT3 -k "system-images;android-31;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)      
-        emulatorCreateErr=emulatorCreate.communicate()[0]
-        print('--error \n',str(emulatorCreateErr).replace("\r\n"," "),'\n error')
-        '''
-        emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-        #print("------------------------ele---->",ele,"------------------------ele---->")
-        #emulatorStartErr=emulatorStart.communicate()[0]
-        #print('--error \n',str(emulatorStartErr).replace("\r\n"," "),'\n error')
-        #if(ele.returncode):
-            #print('---')   
-            #sp.Popen('adb start-server', stdout=sp.PIPE, text=True, shell=True)
-            
-            #ele=sp.Popen('avdmanager delete avd -n pixelTest3 --force', stdout=sp.PIPE, text=True, shell=True)
-            #print(ele.returncode,'<-----------')
-            #time.sleep(20)
-            #sp.Popen('avdmanager create avd -n pixelTest3 -k "system-images;android-33;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE, text=True, shell=True)
-        #time.sleep(180)
-            #start=sp.Popen('emulator -avd pixelTest3 -partition-size 1024 -wipe-data -no-snapshot-load',
-                            #stdout=sp.PIPE, text=True, shell=True)
-        time.sleep(60)                 
-        #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
+            shutil.rmtree
+            sp.Popen('adb kill-server', stdout=sp.PIPE, text=True, shell=True)
+            if(os.path.exists("D:/Users/sjyothi/.android/avd/pixelTest3")):
+                pattern= r'D:/Users/sjyothi/.android/avd/**/multiinstance.lock'
+                for item in glob.iglob(pattern, recursive=True):
+            # delete file
+                    print("Deleting:", item)
+                    os.remove(item)
+                
+            #from subprocess import Popen
+            commands = ['adb start-server', 'avdmanager create avd -n pixelT -k "system-images;android-31;google_apis;x86_64" -d 1','emulator -avd pixelT -partition-size 1024 -wipe-data -no-snapshot-load']
+            procs = [ sp.Popen(i,shell=True) for i in commands ]
+            for p in procs:
+                p.wait() 
+            '''  
+            '''
+            deviceStart=sp.Popen('adb devices',stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+            deviceStartErr=deviceStart.communicate()[0]
+            print('--error \n',str(deviceStartErr).replace("\r\n"," "),'\n error')    
+            deviceServerStart=sp.Popen('adb start-server', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+            deviceServerStartErr=deviceServerStart.communicate()[0]
+            print('--error \n',str(deviceServerStartErr).replace("\r\n"," "),'\n error')
+            emulatorCreate=sp.Popen('avdmanager create avd -n pixelT3 -k "system-images;android-31;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)      
+            emulatorCreateErr=emulatorCreate.communicate()[0]
+            print('--error \n',str(emulatorCreateErr).replace("\r\n"," "),'\n error')
+            '''
+            emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
+            #print("------------------------ele---->",ele,"------------------------ele---->")
+            #emulatorStartErr=emulatorStart.communicate()[0]
+            #print('--error \n',str(emulatorStartErr).replace("\r\n"," "),'\n error')
+            #if(ele.returncode):
+                #print('---')   
+                #sp.Popen('adb start-server', stdout=sp.PIPE, text=True, shell=True)
+                
+                #ele=sp.Popen('avdmanager delete avd -n pixelTest3 --force', stdout=sp.PIPE, text=True, shell=True)
+                #print(ele.returncode,'<-----------')
+                #time.sleep(20)
+                #sp.Popen('avdmanager create avd -n pixelTest3 -k "system-images;android-33;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE, text=True, shell=True)
+            #time.sleep(180)
+                #start=sp.Popen('emulator -avd pixelTest3 -partition-size 1024 -wipe-data -no-snapshot-load',
+                                #stdout=sp.PIPE, text=True, shell=True)
+            time.sleep(60)                 
+            #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
 
-        #print(ele.returncode)
-        #for i in ele.stdout.read().splitlines():
-            #print(i)
-        #yield start
-        #start.kill()
-        #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
-        # print('*****SETUP*****')
+            #print(ele.returncode)
+            #for i in ele.stdout.read().splitlines():
+                #print(i)
+            #yield start
+            #start.kill()
+            #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
+            # print('*****SETUP*****')
+    except Exception as error:
+        raise error    
 #@given('screenshot insert')        
 def pytest_bdd_after_scenario(request, feature, scenario):
+
     print()
 
 @pytest.hookimpl()
 def pytest_html_results_summary(prefix, summary, postfix):
-
+    config.summary_modification(prefix,summary,postfix)
     
-    summary.extend ([html.p('')])
-    #style=html.style(border='1px solid black')
-    #table_1 = html.div( class_="pie",style="height: 100px;width:100px;border-radius: 50%;background: conic-gradient(brown 0.00%, black 0.00% 0.55%, blue 0.55% 6.08%, green 6.08% 13.68%, yellow 13.68% 23.27%, orange 23.27% 40.47%, red 40.47%)")
-    
+from allure_commons.lifecycle import AllureLifecycle
+from allure_commons.model2 import TestResult
+from allure_commons import plugin_manager
 
-    
-    pass_testcases=0
-    failed_testcase=0
-    skipped_testcase=0
-    error_testcases=0
+def custom_write_test_case(self, uuid=None):
+    test_result = self._pop_item(uuid=uuid, item_type=TestResult)
+    if test_result:
+        if test_result.parameters:
+            adj_parameters = []
+            for param in test_result.parameters:
+                if param.name != '_pytest_bdd_example':
+                    # do not include parameters with "_pytest_bdd_example"
+                    adj_parameters.append(param)
+            test_result.parameters = adj_parameters
 
-    for i in summary:
-        #print(i,    '<---loop--')
-        
-        if 'py._xmlgen.span' in str(type(i)) :
-            if '<span class="skipped">' in str(i):
-                skipped_testcase=int(re.findall(r'\d+', str(i))[0])
-            if '<span class="failed">' in str(i):
-                failed_testcase=int(re.findall(r'\d+', str(i))[0])
-            if '<span class="passed">' in str(i):
-                pass_testcases=int(re.findall(r'\d+', str(i))[0])
-            if '<span class="error">' in str(i):
-                error_testcases=int(re.findall(r'\d+', str(i))[0])                
-    total_cases=pass_testcases+failed_testcase+skipped_testcase
+        plugin_manager.hook.report_result(result=test_result)
 
-
-    failed = 0 if failed_testcase == 0 else (failed_testcase/total_cases)
-    errorcases = 0 if error_testcases == 0 else (error_testcases/total_cases)
-    passed = 0 if pass_testcases == 0 else (pass_testcases/total_cases)
-    skipped = 0 if skipped_testcase == 0 else (skipped_testcase/total_cases)
-
-    data_pie=html.link( rel='stylesheet',href='report_styles/summarypiechart.css')
-    data_pie.append(html.div( class_="pie",style="--val_1:"+str(failed)+"; --val_2:"+str(passed)+"; --val_3:"+str(skipped)+"; --val_4:"+str(errorcases)))
-    Data_table=html.div(class_="Container",style="float: right;position: relative;left: -70%;padding: 0 70px;line-height: 200%;")
-    Data_table.append(html.ul())
-    Data_table.append(html.li("pass %: "+str((pass_testcases/total_cases)*100),style="color: green;font-size: 12px;align-content: center;"))
-    Data_table.append(html.li("fail %: "+str((failed_testcase/total_cases)*100),style="color: red;font-size: 12px;align-content: center;"))
-    Data_table.append(html.li("skip %: "+str((skipped_testcase/total_cases)*100),style="color: orange;font-size: 12px;align-content: center;"))
-    Data_table.append(html.li("error %: "+str((error_testcases/total_cases)*100),style="color: red;font-size: 12px;align-content: center;"))
-    summary.extend ([data_pie,Data_table])
+AllureLifecycle.write_test_case = custom_write_test_case    
