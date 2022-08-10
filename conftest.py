@@ -11,7 +11,7 @@ from pytest import CaptureFixture
 #import pytest_bdd
 #from selenium import webdriver
 #from appium import webdriver
-import config
+#import config
 import os
 import re
 import sys
