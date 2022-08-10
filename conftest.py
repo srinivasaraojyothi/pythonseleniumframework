@@ -26,13 +26,13 @@ import subprocess as sp
 from appium.webdriver.appium_service import AppiumService
 import requests
 #from torch import embedding
-import xlrd
+#import xlrd
 import pandas as pd
 import json
 import numpy as np
-import base64
+#import base64
 import time
-import tweepy
+#import tweepy
 import config
 from pyallied.web.webWaits import customwebDriverwait
 
