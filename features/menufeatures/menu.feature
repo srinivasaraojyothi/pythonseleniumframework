@@ -1,8 +1,8 @@
 Feature: amazon search
-@tt
+@teach
 Scenario: amazon the article
 Given I menu press the publish button
-@tt
+@teach
 Scenario: google search
 Given navigate to google
 Given search in google
