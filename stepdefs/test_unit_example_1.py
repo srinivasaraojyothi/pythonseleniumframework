@@ -5,7 +5,7 @@ from selenium.webdriver.remote.errorhandler import ErrorHandler
 from pages.menuPageObj import menuPageObj
 from pyallied.api_crud import crud
 #from HtmlTestRunner import HTMLTestRunner
-import HtmlTestRunner
+#import HtmlTestRunner
 import logging
 from logging import config
 import pytest
