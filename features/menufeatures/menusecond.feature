@@ -1,8 +1,8 @@
 Feature: amazon search
-@tt
-Scenario: amazon the article
+@cm
+Scenario: article for amazon
 Given I menu press the publish button
-@tt
-Scenario: google search
+@cm
+Scenario: find search
 Given navigate to google
 Given search in google
