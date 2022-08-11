@@ -170,8 +170,7 @@ PyPDF2==2.4.1
 PyPDF4==1.27.0
 pypiwin32==223
 Pypubsub==4.0.3
-pyrsistent==0.18.1
-pyseleniumbot==1.0.7
+pyrsistent==0.18.17
 python-dateutil==2.8.2
 python-dotenv==0.20.0
 python-pptx==0.6.21
