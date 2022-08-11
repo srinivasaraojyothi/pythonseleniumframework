@@ -6,7 +6,7 @@ from pages.menuPageObj import menuPageObj
 from pyallied.web.keys import Keys
 import pytest
 #from HtmlTestRunner import HTMLTestRunner
-import HtmlTestRunner
+#import HtmlTestRunner
 
 class SampleCase(unittest.TestCase):
 

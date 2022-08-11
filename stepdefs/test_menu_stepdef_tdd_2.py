@@ -17,15 +17,18 @@ logger = logging.getLogger()
 
 @pytest.mark.slow
 def test_publish_article_4(browser):
-        #try:
+        try:
             menuPageObj(browser).searchinGoogle("https://www.amazon.in/")
             menuPageObj(browser).googleSearch()
             logger.critical('This outputs just to the scre_critical')
             logger.info("This does not write to either screen (expected) nor file (unexpected)_info") 
             logger.debug("debug")  
-            logger.exception("exception----")  
-        #except Exception:
-            #browser.save_screenshot('.//output//screenshot.png')
+            
+        except Exception:
+             
+            browser.save_screenshot('.//output//screenshot.png')
+            logger.exception("exception----") 
+
             #print(Exception)
 
 @pytest.mark.slow
