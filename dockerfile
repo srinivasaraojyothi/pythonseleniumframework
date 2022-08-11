@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     python3-pip
 RUN git config --global http.sslverify false     
 RUN git clone https://github.com/srinivasaraojyothi/pythonseleniumframework.git
-RUN cd ./pythonseleniumframework && git checkout development
+RUN cd ./pythonseleniumframework && git checkout dockertest && git pull origin dockertest
 #RUN git checkout main
 # ./pythonseleniumframework
 WORKDIR  pythonseleniumframework
