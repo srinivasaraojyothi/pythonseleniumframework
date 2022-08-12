@@ -90,7 +90,7 @@ def browser(b, t, request):
 
             opts.add_argument('--disable-gpu')
             #opts.capabilities
-            '''
+            
             browser = webdriver.Chrome(
                 "D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
@@ -103,7 +103,7 @@ def browser(b, t, request):
                         desired_capabilities=capabilities
                     )
             
-                    
+            '''        
 
             customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
