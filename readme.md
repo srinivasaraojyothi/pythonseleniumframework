@@ -5,7 +5,7 @@ Framework designed to work with both PyTest and unittest. Migration from unittes
 This framework supports both BDD and TDD style testing  
 
 Framework runs on pyallied wrapper which is a python based library developed with pytest. it supports web, mobile (web and native) and api automation.  
-
+pyallied wrapper is published to pypi and it is mentioned as dependency in requirements.txt file in this framework.
 ### Get Start:  
 
 clone the code from git using below command  
@@ -118,7 +118,7 @@ There is open bug w.r.t pytest-bdd with allure-bdd.
 refer https://github.com/allure-framework/allure-python/issues/636  
 
 prerequisites:(local execution)  
- 1. Need to download allure zip from allure sie - https://github.com/allure-framework/allure2/releases/tag/  
+ 1. Need to download allure zip from allure sie - https://github.com/allure-framework/allure2/releases/  
  2. unzip the folder
  Execute the test suite/test cases with following command
  
