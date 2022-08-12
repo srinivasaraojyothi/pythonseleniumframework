@@ -52,6 +52,7 @@ Pygments==2.12.0
 pyOpenSSL==22.0.0
 pyparsing==3.0.9
 pyallied==1.0.5
+webdriver-manager==3.8.3
 PySocks==1.7.1
 seletools==1.2.1
 pytest==7.1.2

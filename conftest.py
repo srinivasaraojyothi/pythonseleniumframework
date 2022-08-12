@@ -80,6 +80,8 @@ def browser(b, t, request):
             from selenium import webdriver
             from selenium.webdriver.common.by import By
             from selenium.webdriver.remote.errorhandler import ErrorHandler
+            from selenium.webdriver.chrome.service import Service as ChromeService
+            from webdriver_manager.chrome import ChromeDriverManager
             opts = webdriver.ChromeOptions()
             desiredcaps=webdriver.DesiredCapabilities.CHROME.copy()
             capabilities = {
@@ -91,9 +93,9 @@ def browser(b, t, request):
 
             opts.add_argument('--disable-gpu')
             #opts.capabilities
-            '''
+            
             browser = webdriver.Chrome(
-                "D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
+                service=ChromeService(ChromeDriverManager().install()), options=opts)
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             '''
             
@@ -104,7 +106,7 @@ def browser(b, t, request):
                         desired_capabilities=capabilities
                     )
             
-                    
+            '''        
 
             customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
@@ -390,10 +392,10 @@ def custom_write_test_case(self, uuid=None):
 
 AllureLifecycle.write_test_case = custom_write_test_case    
 
-@pytest.fixture(scope='session', autouse=True)
+#@pytest.fixture(scope='session', autouse=True)
 def session_setup_teardown():
     yield
     print("----")
     p=sp.Popen('D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat generate allurereports  allure-report --clean && D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat open -h localhost -p 52400' , stdout=sp.PIPE, text=True, shell=True)
     #sp.Popen('allure-2.18.1/bin/allure.bat generate allurereports  allure-report', stdout=sp.PIPE, text=True, shell=True)
-    #print("----",p.communicate())
+    print("----",p.communicate())
