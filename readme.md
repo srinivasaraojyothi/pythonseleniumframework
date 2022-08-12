@@ -109,6 +109,10 @@ execute below command
 
 ### Allure Report Generation   - (manual)
 
+need to install:
+pip install allure-pytest
+
+Note: installation of 'allure-pytest-bdd' is NOT recommended
 Note: uncomment the allure generation code in conftest.py file and comment the defaulte pytest html report code in conftest.py file.
 There is open bug w.r.t pytest-bdd with allure-bdd.  
 refer https://github.com/allure-framework/allure-python/issues/636  
