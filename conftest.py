@@ -11,10 +11,11 @@ from pytest import CaptureFixture
 #import pytest_bdd
 #from selenium import webdriver
 #from appium import webdriver
-#import config
+
 import os
 import re
 import sys
+
 #from pytest_bdd import hooks
 from datetime import datetime
 from typing import Union, List
@@ -33,7 +34,7 @@ import numpy as np
 #import base64
 import time
 #import tweepy
-from config import rootPath,summary_modification
+from config import rootPath,summary_modification,anodroidEmulatorSetandStart,appiumStart
 from pyallied.web.webWaits import customwebDriverwait
 
 
@@ -90,7 +91,7 @@ def browser(b, t, request):
 
             opts.add_argument('--disable-gpu')
             #opts.capabilities
-            
+            '''
             browser = webdriver.Chrome(
                 "D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
             #browser2=webdriver.Firefox("D:/Users/sjyothi/Downloads/chromedriver/chromedriver.exe", options=opts)
@@ -103,7 +104,7 @@ def browser(b, t, request):
                         desired_capabilities=capabilities
                     )
             
-            '''        
+                    
 
             customwebDriverwait.customWait = 25
             #print(customwebDriverwait.customWait," = custom wait")
@@ -264,8 +265,11 @@ def pytest_runtest_makereport(item, call):
                     name='screenshot',
                     attachment_type=allure.attachment_type.PNG
                 )
+                
             except Exception as e:
-                print('Fail to take screen-shot: {}'.format(e))        
+                print('Fail to take screen-shot: {}'.format(e))
+    p=sp.Popen('D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat generate allurereports  allure-report --clean && D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat open -h localhost -p 52399' , stdout=sp.PIPE, text=True, shell=True)
+                
 
 
 # for all test cases executed, 'do NOT modify it'
@@ -346,38 +350,7 @@ def test_extra(extra):
 @pytest.fixture(scope='session', autouse=True)
 def setup_appium(platformType,setup_androidVirtualDevice):
     try:
-        if platformType=='w_mob' or platformType=='n_mob':
-            #import json
-            appium_service = AppiumService()
-
-            '''
-            args=['-p', '4725','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log','--log-timestamp','true'
-            ,'--allow-insecure', 'chromedriver_autodownload'],
-            '''
-            appium_service.start( args=['-p', '4725','--log', 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata/appium.log'
-            ],timeout_ms=10000)
-            #ele=sp.Popen('avdmanager delete avd -n pixel', stdout=sp.PIPE, text=True, shell=True)
-            #print(ele.returncode,'<-----------')
-            #time.sleep(20)
-            #emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-            #print("------------------------ele---->",ele,"------------------------ele---->")
-            #emulatorStartErr=emulatorStart.communicate()[0]
-            #print('--error \n',emulatorStartErr,'\n error')
-            print(appium_service.is_running,',Appium service started...')
-            print(appium_service.is_listening,',Appium service started listening...')            
-            #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
-            #for i in ele.stdout.read().splitlines():
-            #    print(i)
-            time.sleep(40)
-            yield appium_service
-            appium_service.stop()
-        # print('*****SETUP*****')
-        else:
-            
-            yield "not required"
-            print(' mobile platform is not selected')
-
-            
+            appiumStart(platformType)
 
     except Exception as error:
         raise error    
@@ -386,61 +359,7 @@ def setup_appium(platformType,setup_androidVirtualDevice):
 @pytest.fixture(scope='session')
 def setup_androidVirtualDevice(platformType):
     try:
-        if platformType=='w_mob' or platformType=='n_mob':
-            print('test---')
-            '''
-            
-            shutil.rmtree
-            sp.Popen('adb kill-server', stdout=sp.PIPE, text=True, shell=True)
-            if(os.path.exists("D:/Users/sjyothi/.android/avd/pixelTest3")):
-                pattern= r'D:/Users/sjyothi/.android/avd/**/multiinstance.lock'
-                for item in glob.iglob(pattern, recursive=True):
-            # delete file
-                    print("Deleting:", item)
-                    os.remove(item)
-                
-            #from subprocess import Popen
-            commands = ['adb start-server', 'avdmanager create avd -n pixelT -k "system-images;android-31;google_apis;x86_64" -d 1','emulator -avd pixelT -partition-size 1024 -wipe-data -no-snapshot-load']
-            procs = [ sp.Popen(i,shell=True) for i in commands ]
-            for p in procs:
-                p.wait() 
-            '''  
-            '''
-            deviceStart=sp.Popen('adb devices',stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-            deviceStartErr=deviceStart.communicate()[0]
-            print('--error \n',str(deviceStartErr).replace("\r\n"," "),'\n error')    
-            deviceServerStart=sp.Popen('adb start-server', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-            deviceServerStartErr=deviceServerStart.communicate()[0]
-            print('--error \n',str(deviceServerStartErr).replace("\r\n"," "),'\n error')
-            emulatorCreate=sp.Popen('avdmanager create avd -n pixelT3 -k "system-images;android-31;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)      
-            emulatorCreateErr=emulatorCreate.communicate()[0]
-            print('--error \n',str(emulatorCreateErr).replace("\r\n"," "),'\n error')
-            '''
-            emulatorStart=sp.Popen('emulator -avd pixelT3 -partition-size 1024 -wipe-data -no-snapshot-load', stdout=sp.PIPE,stderr=sp.STDOUT,shell=True)
-            #print("------------------------ele---->",ele,"------------------------ele---->")
-            #emulatorStartErr=emulatorStart.communicate()[0]
-            #print('--error \n',str(emulatorStartErr).replace("\r\n"," "),'\n error')
-            #if(ele.returncode):
-                #print('---')   
-                #sp.Popen('adb start-server', stdout=sp.PIPE, text=True, shell=True)
-                
-                #ele=sp.Popen('avdmanager delete avd -n pixelTest3 --force', stdout=sp.PIPE, text=True, shell=True)
-                #print(ele.returncode,'<-----------')
-                #time.sleep(20)
-                #sp.Popen('avdmanager create avd -n pixelTest3 -k "system-images;android-33;google_apis;x86_64" -d 1 --force', stdout=sp.PIPE, text=True, shell=True)
-            #time.sleep(180)
-                #start=sp.Popen('emulator -avd pixelTest3 -partition-size 1024 -wipe-data -no-snapshot-load',
-                                #stdout=sp.PIPE, text=True, shell=True)
-            time.sleep(60)                 
-            #ele = sp.Popen('avdmanager -s list', stdout=sp.PIPE, text=True, shell=True)
-
-            #print(ele.returncode)
-            #for i in ele.stdout.read().splitlines():
-                #print(i)
-            #yield start
-            #start.kill()
-            #sp.Popen(' adb emu kill', stdout=sp.PIPE, text=True, shell=True)
-            # print('*****SETUP*****')
+        anodroidEmulatorSetandStart(platformType,)
     except Exception as error:
         raise error    
 #@given('screenshot insert')        
@@ -470,3 +389,11 @@ def custom_write_test_case(self, uuid=None):
         plugin_manager.hook.report_result(result=test_result)
 
 AllureLifecycle.write_test_case = custom_write_test_case    
+
+@pytest.fixture(scope='session', autouse=True)
+def session_setup_teardown():
+    yield
+    print("----")
+    p=sp.Popen('D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat generate allurereports  allure-report --clean && D:/Users/sjyothi/Repos/pythonseleniumFramework/allure-2.18.1/bin/allure.bat open -h localhost -p 52400' , stdout=sp.PIPE, text=True, shell=True)
+    #sp.Popen('allure-2.18.1/bin/allure.bat generate allurereports  allure-report', stdout=sp.PIPE, text=True, shell=True)
+    #print("----",p.communicate())
