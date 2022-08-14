@@ -8,6 +8,12 @@ Framework runs on pyallied wrapper which is a python based library developed wit
 pyallied wrapper is published to pypi and it is mentioned as dependency in requirements.txt file in this framework.
 ### Get Start:  
 
+prerequisites:
+
+1. pythons version >=3.9  
+
+Note: If your python is installed from python.org below mentioned command with extension like 'py -3 -m ' will work, else please use direct command like 'python3' in place of 'py -3 -m '.
+
 clone the code from git using below command  
 ```shell
 git clone https://github.com/srinivasaraojyothi/pythonseleniumframework.git  
@@ -187,6 +193,45 @@ plugins:
 ```
 Generate the allure and check logo is displaying like below
 ![Alt text](report_png_logo.PNG)
+
+### dockerization:
+
+Repo is included with docker-compose file and dockerfile.  
+To run in docker environment, user should have test infra that supports the docker execution. ex: browserstack, AWS or local setup of selenoid/ggr.  
+
+
+Note: conftest.py file should be updated with remote url of docker test infra.  
+steps to follow to execute in docker:  
+
+1. create the mount folder with below command
+```shell
+docker volume create automation 
+```
+
+2. Build the image with below command
+
+```shell
+docker-compose build --no-cache
+```
+3. start the image with elow command
+```shell
+docker-compose up
+```
+Your tests should start on the remote url provided in conftest.py file.
+
+Environmenatl varibales allowed in docker-compose file are as follows:
+
+ENV gitrepo   
+ENV git branch  
+ENV PYTHONPATH  
+ENV tag  
+ENV browser  
+ENV exenv   
+ENV platform
+
+user can download the mount files from the mount location.
+
+
 
 
 
