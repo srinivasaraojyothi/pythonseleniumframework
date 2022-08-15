@@ -12,7 +12,14 @@ prerequisites:
 
 1. pythons version >=3.9  
 
-Note: If your python is installed from python.org below mentioned command with extension like 'py -3 -m ' will work, else please use direct command like 'python3' in place of 'py -3 -m '.
+Note: Recommends to install python from https://www.python.org/ as the installer comes with py.exe which suports easy transition of framewrok testing on different python versions.
+ex: To test on python 3.9 and 3.10 we can use below commands respectively.
+```shell
+py -3.9 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+``` 
+```shell
+py -3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+``` 
 
 clone the code from git using below command  
 ```shell
