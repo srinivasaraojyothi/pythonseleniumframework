@@ -11,8 +11,8 @@ pyallied wrapper is published to pypi and it is mentioned as dependency in requi
 prerequisites:
 
 1. pythons version >=3.9  
-
-Note: Recommends to install python from https://www.python.org/ as the installer comes with py.exe which suports easy transition of framewrok testing on different python versions.
+### windows:  
+ Recommends to install python from https://www.python.org/ as the installer comes with py.exe which suports easy transition of framewrok testing on different python versions.
 ex: To test on python 3.9 and 3.10 we can use below commands respectively.
 ```shell
 py -3.9 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
@@ -20,6 +20,43 @@ py -3.9 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=
 ```shell
 py -3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
 ``` 
+### linux:   
+
+Need to install python >=3.9 with ssl enabled. follow the steps mentined below if ssl error occurs.   
+
+setting up the ssl from source code:  
+
+1. follow links and do configure ssl
+https://cloudwafer.com/blog/installing-openssl-on-centos-7/
+
+2. https://gist.github.com/fernandoaleman/5459173e24d59b45ae2cfc618e20fe06   
+
+configure with below commands with ROOT user access(sudo)
+```shell
+sudo ./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic -Wl,-rpath=/usr/local/ssl/lib -Wl,--enable-new-dtags
+
+sudo make install
+
+```
+Follow below link to install python   
+
+1. https://linuxstans.com/how-to-install-python-centos/
+
+if python is built from source, configure it with below command and install it
+
+```shell
+sudo ./configure --enable-optimizations --with-ssl-default-suites=openssl --with-openssl=/usr/local/ssl --with-openssl-rpath=auto  CFLAGS="-I/usr/local/ssl/include" LDFLAGS="-L/usr/local/ssl"
+
+sudo make install
+```
+Verify after installation ssl related errors are not displaying.
+
+NOTE: use 'python3.XX' in place of 'py -3' while testing on linux environment  
+
+example command for linux:   
+```shell
+python3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+```
 
 clone the code from git using below command  
 ```shell
