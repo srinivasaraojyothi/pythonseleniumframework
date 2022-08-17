@@ -15,10 +15,10 @@ prerequisites:
  Recommends to install python from https://www.python.org/ as the installer comes with py.exe which suports easy transition of framewrok testing on different python versions.
 ex: To test on python 3.9 and 3.10 we can use below commands respectively.
 ```shell
-py -3.9 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+py -3.9 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=web -v
 ``` 
 ```shell
-py -3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+py -3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=web -v
 ``` 
 ### linux:   
 
@@ -55,7 +55,7 @@ NOTE: use 'python3.XX' in place of 'py -3' while testing on linux environment
 
 example command for linux:   
 ```shell
-python3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+python3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=web -v
 ```
 
 clone the code from git using below command  
@@ -106,7 +106,7 @@ This file handles the following actions:
 As the framework built on pyTest test engine, it support all the features of pyTest.
 
 ```
-py -3 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+py -3 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=web -v
 ```
 
 --b : browser (allowed are chrome,firefox) 
@@ -236,7 +236,65 @@ plugins:
   - custom-logo-plugin
 ```
 Generate the allure and check logo is displaying like below
-![Alt text](report_png_logo.PNG)
+![Alt text](report_png_logo.PNG)  
+
+### Mobile :
+
+#### Native - emulator/device:  
+
+Following softwares should be installed on the master node   
+
+1. Appium
+2. Android SDK
+
+connect the device in debugmode or create a emulator and bring it up. use following command from 'cmd' to check the device is connected or not.  
+
+```shell
+adb devices
+
+command should give following o/p
+List of devices attached
+emulator-5554   device
+```
+
+provide following desired capabilities in the conftest.py  
+```shell
+            desired_caps = {
+                "platformName": "Android",
+                "androidInstallTimeout": 180000,
+                "avdLaunchTimeout": 1200000,
+                "avdReadyTimeout": 1200000,
+                "noReset": "true",
+                "automationName": "UiAutomator2",
+                "appium:deviceName": "pixelT3",
+                "appium:app": "D:\\Users\\sjyothi\\Repos\\apks\\Airbnb_v22.21_apkpure.com.apk",
+                "appium:appPackage": "com.airbnb.android",
+                "appium:appActivity": "com.airbnb.android.feat.homescreen.HomeActivity",
+                'chromedriverExecutableDir ': 'D:/Users/sjyothi/Repos/pythonseleniumFramework/testdata',
+                'chromedriverChromeMappingFile': "D:/Users/sjyothi/AppData/Roamin/npm/node_modules/appium/node_modules/appium-chromedriver/config/mapping.json",
+
+            }   
+```
+host url :  'http://localhost:4723/wd/hub'  
+
+NOTE: Change the paths to reflect test server. Framework will start appium and android sdk with given emulator/device name in the fuction ''anodroidEmulatorSetandStart' under module -config.py. OR user can start both appium and sdk manually.   
+
+command to run native mobile app test :
+```shell
+windows
+py -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=n_mob -v
+linux
+python3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=n_mob -v
+```
+#### Mobile web - emulator/device:  
+
+Start appium and andriod sdk device/emulator and use following commands to web mobile application test. selenium tests should run on mobile browser.
+```shell
+windows
+py -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+linux
+python3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b=chrome --e=qc --t=w_mob -v
+```
 
 ### dockerization:
 
