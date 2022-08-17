@@ -1,0 +1,12 @@
+{
+    "profile_web_1":{
+        "env":"QC",
+        "platform":"web",
+        "browser":"chrome"
+    },
+    "profile_web_2":{
+        "env":"QC",
+        "platform":"web",
+        "browser":"firefox"
+    }
+}
