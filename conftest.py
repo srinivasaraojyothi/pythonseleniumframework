@@ -79,7 +79,7 @@ def t(request):
 
 @pytest.fixture
 def browser(b, t, request):
-   try: 
+    try:
         browser = ''
         if(t in "web"):
 
@@ -116,10 +116,9 @@ def browser(b, t, request):
             # Quit the WebDriver instance for the teardown
             browser.quit()
         if("profile" in t):
-            file=open(rootPath()+"testdata/executionprofile.json")
-            data=json.load(file)[t]
+            file = open(rootPath()+"testdata/executionprofile.json")
+            data = json.load(file)[t]
             if(data["browser"] in "chrome"):
-                
 
                 browser = chromeBrowser()
 
@@ -128,10 +127,10 @@ def browser(b, t, request):
 
             yield browser
 
-            browser.close()                
+            browser.close()
 
-   except Exception as error:
-    raise error
+    except Exception as error:
+        raise error
 
 
 # for allure generation with screenshots and for creating rerun failure.txt file. 'do NOT modify it'
@@ -217,18 +216,19 @@ def update_env_file(b, t, e):
             json.dump(data, jsonFile)
             jsonFile.truncate()
     else:
-            file=open(rootPath()+"testdata/executionprofile.json")
-            executiondata=json.load(file)[t] 
-            with open(rootPath()+"/env.json", "r+") as jsonFile:
-                data = json.load(jsonFile)
+        file = open(rootPath()+"testdata/executionprofile.json")
+        executiondata = json.load(file)[t]
+        with open(rootPath()+"/env.json", "r+") as jsonFile:
+            data = json.load(jsonFile)
 
-                data["env"] = executiondata["env"]
-                data["browser_name"] = executiondata["browser"]
-                data["test_platform"] = executiondata["platform"]
+            data["env"] = executiondata["env"]
+            data["browser_name"] = executiondata["browser"]
+            data["test_platform"] = executiondata["platform"]
 
-                jsonFile.seek(0)  # rewind
-                json.dump(data, jsonFile)
-                jsonFile.truncate()       
+            jsonFile.seek(0)  # rewind
+            json.dump(data, jsonFile)
+            jsonFile.truncate()
+
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_sessionfinish(session, exitstatus):
