@@ -25,30 +25,44 @@ py -3.10 -m pytest -m 't'  -rA -n 1 --html=report.html --self-contained-html --b
 Need to install python >=3.9 with ssl enabled. follow the steps mentined below if ssl error occurs.   
 
 setting up the ssl from source code:  
-
-1. follow links and do configure ssl
-https://cloudwafer.com/blog/installing-openssl-on-centos-7/
-
-2. https://gist.github.com/fernandoaleman/5459173e24d59b45ae2cfc618e20fe06   
-
-configure with below commands with ROOT user access(sudo)
 ```shell
-sudo ./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic -Wl,-rpath=/usr/local/ssl/lib -Wl,--enable-new-dtags
+1. sudo yum update
+2. sudo yum group install 'Development Tools'
+3. sudo yum install perl-core zlib-devel -y
+4.cd /usr/local/src/
+5. sudo wget https://www.openssl.org/source/openssl-1.1.1c.tar.gz
+6. sudo tar -xf openssl-1.1.1c.tar.gz
+7. cd openssl-1.1.1c
+8. sudo ./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic -Wl,-rpath=/usr/local/ssl/lib -Wl,--enable-new-dtags
+9. sudo make install
 
-sudo make install
 
 ```
-Follow below link to install python   
+refer below links for more info:
 
-1. https://linuxstans.com/how-to-install-python-centos/
+1. https://cloudwafer.com/blog/installing-openssl-on-centos-7/
+
+2. https://gist.github.com/fernandoaleman/5459173e24d59b45ae2cfc618e20fe06  
+
+
+Follow below steps to install python   
+
+
 
 if python is built from source, configure it with below command and install it
 
 ```shell
-sudo ./configure --enable-optimizations --with-ssl-default-suites=openssl --with-openssl=/usr/local/ssl --with-openssl-rpath=auto  CFLAGS="-I/usr/local/ssl/include" LDFLAGS="-L/usr/local/ssl"
+1. sudo yum install openssl-devel bzip2-devel libffi-devel
+2. sudo yum groupinstall "Development Tools"
+3. sudo wget https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tgz
+4. sudo tar -xzf Python-3.10.2.tgz
+5. cd Python-3.10.2
+6. sudo ./configure --enable-optimizations --with-ssl-default-suites=openssl --with-openssl=/usr/local/ssl --with-openssl-rpath=auto  CFLAGS="-I/usr/local/ssl/include" LDFLAGS="-L/usr/local/ssl"
 
-sudo make install
+7.sudo make install
 ```
+Refer below link for more info:
+1. https://linuxstans.com/how-to-install-python-centos/
 Verify after installation ssl related errors are not displaying.
 
 NOTE: use 'python3.XX' in place of 'py -3' while testing on linux environment  
